@@ -183,16 +183,20 @@ FedoraClient fedora = new FedoraClient(credentials);</pre>
 
     fedora.execute(ingest(&quot;test:pid&quot;).build());</pre>
 </div>
-<p>Including fedora-client in your Maven2 project</p>
+<div class="section"><h3>Including fedora-client in your Maven2 project</h3>
+</div>
+</div>
+<div class="section"><h2>Add the following to your pom.xml:</h2>
 <div class="source"><pre>&lt;repository&gt;
-  &lt;id&gt;duraspace-thirdparty&lt;/id&gt;
-  &lt;name&gt;Duraspace Thirdparty Maven Repository&lt;/name&gt;
-  &lt;url&gt;https://fedora-commons.org/m2/content/repositories/thirdparty&lt;/url&gt;
+    &lt;id&gt;duraspace-thirdparty&lt;/id&gt;
+    &lt;name&gt;Duraspace Thirdparty Maven Repository&lt;/name&gt;
+    &lt;url&gt;https://fedora-commons.org/m2/content/repositories/thirdparty&lt;/url&gt;
 &lt;/repository&gt;
+
 &lt;dependency&gt;
-  &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
-   &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
-   &lt;version&gt;0.0.2&lt;/version&gt;
+    &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
+    &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
+    &lt;version&gt;0.0.2&lt;/version&gt;
 &lt;/dependency&gt;</pre>
 </div>
 </div>
