@@ -118,18 +118,6 @@
             <ul>
               
     <li class="none">
-                    <a href="changelog.html">Change Log</a>
-          </li>
-              
-    <li class="none">
-                    <a href="dev-activity.html">Developer Activity</a>
-          </li>
-              
-    <li class="none">
-                    <a href="file-activity.html">File Activity</a>
-          </li>
-              
-    <li class="none">
                     <a href="apidocs/index.html">JavaDocs</a>
           </li>
               
@@ -185,17 +173,21 @@ FedoraClient fedora = new FedoraClient(credentials);</pre>
 </div>
 <div class="section"><h3>Including fedora-client in your Maven2 project</h3>
 <p>Add the following to your pom.xml:</p>
-<div class="source"><pre>&lt;repository&gt;
-    &lt;id&gt;duraspace-thirdparty&lt;/id&gt;
-    &lt;name&gt;Duraspace Thirdparty Maven Repository&lt;/name&gt;
-    &lt;url&gt;https://fedora-commons.org/m2/content/repositories/thirdparty&lt;/url&gt;
-&lt;/repository&gt;
+<div class="source"><pre>&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;duraspace-thirdparty&lt;/id&gt;
+        &lt;name&gt;Duraspace Thirdparty Maven Repository&lt;/name&gt;
+        &lt;url&gt;https://fedora-commons.org/m2/content/repositories/thirdparty&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
 
-&lt;dependency&gt;
-    &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
-    &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
-    &lt;version&gt;0.0.2&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
+        &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
+        &lt;version&gt;0.0.3&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</pre>
 </div>
 </div>
 </div>
