@@ -42,8 +42,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-05-23
-                  &nbsp;| Version: 0.0.4-SNAPSHOT
+        Last Published: 2010-05-26
+                  &nbsp;| Version: 0.0.5-SNAPSHOT
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -177,12 +177,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th>
 </tr>
-<tr class="b"><td>20</td>
+<tr class="b"><td>27</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>11.865</td>
+<td>96.296%</td>
+<td>9.341</td>
 </tr>
 </table>
 <br />
@@ -200,27 +200,35 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th>
 </tr>
-<tr class="b"><td><a href="#com.yourmediashelf.fedora.client">com.yourmediashelf.fedora.client</a></td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.util">com.yourmediashelf.fedora.util</a></td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.008</td>
+</tr>
+<tr class="a"><td><a href="#com.yourmediashelf.fedora.client">com.yourmediashelf.fedora.client</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.177</td>
+<td>0.13</td>
 </tr>
-<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.request">com.yourmediashelf.fedora.client.request</a></td>
-<td>19</td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.request">com.yourmediashelf.fedora.client.request</a></td>
+<td>22</td>
 <td>0</td>
+<td>1</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>11.688</td>
+<td>95.455%</td>
+<td>9.203</td>
 </tr>
 </table>
 <br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
-<div class="section"><h3>com.yourmediashelf.fedora.client</h3>
-<a name="com.yourmediashelf.fedora.client"></a><table class="bodyTable"><tr class="b"><th></th>
+<div class="section"><h3>com.yourmediashelf.fedora.util</h3>
+<a name="com.yourmediashelf.fedora.util"></a><table class="bodyTable"><tr class="a"><th></th>
 <th>Class</th>
 <th>Tests</th>
 <th>Errors </th>
@@ -229,19 +237,40 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th>
 </tr>
-<tr class="a"><td><a href="#com.yourmediashelf.fedora.clientFedoraClientTest"><img src="images/icon_success_sml.gif" /></a></td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.utilDateUtilityTest"><img src="images/icon_success_sml.gif" /></a></td>
+<td><a href="#com.yourmediashelf.fedora.utilDateUtilityTest">DateUtilityTest</a></td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.008</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>com.yourmediashelf.fedora.client</h3>
+<a name="com.yourmediashelf.fedora.client"></a><table class="bodyTable"><tr class="a"><th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th>
+</tr>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.clientFedoraClientTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.clientFedoraClientTest">FedoraClientTest</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.177</td>
+<td>0.13</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>com.yourmediashelf.fedora.client.request</h3>
-<a name="com.yourmediashelf.fedora.client.request"></a><table class="bodyTable"><tr class="b"><th></th>
+<a name="com.yourmediashelf.fedora.client.request"></a><table class="bodyTable"><tr class="a"><th></th>
 <th>Class</th>
 <th>Tests</th>
 <th>Errors </th>
@@ -250,68 +279,77 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th>
 </tr>
-<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestAddDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestAddDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestAddDatastreamTest">AddDatastreamTest</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.589</td>
+<td>1.06</td>
 </tr>
-<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestAddRelationshipTest"><img src="images/icon_success_sml.gif" /></a></td>
+<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestAddRelationshipTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestAddRelationshipTest">AddRelationshipTest</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.93</td>
+<td>0.595</td>
 </tr>
-<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestGetDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestGetDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestGetDatastreamTest">GetDatastreamTest</a></td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.912</td>
+<td>0.408</td>
 </tr>
-<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestGetRelationshipsTest"><img src="images/icon_success_sml.gif" /></a></td>
+<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestGetRelationshipsTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestGetRelationshipsTest">GetRelationshipsTest</a></td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.843</td>
+<td>1.53</td>
 </tr>
-<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestIngestTest"><img src="images/icon_success_sml.gif" /></a></td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestIngestTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestIngestTest">IngestTest</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>3.971</td>
+<td>2.737</td>
 </tr>
-<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestModifyDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
-<td><a href="#com.yourmediashelf.fedora.client.requestModifyDatastreamTest">ModifyDatastreamTest</a></td>
+<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestListDatastreamsTest"><img src="images/icon_success_sml.gif" /></a></td>
+<td><a href="#com.yourmediashelf.fedora.client.requestListDatastreamsTest">ListDatastreamsTest</a></td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.389</td>
+<td>0.387</td>
 </tr>
-<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestModifyObjectTest"><img src="images/icon_success_sml.gif" /></a></td>
-<td><a href="#com.yourmediashelf.fedora.client.requestModifyObjectTest">ModifyObjectTest</a></td>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestModifyDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
+<td><a href="#com.yourmediashelf.fedora.client.requestModifyDatastreamTest">ModifyDatastreamTest</a></td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.71</td>
+<td>0.64</td>
+</tr>
+<tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestModifyObjectTest"><img src="images/icon_warning_sml.gif" /></a></td>
+<td><a href="#com.yourmediashelf.fedora.client.requestModifyObjectTest">ModifyObjectTest</a></td>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>66.667%</td>
+<td>0.934</td>
 </tr>
 <tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestPurgeDatastreamTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestPurgeDatastreamTest">PurgeDatastreamTest</a></td>
@@ -320,7 +358,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.394</td>
+<td>0.244</td>
 </tr>
 <tr class="a"><td><a href="#com.yourmediashelf.fedora.client.requestPurgeObjectTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestPurgeObjectTest">PurgeObjectTest</a></td>
@@ -329,7 +367,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.374</td>
+<td>0.24</td>
 </tr>
 <tr class="b"><td><a href="#com.yourmediashelf.fedora.client.requestPurgeRelationshipTest"><img src="images/icon_success_sml.gif" /></a></td>
 <td><a href="#com.yourmediashelf.fedora.client.requestPurgeRelationshipTest">PurgeRelationshipTest</a></td>
@@ -338,7 +376,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.576</td>
+<td>0.428</td>
 </tr>
 </table>
 </div>
@@ -349,116 +387,179 @@ function toggleDisplay(elementId) {
 <div class="section"><h3>FedoraClientTest</h3>
 <a name="com.yourmediashelf.fedora.clientFedoraClientTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testGetMimeType</td>
-<td>0.173</td>
+<td>0.127</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>AddDatastreamTest</h3>
 <a name="com.yourmediashelf.fedora.client.requestAddDatastreamTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testDefaultValues</td>
-<td>0.608</td>
+<td>0.391</td>
 </tr>
 <tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testManagedContent</td>
-<td>0.351</td>
+<td>0.488</td>
 </tr>
 <tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testMissingContent</td>
-<td>0.626</td>
+<td>0.177</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>AddRelationshipTest</h3>
 <a name="com.yourmediashelf.fedora.client.requestAddRelationshipTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testAddRelationship</td>
-<td>0.404</td>
+<td>0.199</td>
 </tr>
 <tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testAddLiteral</td>
-<td>0.272</td>
+<td>0.204</td>
 </tr>
 <tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testAddTypedLiteral</td>
-<td>0.252</td>
+<td>0.19</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>GetDatastreamTest</h3>
 <a name="com.yourmediashelf.fedora.client.requestGetDatastreamTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testGetDatastreamAsHtml</td>
-<td>1.645</td>
+<td>0.213</td>
 </tr>
 <tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testGetDatastreamAsXml</td>
-<td>0.265</td>
+<td>0.192</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>GetRelationshipsTest</h3>
 <a name="com.yourmediashelf.fedora.client.requestGetRelationshipsTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testGetAllRelationships</td>
-<td>0.498</td>
+<td>0.35</td>
 </tr>
 <tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testGetRelationships</td>
-<td>0.343</td>
+<td>1.179</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>IngestTest</h3>
 <a name="com.yourmediashelf.fedora.client.requestIngestTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testIngestDefault</td>
-<td>2.905</td>
+<td>1.858</td>
 </tr>
 <tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testIngestWithNamespace</td>
-<td>0.59</td>
+<td>0.469</td>
 </tr>
 <tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testIngestWithPid</td>
-<td>0.356</td>
+<td>0.289</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3>ListDatastreamsTest</h3>
+<a name="com.yourmediashelf.fedora.client.requestListDatastreamsTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testListDatastreams</td>
+<td>0.386</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>ModifyDatastreamTest</h3>
-<a name="com.yourmediashelf.fedora.client.requestModifyDatastreamTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
-<td>testModifyDatastream</td>
-<td>0.387</td>
+<a name="com.yourmediashelf.fedora.client.requestModifyDatastreamTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testModifyDatastreamContent</td>
+<td>0.484</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testOptimisticLocking</td>
+<td>0.154</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>ModifyObjectTest</h3>
 <a name="com.yourmediashelf.fedora.client.requestModifyObjectTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
-<td>testModifyObjectLabel</td>
-<td>0.308</td>
+<td>testOptimisticLocking</td>
+<td>0.489</td>
 </tr>
 <tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
-<td>testModifyObjectState</td>
-<td>0.399</td>
+<td>testModifyObjectLabel</td>
+<td>0.239</td>
+</tr>
+<tr class="b"><td><a href="#com.yourmediashelf.fedora.client.request.ModifyObjectTest.testModifyObjectState"><img src="images/icon_error_sml.gif" /></a></td>
+<td><a href="#com.yourmediashelf.fedora.client.request.ModifyObjectTest.testModifyObjectState">testModifyObjectState</a>  <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('testModifyObjectState');"><span style="display: inline;" id="testModifyObjectStateoff">+</span><span id="testModifyObjectStateon" style="display: none;">-</span> [ Detail ]</a></div></td>
+<td>0.201</td>
+</tr>
+<tr class="a"><td></td>
+<td>expected:&lt;...10-05-26T15:43:32.38[]Z&gt; but was:&lt;...10-05-26T15:43:32.38[0]Z&gt;</td>
+<td></td>
+</tr>
+<tr class="b"><td></td>
+<td>  <div id="testModifyObjectStateerror" style="display:none;"><div class="source"><pre>org.junit.ComparisonFailure: expected:&lt;...10-05-26T15:43:32.38[]Z&gt; but was:&lt;...10-05-26T15:43:32.38[0]Z&gt;<br />
+at org.junit.Assert.assertEquals(Assert.java:123)<br />
+at org.junit.Assert.assertEquals(Assert.java:145)<br />
+at com.yourmediashelf.fedora.client.request.ModifyObjectTest.testModifyObjectState(ModifyObjectTest.java:50)<br />
+</pre>
+</div>
+</div></td>
+<td></td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>PurgeDatastreamTest</h3>
-<a name="com.yourmediashelf.fedora.client.requestPurgeDatastreamTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<a name="com.yourmediashelf.fedora.client.requestPurgeDatastreamTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testPurgeDatastream</td>
-<td>0.393</td>
+<td>0.242</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>PurgeObjectTest</h3>
-<a name="com.yourmediashelf.fedora.client.requestPurgeObjectTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<a name="com.yourmediashelf.fedora.client.requestPurgeObjectTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testPurgeObject</td>
-<td>0.373</td>
+<td>0.239</td>
 </tr>
 </table>
 </div>
 <div class="section"><h3>PurgeRelationshipTest</h3>
-<a name="com.yourmediashelf.fedora.client.requestPurgeRelationshipTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<a name="com.yourmediashelf.fedora.client.requestPurgeRelationshipTest"></a><table class="bodyTable"><tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
 <td>testPurgeRelationship</td>
-<td>0.573</td>
+<td>0.418</td>
 </tr>
 </table>
 </div>
+<div class="section"><h3>DateUtilityTest</h3>
+<a name="com.yourmediashelf.fedora.utilDateUtilityTest"></a><table class="bodyTable"><tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testFormatting</td>
+<td>0</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testTimezones</td>
+<td>0.003</td>
+</tr>
+<tr class="b"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testZeroYearAndEndFrag</td>
+<td>0</td>
+</tr>
+<tr class="a"><td><img src="images/icon_success_sml.gif" /></td>
+<td>testMillis</td>
+<td>0</td>
+</tr>
+</table>
+</div>
+<br />
+</div>
+<div class="section"><h2>Failure Details</h2>
+<a name="Failure_Details"></a><p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
+<br />
+<table class="bodyTable"><tr class="b"><td><img src="images/icon_error_sml.gif" /></td>
+<td><a name="com.yourmediashelf.fedora.client.request.ModifyObjectTest.testModifyObjectState"></a>testModifyObjectState</td>
+</tr>
+<tr class="a"><td></td>
+<td>org.junit.ComparisonFailure: expected:&lt;...10-05-26T15:43:32.38[]Z&gt; but was:&lt;...10-05-26T15:43:32.38[0]Z&gt;</td>
+</tr>
+            <tr class="b"><td></td>
+<td>  <div id="testModifyObjectStateerror" ><a href="./xref-test/com/yourmediashelf/fedora/client/request/ModifyObjectTest.html#50">com.yourmediashelf.fedora.client.request.ModifyObjectTest:50</a></div></td>
+</tr>
+</table>
 <br />
 </div>
 
