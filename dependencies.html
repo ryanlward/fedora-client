@@ -42,8 +42,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-05-26
-                  &nbsp;| Version: 0.0.5-SNAPSHOT
+        Last Published: 2010-05-27
+                  &nbsp;| Version: 0.0.5
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -159,17 +159,22 @@
 <th>Version</th>
 <th>Type</th>
 </tr>
-<tr class="b"><td>com.sun.jersey</td>
+<tr class="b"><td>com.hp.hpl.jena</td>
+<td><a href="http://www.openjena.org/" class="externalLink">jena</a></td>
+<td>2.6.2</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>com.sun.jersey</td>
 <td><a href="https://jersey.dev.java.net/jersey-client" class="externalLink">jersey-client</a></td>
 <td>1.2</td>
 <td>jar</td>
 </tr>
-<tr class="a"><td>eu.medsea.mimeutil</td>
+<tr class="b"><td>eu.medsea.mimeutil</td>
 <td><a href="http://www.medsea.eu/mime-util/" class="externalLink">mime-util</a></td>
 <td>2.1.3</td>
 <td>jar</td>
 </tr>
-<tr class="b"><td>joda-time</td>
+<tr class="a"><td>joda-time</td>
 <td><a href="http://joda-time.sourceforge.net" class="externalLink">joda-time</a></td>
 <td>1.6</td>
 <td>jar</td>
@@ -178,19 +183,14 @@
 </div>
 <a name="test"></a><div class="section"><h3>test</h3>
 <p>The following is a list of test dependencies for this project. These dependencies are only required to compile and run unit tests for the application:</p>
-<table class="bodyTable"><tr class="a"><th>GroupId</th>
+<table class="bodyTable"><tr class="b"><th>GroupId</th>
 <th>ArtifactId</th>
 <th>Version</th>
 <th>Type</th>
 </tr>
-<tr class="b"><td>com.hp.hpl.jena</td>
-<td><a href="http://www.openjena.org/" class="externalLink">jena</a></td>
-<td>2.6.2</td>
-<td>jar</td>
-</tr>
 <tr class="a"><td>junit</td>
 <td><a href="http://junit.org" class="externalLink">junit</a></td>
-<td>4.5</td>
+<td>4.8.1</td>
 <td>jar</td>
 </tr>
 <tr class="b"><td>xmlunit</td>
@@ -210,6 +210,16 @@
 <th>Version</th>
 <th>Type</th>
 </tr>
+<tr class="b"><td>com.hp.hpl.jena</td>
+<td><a href="http://jena.sf.net/iri" class="externalLink">iri</a></td>
+<td>0.7</td>
+<td>jar</td>
+</tr>
+<tr class="a"><td>com.ibm.icu</td>
+<td><a href="http://www-306.ibm.com/software/globalization/icu/" class="externalLink">icu4j</a></td>
+<td>3.4.4</td>
+<td>jar</td>
+</tr>
 <tr class="b"><td>com.sun.jersey</td>
 <td><a href="https://jersey.dev.java.net/jersey-core" class="externalLink">jersey-core</a></td>
 <td>1.2</td>
@@ -225,47 +235,28 @@
 <td>1.5.6</td>
 <td>jar</td>
 </tr>
+<tr class="a"><td>xerces</td>
+<td>xercesImpl</td>
+<td>2.7.1</td>
+<td>jar</td>
+</tr>
 </table>
 </div>
 <a name="runtime"></a><div class="section"><h3>runtime</h3>
 <p>The following is a list of runtime dependencies for this project. These dependencies are required to run the application:</p>
-<table class="bodyTable"><tr class="a"><th>GroupId</th>
-<th>ArtifactId</th>
-<th>Version</th>
-<th>Type</th>
-</tr>
-<tr class="b"><td>log4j</td>
-<td><a href="http://logging.apache.org/log4j/docs/" class="externalLink">log4j</a></td>
-<td>1.2.14</td>
-<td>jar</td>
-</tr>
-<tr class="a"><td>org.slf4j</td>
-<td><a href="http://www.slf4j.org" class="externalLink">slf4j-log4j12</a></td>
-<td>1.5.6</td>
-<td>jar</td>
-</tr>
-</table>
-</div>
-<a name="test"></a><div class="section"><h3>test</h3>
-<p>The following is a list of test dependencies for this project. These dependencies are only required to compile and run unit tests for the application:</p>
 <table class="bodyTable"><tr class="b"><th>GroupId</th>
 <th>ArtifactId</th>
 <th>Version</th>
 <th>Type</th>
 </tr>
-<tr class="a"><td>com.hp.hpl.jena</td>
-<td><a href="http://jena.sf.net/iri" class="externalLink">iri</a></td>
-<td>0.7</td>
+<tr class="a"><td>log4j</td>
+<td><a href="http://logging.apache.org/log4j/docs/" class="externalLink">log4j</a></td>
+<td>1.2.14</td>
 <td>jar</td>
 </tr>
-<tr class="b"><td>com.ibm.icu</td>
-<td><a href="http://www-306.ibm.com/software/globalization/icu/" class="externalLink">icu4j</a></td>
-<td>3.4.4</td>
-<td>jar</td>
-</tr>
-<tr class="a"><td>xerces</td>
-<td>xercesImpl</td>
-<td>2.7.1</td>
+<tr class="b"><td>org.slf4j</td>
+<td><a href="http://www.slf4j.org" class="externalLink">slf4j-log4j12</a></td>
+<td>1.5.6</td>
 <td>jar</td>
 </tr>
 </table>
@@ -290,17 +281,17 @@
       }
 </script>
 <a name="Dependency_Tree"></a><div class="section"><h3>Dependency Tree</h3>
-<ul><li>com.yourmediashelf.fedora.client:fedora-client:jar:0.0.5-SNAPSHOT <img id="_1814127259" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_837883481', '_1814127259' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_837883481" style="display:none"><table class="bodyTable"><tr class="b"><th>MediaShelf fedora-client</th>
+<ul><li>com.yourmediashelf.fedora.client:fedora-client:jar:0.0.5 <img id="_615810440" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1853886537', '_615810440' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1853886537" style="display:none"><table class="bodyTable"><tr class="a"><th>MediaShelf fedora-client</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Java client library for Fedora</p>
+<tr class="b"><td><p><b>Description: </b>Java client library for Fedora</p>
 <p><b>URL: </b><a href="http://mediashelf.github.com/fedora-client" class="externalLink">http://mediashelf.github.com/fedora-client</a></p>
 <p><b>Project License: </b><a href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html" class="externalLink">GNU Lesser General Public License, Version 3.0</a></p>
 </td>
 </tr>
 </table>
-</div><ul><li>com.sun.jersey:jersey-client:jar:1.2 (compile) <img id="_1993895844" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_651565856', '_1993895844' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_651565856" style="display:none"><table class="bodyTable"><tr class="b"><th>jersey-client</th>
+</div><ul><li>com.sun.jersey:jersey-client:jar:1.2 (compile) <img id="_658923297" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_777824789', '_658923297' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_777824789" style="display:none"><table class="bodyTable"><tr class="a"><th>jersey-client</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Jersey is the open source (under dual CDDL+GPL license) JAX-RS (JSR 311)
+<tr class="b"><td><p><b>Description: </b>Jersey is the open source (under dual CDDL+GPL license) JAX-RS (JSR 311)
         production quality Reference Implementation for building
         RESTful Web services.</p>
 <p><b>URL: </b><a href="https://jersey.dev.java.net/jersey-client" class="externalLink">https://jersey.dev.java.net/jersey-client</a></p>
@@ -308,9 +299,9 @@
 </td>
 </tr>
 </table>
-</div><ul><li>com.sun.jersey:jersey-core:jar:1.2 (compile) <img id="_1181970160" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_296196551', '_1181970160' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_296196551" style="display:none"><table class="bodyTable"><tr class="b"><th>jersey-core</th>
+</div><ul><li>com.sun.jersey:jersey-core:jar:1.2 (compile) <img id="_1653760035" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1651442102', '_1653760035' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1651442102" style="display:none"><table class="bodyTable"><tr class="a"><th>jersey-core</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Jersey is the open source (under dual CDDL+GPL license) JAX-RS (JSR 311)
+<tr class="b"><td><p><b>Description: </b>Jersey is the open source (under dual CDDL+GPL license) JAX-RS (JSR 311)
         production quality Reference Implementation for building
         RESTful Web services.</p>
 <p><b>URL: </b><a href="https://jersey.dev.java.net/jersey-core" class="externalLink">https://jersey.dev.java.net/jersey-core</a></p>
@@ -318,9 +309,9 @@
 </td>
 </tr>
 </table>
-</div><ul><li>javax.ws.rs:jsr311-api:jar:1.1.1 (compile) <img id="_39928278" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_947271211', '_39928278' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_947271211" style="display:none"><table class="bodyTable"><tr class="b"><th>jsr311-api</th>
+</div><ul><li>javax.ws.rs:jsr311-api:jar:1.1.1 (compile) <img id="_2108659614" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1548891753', '_2108659614' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1548891753" style="display:none"><table class="bodyTable"><tr class="a"><th>jsr311-api</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>There is currently no description associated with this project.</p>
+<tr class="b"><td><p><b>Description: </b>There is currently no description associated with this project.</p>
 <p><b>URL: </b><a href="https://jsr311.dev.java.net" class="externalLink">https://jsr311.dev.java.net</a></p>
 <p><b>Project License: </b><a href="http://www.opensource.org/licenses/cddl1.php" class="externalLink">CDDL License</a></p>
 </td>
@@ -331,9 +322,9 @@
 </li>
 </ul>
 </li>
-<li>eu.medsea.mimeutil:mime-util:jar:2.1.3 (compile) <img id="_1207130859" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_608718609', '_1207130859' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_608718609" style="display:none"><table class="bodyTable"><tr class="b"><th>Mime Detection Utility</th>
+<li>eu.medsea.mimeutil:mime-util:jar:2.1.3 (compile) <img id="_1529908262" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1637952010', '_1529908262' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1637952010" style="display:none"><table class="bodyTable"><tr class="a"><th>Mime Detection Utility</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>mime-util is a simple to use, small, light weight and fast open source java utility library that can detect
+<tr class="b"><td><p><b>Description: </b>mime-util is a simple to use, small, light weight and fast open source java utility library that can detect
 		MIME types from files, input streams, URL's and byte arrays.
 		Due to the use of regular expressions and the java.nio packages it requires at least Java 1.4.</p>
 <p><b>URL: </b><a href="http://www.medsea.eu/mime-util/" class="externalLink">http://www.medsea.eu/mime-util/</a></p>
@@ -341,35 +332,35 @@
 </td>
 </tr>
 </table>
-</div><ul><li>org.slf4j:slf4j-api:jar:1.5.6 (compile) <img id="_1515197033" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1204401511', '_1515197033' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1204401511" style="display:none"><table class="bodyTable"><tr class="b"><th>SLF4J API Module</th>
+</div><ul><li>org.slf4j:slf4j-api:jar:1.5.6 (compile) <img id="_694979513" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_201367711', '_694979513' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_201367711" style="display:none"><table class="bodyTable"><tr class="a"><th>SLF4J API Module</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The slf4j API</p>
+<tr class="b"><td><p><b>Description: </b>The slf4j API</p>
 <p><b>URL: </b><a href="http://www.slf4j.org" class="externalLink">http://www.slf4j.org</a></p>
 <p><b>Project License: </b>No project license is defined for this project.</p>
 </td>
 </tr>
 </table>
 </div></li>
-<li>org.slf4j:slf4j-log4j12:jar:1.5.6 (runtime) <img id="_1208558332" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_284618398', '_1208558332' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_284618398" style="display:none"><table class="bodyTable"><tr class="b"><th>SLF4J LOG4J-12 Binding</th>
+<li>org.slf4j:slf4j-log4j12:jar:1.5.6 (runtime) <img id="_1605242651" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_536963483', '_1605242651' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_536963483" style="display:none"><table class="bodyTable"><tr class="a"><th>SLF4J LOG4J-12 Binding</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The slf4j log4j-12 binding</p>
+<tr class="b"><td><p><b>Description: </b>The slf4j log4j-12 binding</p>
 <p><b>URL: </b><a href="http://www.slf4j.org" class="externalLink">http://www.slf4j.org</a></p>
 <p><b>Project License: </b>No project license is defined for this project.</p>
 </td>
 </tr>
 </table>
-</div><ul><li>org.slf4j:slf4j-api:jar:1.5.6 (runtime) <img id="_130356109" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_112680127', '_130356109' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_112680127" style="display:none"><table class="bodyTable"><tr class="b"><th>SLF4J API Module</th>
+</div><ul><li>org.slf4j:slf4j-api:jar:1.5.6 (runtime) <img id="_1547772614" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_329307153', '_1547772614' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_329307153" style="display:none"><table class="bodyTable"><tr class="a"><th>SLF4J API Module</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The slf4j API</p>
+<tr class="b"><td><p><b>Description: </b>The slf4j API</p>
 <p><b>URL: </b><a href="http://www.slf4j.org" class="externalLink">http://www.slf4j.org</a></p>
 <p><b>Project License: </b>No project license is defined for this project.</p>
 </td>
 </tr>
 </table>
 </div></li>
-<li>log4j:log4j:jar:1.2.14 (runtime) <img id="_1053181632" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1493695685', '_1053181632' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1493695685" style="display:none"><table class="bodyTable"><tr class="b"><th>Log4j</th>
+<li>log4j:log4j:jar:1.2.14 (runtime) <img id="_989495604" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_511754232', '_989495604' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_511754232" style="display:none"><table class="bodyTable"><tr class="a"><th>Log4j</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Log4j</p>
+<tr class="b"><td><p><b>Description: </b>Log4j</p>
 <p><b>URL: </b><a href="http://logging.apache.org/log4j/docs/" class="externalLink">http://logging.apache.org/log4j/docs/</a></p>
 <p><b>Project License: </b><a href="http://www.apache.org/licenses/LICENSE-2.0.txt" class="externalLink">The Apache Software License, Version 2.0</a></p>
 </td>
@@ -378,9 +369,9 @@
 </div></li>
 </ul>
 </li>
-<li>log4j:log4j:jar:1.2.14 (runtime) <img id="_1598660419" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1125269376', '_1598660419' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1125269376" style="display:none"><table class="bodyTable"><tr class="b"><th>Log4j</th>
+<li>log4j:log4j:jar:1.2.14 (runtime) <img id="_1591919415" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1063640844', '_1591919415' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1063640844" style="display:none"><table class="bodyTable"><tr class="a"><th>Log4j</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Log4j</p>
+<tr class="b"><td><p><b>Description: </b>Log4j</p>
 <p><b>URL: </b><a href="http://logging.apache.org/log4j/docs/" class="externalLink">http://logging.apache.org/log4j/docs/</a></p>
 <p><b>Project License: </b><a href="http://www.apache.org/licenses/LICENSE-2.0.txt" class="externalLink">The Apache Software License, Version 2.0</a></p>
 </td>
@@ -389,34 +380,34 @@
 </div></li>
 </ul>
 </li>
-<li>joda-time:joda-time:jar:1.6 (compile) <img id="_319750675" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_534215110', '_319750675' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_534215110" style="display:none"><table class="bodyTable"><tr class="b"><th>Joda time</th>
+<li>joda-time:joda-time:jar:1.6 (compile) <img id="_1807654902" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1895936251', '_1807654902' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1895936251" style="display:none"><table class="bodyTable"><tr class="a"><th>Joda time</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Date and time library to replace JDK date handling.</p>
+<tr class="b"><td><p><b>Description: </b>Date and time library to replace JDK date handling.</p>
 <p><b>URL: </b><a href="http://joda-time.sourceforge.net" class="externalLink">http://joda-time.sourceforge.net</a></p>
 <p><b>Project License: </b><a href="http://www.apache.org/licenses/" class="externalLink">Apache 2</a></p>
 </td>
 </tr>
 </table>
 </div></li>
-<li>com.hp.hpl.jena:jena:jar:2.6.2 (test) <img id="_824090281" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1489826084', '_824090281' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1489826084" style="display:none"><table class="bodyTable"><tr class="b"><th>Jena</th>
+<li>com.hp.hpl.jena:jena:jar:2.6.2 (compile) <img id="_1050545850" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_690250182', '_1050545850' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_690250182" style="display:none"><table class="bodyTable"><tr class="a"><th>Jena</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>Jena is a Java framework for building Semantic Web applications. It provides a programmatic environment for RDF, RDFS and OWL, SPARQL and includes a rule-based inference engine.</p>
+<tr class="b"><td><p><b>Description: </b>Jena is a Java framework for building Semantic Web applications. It provides a programmatic environment for RDF, RDFS and OWL, SPARQL and includes a rule-based inference engine.</p>
 <p><b>URL: </b><a href="http://www.openjena.org/" class="externalLink">http://www.openjena.org/</a></p>
 <p><b>Project License: </b><a href="http://jena.sourceforge.net/license.html" class="externalLink">BSD</a></p>
 </td>
 </tr>
 </table>
-</div><ul><li>com.hp.hpl.jena:iri:jar:0.7 (test) <img id="_1190517234" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_12335822', '_1190517234' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_12335822" style="display:none"><table class="bodyTable"><tr class="b"><th>Jena IRI</th>
+</div><ul><li>com.hp.hpl.jena:iri:jar:0.7 (compile) <img id="_1555247713" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1536874615', '_1555247713' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1536874615" style="display:none"><table class="bodyTable"><tr class="a"><th>Jena IRI</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>There is currently no description associated with this project.</p>
+<tr class="b"><td><p><b>Description: </b>There is currently no description associated with this project.</p>
 <p><b>URL: </b><a href="http://jena.sf.net/iri" class="externalLink">http://jena.sf.net/iri</a></p>
 <p><b>Project License: </b><a href="http://jena.sourceforge.net/iri/license.html" class="externalLink">BSD-style license</a></p>
 </td>
 </tr>
 </table>
-</div><ul><li>com.ibm.icu:icu4j:jar:3.4.4 (test) <img id="_1712405121" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_2065568001', '_1712405121' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_2065568001" style="display:none"><table class="bodyTable"><tr class="b"><th>ICU4J</th>
+</div><ul><li>com.ibm.icu:icu4j:jar:3.4.4 (compile) <img id="_765935394" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_584978292', '_765935394' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_584978292" style="display:none"><table class="bodyTable"><tr class="a"><th>ICU4J</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The International Component for Unicode (ICU) is a mature,
+<tr class="b"><td><p><b>Description: </b>The International Component for Unicode (ICU) is a mature,
         portable set of C/C++ and Java libraries for Unicode support, software
         internationalization (I18N) and globalization (G11N), giving
         applications the same results on all platforms.</p>
@@ -428,18 +419,18 @@
 </div></li>
 </ul>
 </li>
-<li>org.slf4j:slf4j-api:jar:1.5.6 (test) <img id="_976519178" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1783226509', '_976519178' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1783226509" style="display:none"><table class="bodyTable"><tr class="b"><th>SLF4J API Module</th>
+<li>org.slf4j:slf4j-api:jar:1.5.6 (compile) <img id="_1986480293" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1013227621', '_1986480293' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1013227621" style="display:none"><table class="bodyTable"><tr class="a"><th>SLF4J API Module</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The slf4j API</p>
+<tr class="b"><td><p><b>Description: </b>The slf4j API</p>
 <p><b>URL: </b><a href="http://www.slf4j.org" class="externalLink">http://www.slf4j.org</a></p>
 <p><b>Project License: </b>No project license is defined for this project.</p>
 </td>
 </tr>
 </table>
 </div></li>
-<li>com.ibm.icu:icu4j:jar:3.4.4 (test) <img id="_1869840945" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1249391371', '_1869840945' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1249391371" style="display:none"><table class="bodyTable"><tr class="b"><th>ICU4J</th>
+<li>com.ibm.icu:icu4j:jar:3.4.4 (compile) <img id="_1571368796" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1262266308', '_1571368796' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1262266308" style="display:none"><table class="bodyTable"><tr class="a"><th>ICU4J</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The International Component for Unicode (ICU) is a mature,
+<tr class="b"><td><p><b>Description: </b>The International Component for Unicode (ICU) is a mature,
         portable set of C/C++ and Java libraries for Unicode support, software
         internationalization (I18N) and globalization (G11N), giving
         applications the same results on all platforms.</p>
@@ -449,17 +440,17 @@
 </tr>
 </table>
 </div></li>
-<li>xerces:xercesImpl:jar:2.7.1 (test) <img id="_1524944688" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1660125299', '_1524944688' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1660125299" style="display:none"><table class="bodyTable"><tr class="b"><th>Unnamed - xerces:xercesImpl:jar:2.7.1</th>
+<li>xerces:xercesImpl:jar:2.7.1 (compile) <img id="_1171314614" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_1921651591', '_1171314614' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_1921651591" style="display:none"><table class="bodyTable"><tr class="a"><th>Unnamed - xerces:xercesImpl:jar:2.7.1</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>There is currently no description associated with this project.</p>
+<tr class="b"><td><p><b>Description: </b>There is currently no description associated with this project.</p>
 <p><b>Project License: </b>No project license is defined for this project.</p>
 </td>
 </tr>
 </table>
 </div></li>
-<li>org.slf4j:slf4j-log4j12:jar:1.5.6 (test) <img id="_142541399" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_408838813', '_142541399' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_408838813" style="display:none"><table class="bodyTable"><tr class="b"><th>SLF4J LOG4J-12 Binding</th>
+<li>org.slf4j:slf4j-log4j12:jar:1.5.6 (runtime) <img id="_989393165" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_958936469', '_989393165' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_958936469" style="display:none"><table class="bodyTable"><tr class="a"><th>SLF4J LOG4J-12 Binding</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>The slf4j log4j-12 binding</p>
+<tr class="b"><td><p><b>Description: </b>The slf4j log4j-12 binding</p>
 <p><b>URL: </b><a href="http://www.slf4j.org" class="externalLink">http://www.slf4j.org</a></p>
 <p><b>Project License: </b>No project license is defined for this project.</p>
 </td>
@@ -468,18 +459,18 @@
 </div></li>
 </ul>
 </li>
-<li>junit:junit:jar:4.5 (test) <img id="_2012441888" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_627226634', '_2012441888' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_627226634" style="display:none"><table class="bodyTable"><tr class="b"><th>JUnit</th>
+<li>junit:junit:jar:4.8.1 (test) <img id="_79091" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_457398578', '_79091' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_457398578" style="display:none"><table class="bodyTable"><tr class="a"><th>JUnit</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p>
+<tr class="b"><td><p><b>Description: </b>JUnit is a regression testing framework written by Erich Gamma and Kent Beck. It is used by the developer who implements unit tests in Java.</p>
 <p><b>URL: </b><a href="http://junit.org" class="externalLink">http://junit.org</a></p>
 <p><b>Project License: </b><a href="http://www.opensource.org/licenses/cpl1.0.txt" class="externalLink">Common Public License Version 1.0</a></p>
 </td>
 </tr>
 </table>
 </div></li>
-<li>xmlunit:xmlunit:jar:1.3 (test) <img id="_1042435108" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_349005422', '_1042435108' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_349005422" style="display:none"><table class="bodyTable"><tr class="b"><th>XMLUnit for Java</th>
+<li>xmlunit:xmlunit:jar:1.3 (test) <img id="_1874644519" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_312560928', '_1874644519' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_312560928" style="display:none"><table class="bodyTable"><tr class="a"><th>XMLUnit for Java</th>
 </tr>
-<tr class="a"><td><p><b>Description: </b>XMLUnit compares a control XML document to a test document or the result of a transformation, validates documents, and compares the results of XPath expressions.</p>
+<tr class="b"><td><p><b>Description: </b>XMLUnit compares a control XML document to a test document or the result of a transformation, validates documents, and compares the results of XPath expressions.</p>
 <p><b>URL: </b><a href="http://xmlunit.sourceforge.net/" class="externalLink">http://xmlunit.sourceforge.net/</a></p>
 <p><b>Project License: </b><a href="http://xmlunit.svn.sourceforge.net/viewvc/*checkout*/xmlunit/trunk/xmlunit/LICENSE.txt" class="externalLink">BSD License</a></p>
 </td>
@@ -505,7 +496,7 @@
 <p><b>GNU Lesser General Public License, Version 3.0: </b>MediaShelf fedora-client</p>
 </div>
 <a name="Dependency_File_Details"></a><div class="section"><h2>Dependency File Details</h2>
-<table class="bodyTable"><tbody><tr class="b"><th align="left">Filename</th>
+<table class="bodyTable"><tbody><tr class="a"><th align="left">Filename</th>
 <th align="right">Size</th>
 <th align="right">Entries</th>
 <th align="right">Classes</th>
@@ -513,7 +504,7 @@
 <th align="center">JDK Rev</th>
 <th align="center">Debug</th>
 </tr>
-<tr class="a"><td align="left">iri-0.7.jar</td>
+<tr class="b"><td align="left">iri-0.7.jar</td>
 <td align="right">147.79 kB</td>
 <td align="right">78</td>
 <td align="right">62</td>
@@ -521,7 +512,7 @@
 <td align="center">1.5</td>
 <td align="center">debug</td>
 </tr>
-<tr class="b"><td align="left">jena-2.6.2.jar</td>
+<tr class="a"><td align="left">jena-2.6.2.jar</td>
 <td align="right">1.79 MB</td>
 <td align="right">1,494</td>
 <td align="right">1,383</td>
@@ -529,7 +520,7 @@
 <td align="center">1.5</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><td align="left">icu4j-3.4.4.jar</td>
+<tr class="b"><td align="left">icu4j-3.4.4.jar</td>
 <td align="right">3.08 MB</td>
 <td align="right">1,073</td>
 <td align="right">525</td>
@@ -537,7 +528,7 @@
 <td align="center">1.3</td>
 <td align="center">debug</td>
 </tr>
-<tr class="b"><td align="left">jersey-client-1.2.jar</td>
+<tr class="a"><td align="left">jersey-client-1.2.jar</td>
 <td align="right">109.47 kB</td>
 <td align="right">106</td>
 <td align="right">82</td>
@@ -545,7 +536,7 @@
 <td align="center">1.5</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><td align="left">jersey-core-1.2.jar</td>
+<tr class="b"><td align="left">jersey-core-1.2.jar</td>
 <td align="right">362.47 kB</td>
 <td align="right">316</td>
 <td align="right">271</td>
@@ -553,7 +544,7 @@
 <td align="center">1.5</td>
 <td align="center">debug</td>
 </tr>
-<tr class="b"><td align="left">mime-util-2.1.3.jar</td>
+<tr class="a"><td align="left">mime-util-2.1.3.jar</td>
 <td align="right">116.39 kB</td>
 <td align="right">44</td>
 <td align="right">26</td>
@@ -561,7 +552,7 @@
 <td align="center">1.2</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><td align="left">jsr311-api-1.1.1.jar</td>
+<tr class="b"><td align="left">jsr311-api-1.1.1.jar</td>
 <td align="right">45.28 kB</td>
 <td align="right">67</td>
 <td align="right">55</td>
@@ -569,7 +560,7 @@
 <td align="center">1.5</td>
 <td align="center">debug</td>
 </tr>
-<tr class="b"><td align="left">joda-time-1.6.jar</td>
+<tr class="a"><td align="left">joda-time-1.6.jar</td>
 <td align="right">522.29 kB</td>
 <td align="right">675</td>
 <td align="right">222</td>
@@ -577,15 +568,15 @@
 <td align="center">1.3</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><td align="left">junit-4.5.jar</td>
-<td align="right">194.28 kB</td>
-<td align="right">222</td>
-<td align="right">188</td>
-<td align="right">26</td>
+<tr class="b"><td align="left">junit-4.8.1.jar</td>
+<td align="right">231.49 kB</td>
+<td align="right">267</td>
+<td align="right">230</td>
+<td align="right">30</td>
 <td align="center">1.5</td>
 <td align="center">debug</td>
 </tr>
-<tr class="b"><td align="left">log4j-1.2.14.jar</td>
+<tr class="a"><td align="left">log4j-1.2.14.jar</td>
 <td align="right">358.83 kB</td>
 <td align="right">288</td>
 <td align="right">256</td>
@@ -593,7 +584,7 @@
 <td align="center">1.1</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><td align="left">slf4j-api-1.5.6.jar</td>
+<tr class="b"><td align="left">slf4j-api-1.5.6.jar</td>
 <td align="right">21.81 kB</td>
 <td align="right">32</td>
 <td align="right">21</td>
@@ -601,7 +592,7 @@
 <td align="center">1.3</td>
 <td align="center">debug</td>
 </tr>
-<tr class="b"><td align="left">slf4j-log4j12-1.5.6.jar</td>
+<tr class="a"><td align="left">slf4j-log4j12-1.5.6.jar</td>
 <td align="right">9.45 kB</td>
 <td align="right">16</td>
 <td align="right">6</td>
@@ -609,7 +600,7 @@
 <td align="center">1.3</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><td align="left">xercesImpl-2.7.1.jar</td>
+<tr class="b"><td align="left">xercesImpl-2.7.1.jar</td>
 <td align="right">1.15 MB</td>
 <td align="right">938</td>
 <td align="right">870</td>
@@ -617,7 +608,7 @@
 <td align="center">1.1</td>
 <td align="center">release</td>
 </tr>
-<tr class="b"><td align="left">xmlunit-1.3.jar</td>
+<tr class="a"><td align="left">xmlunit-1.3.jar</td>
 <td align="right">94.48 kB</td>
 <td align="right">77</td>
 <td align="right">68</td>
@@ -625,7 +616,7 @@
 <td align="center">1.3</td>
 <td align="center">debug</td>
 </tr>
-<tr class="a"><th align="left">Total</th>
+<tr class="b"><th align="left">Total</th>
 <th align="right">Size</th>
 <th align="right">Entries</th>
 <th align="right">Classes</th>
@@ -633,31 +624,31 @@
 <th align="center">JDK Rev</th>
 <th align="center">Debug</th>
 </tr>
-<tr class="b"><td align="right">14</td>
-<td align="right">7.96 MB</td>
-<td align="right">5,426</td>
-<td align="right">4,035</td>
-<td align="right">194</td>
+<tr class="a"><td align="right">14</td>
+<td align="right">8.00 MB</td>
+<td align="right">5,471</td>
+<td align="right">4,077</td>
+<td align="right">198</td>
 <td align="center">1.5</td>
 <td align="right">13</td>
 </tr>
-<tr class="a"><td align="right">compile: 6</td>
-<td align="right">compile: 1.15 MB</td>
-<td align="right">compile: 1,240</td>
-<td align="right">compile: 677</td>
-<td align="right">compile: 49</td>
+<tr class="b"><td align="right">compile: 10</td>
+<td align="right">compile: 7.32 MB</td>
+<td align="right">compile: 4,823</td>
+<td align="right">compile: 3,517</td>
+<td align="right">compile: 143</td>
 <td align="center">-</td>
-<td align="right">compile: 6</td>
+<td align="right">compile: 9</td>
 </tr>
-<tr class="b"><td align="right">test: 6</td>
-<td align="right">test: 6.45 MB</td>
-<td align="right">test: 3,882</td>
-<td align="right">test: 3,096</td>
-<td align="right">test: 125</td>
+<tr class="a"><td align="right">test: 2</td>
+<td align="right">test: 325.97 kB</td>
+<td align="right">test: 344</td>
+<td align="right">test: 298</td>
+<td align="right">test: 35</td>
 <td align="center">-</td>
-<td align="right">test: 5</td>
+<td align="right">test: 2</td>
 </tr>
-<tr class="a"><td align="right">runtime: 2</td>
+<tr class="b"><td align="right">runtime: 2</td>
 <td align="right">runtime: 368.28 kB</td>
 <td align="right">runtime: 304</td>
 <td align="right">runtime: 262</td>
@@ -669,37 +660,37 @@
 </table>
 </div>
 <a name="Dependency_Repository_Locations"></a><div class="section"><h2>Dependency Repository Locations</h2>
-<table class="bodyTable"><tbody><tr class="b"><th align="left">Repo ID</th>
+<table class="bodyTable"><tbody><tr class="a"><th align="left">Repo ID</th>
 <th align="left">URL</th>
 <th align="center">Release</th>
 <th align="center">Snapshot</th>
 </tr>
-<tr class="a"><td align="left">repo-jena</td>
+<tr class="b"><td align="left">repo-jena</td>
 <td align="left"><a href="http://openjena.org/repo" class="externalLink">http://openjena.org/repo</a></td>
 <td align="center">Yes</td>
 <td align="center">-</td>
 </tr>
-<tr class="b"><td align="left">java.net.m2</td>
+<tr class="a"><td align="left">java.net.m2</td>
 <td align="left"><a href="http://download.java.net/maven/2" class="externalLink">http://download.java.net/maven/2</a></td>
 <td align="center">Yes</td>
 <td align="center">Yes</td>
 </tr>
-<tr class="a"><td align="left">repo-jena-dev</td>
+<tr class="b"><td align="left">repo-jena-dev</td>
 <td align="left"><a href="http://openjena.org/repo-dev" class="externalLink">http://openjena.org/repo-dev</a></td>
 <td align="center">Yes</td>
 <td align="center">Yes</td>
 </tr>
-<tr class="b"><td align="left">m1.dev.java.net</td>
+<tr class="a"><td align="left">m1.dev.java.net</td>
 <td align="left"><a href="http://download.java.net/maven/1" class="externalLink">http://download.java.net/maven/1</a></td>
 <td align="center">Yes</td>
 <td align="center">Yes</td>
 </tr>
-<tr class="a"><td align="left">m2.dev.java.net</td>
+<tr class="b"><td align="left">m2.dev.java.net</td>
 <td align="left"><a href="http://download.java.net/maven/2" class="externalLink">http://download.java.net/maven/2</a></td>
 <td align="center">Yes</td>
 <td align="center">Yes</td>
 </tr>
-<tr class="b"><td align="left">central</td>
+<tr class="a"><td align="left">central</td>
 <td align="left"><a href="http://repo1.maven.org/maven2" class="externalLink">http://repo1.maven.org/maven2</a></td>
 <td align="center">Yes</td>
 <td align="center">-</td>
@@ -707,7 +698,7 @@
 </tbody>
 </table>
 <p>Repository locations for each of the Dependencies.</p>
-<table class="bodyTable"><tbody><tr class="a"><th align="left">Artifact</th>
+<table class="bodyTable"><tbody><tr class="b"><th align="left">Artifact</th>
 <th align="center">repo-jena</th>
 <th align="center">java.net.m2</th>
 <th align="center">repo-jena-dev</th>
@@ -715,7 +706,7 @@
 <th align="center">m2.dev.java.net</th>
 <th align="center">central</th>
 </tr>
-<tr class="b"><td align="left">com.hp.hpl.jena:iri:jar:0.7</td>
+<tr class="a"><td align="left">com.hp.hpl.jena:iri:jar:0.7</td>
 <td align="center"><a href="http://openjena.org/repo/com/hp/hpl/jena/iri/0.7/iri-0.7.jar" class="externalLink"><img alt="Found at http://openjena.org/repo" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -723,7 +714,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/com/hp/hpl/jena/iri/0.7/iri-0.7.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="a"><td align="left">com.hp.hpl.jena:jena:jar:2.6.2</td>
+<tr class="b"><td align="left">com.hp.hpl.jena:jena:jar:2.6.2</td>
 <td align="center"><a href="http://openjena.org/repo/com/hp/hpl/jena/jena/2.6.2/jena-2.6.2.jar" class="externalLink"><img alt="Found at http://openjena.org/repo" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -731,7 +722,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/com/hp/hpl/jena/jena/2.6.2/jena-2.6.2.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="b"><td align="left">com.ibm.icu:icu4j:jar:3.4.4</td>
+<tr class="a"><td align="left">com.ibm.icu:icu4j:jar:3.4.4</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -739,7 +730,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="a"><td align="left">com.sun.jersey:jersey-client:jar:1.2</td>
+<tr class="b"><td align="left">com.sun.jersey:jersey-client:jar:1.2</td>
 <td align="center">-</td>
 <td align="center"><a href="http://download.java.net/maven/2/com/sun/jersey/jersey-client/1.2/jersey-client-1.2.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
@@ -747,7 +738,7 @@
 <td align="center"><a href="http://download.java.net/maven/2/com/sun/jersey/jersey-client/1.2/jersey-client-1.2.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
 </tr>
-<tr class="b"><td align="left">com.sun.jersey:jersey-core:jar:1.2</td>
+<tr class="a"><td align="left">com.sun.jersey:jersey-core:jar:1.2</td>
 <td align="center">-</td>
 <td align="center"><a href="http://download.java.net/maven/2/com/sun/jersey/jersey-core/1.2/jersey-core-1.2.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
@@ -755,7 +746,7 @@
 <td align="center"><a href="http://download.java.net/maven/2/com/sun/jersey/jersey-core/1.2/jersey-core-1.2.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
 </tr>
-<tr class="a"><td align="left">eu.medsea.mimeutil:mime-util:jar:2.1.3</td>
+<tr class="b"><td align="left">eu.medsea.mimeutil:mime-util:jar:2.1.3</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -763,7 +754,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/eu/medsea/mimeutil/mime-util/2.1.3/mime-util-2.1.3.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="b"><td align="left">javax.ws.rs:jsr311-api:jar:1.1.1</td>
+<tr class="a"><td align="left">javax.ws.rs:jsr311-api:jar:1.1.1</td>
 <td align="center">-</td>
 <td align="center"><a href="http://download.java.net/maven/2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2" src="images/icon_success_sml.gif" /></a></td>
 <td align="center">-</td>
@@ -771,7 +762,7 @@
 <td align="center"><a href="http://download.java.net/maven/2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar" class="externalLink"><img alt="Found at http://download.java.net/maven/2" src="images/icon_success_sml.gif" /></a></td>
 <td align="center"><a href="http://repo1.maven.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="a"><td align="left">joda-time:joda-time:jar:1.6</td>
+<tr class="b"><td align="left">joda-time:joda-time:jar:1.6</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -779,15 +770,15 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/joda-time/joda-time/1.6/joda-time-1.6.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="b"><td align="left">junit:junit:jar:4.5</td>
+<tr class="a"><td align="left">junit:junit:jar:4.8.1</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
-<td align="center"><a href="http://repo1.maven.org/maven2/junit/junit/4.5/junit-4.5.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
+<td align="center"><a href="http://repo1.maven.org/maven2/junit/junit/4.8.1/junit-4.8.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="a"><td align="left">log4j:log4j:jar:1.2.14</td>
+<tr class="b"><td align="left">log4j:log4j:jar:1.2.14</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -795,7 +786,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/log4j/log4j/1.2.14/log4j-1.2.14.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="b"><td align="left">org.slf4j:slf4j-api:jar:1.5.6</td>
+<tr class="a"><td align="left">org.slf4j:slf4j-api:jar:1.5.6</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -803,7 +794,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="a"><td align="left">org.slf4j:slf4j-log4j12:jar:1.5.6</td>
+<tr class="b"><td align="left">org.slf4j:slf4j-log4j12:jar:1.5.6</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -811,7 +802,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.5.6/slf4j-log4j12-1.5.6.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="b"><td align="left">xerces:xercesImpl:jar:2.7.1</td>
+<tr class="a"><td align="left">xerces:xercesImpl:jar:2.7.1</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -819,7 +810,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/xerces/xercesImpl/2.7.1/xercesImpl-2.7.1.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="a"><td align="left">xmlunit:xmlunit:jar:1.3</td>
+<tr class="b"><td align="left">xmlunit:xmlunit:jar:1.3</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -827,7 +818,7 @@
 <td align="center">-</td>
 <td align="center"><a href="http://repo1.maven.org/maven2/xmlunit/xmlunit/1.3/xmlunit-1.3.jar" class="externalLink"><img alt="Found at http://repo1.maven.org/maven2" src="images/icon_success_sml.gif" /></a></td>
 </tr>
-<tr class="b"><th align="left">Total</th>
+<tr class="a"><th align="left">Total</th>
 <th align="center">repo-jena</th>
 <th align="center">java.net.m2</th>
 <th align="center">repo-jena-dev</th>
@@ -835,7 +826,7 @@
 <th align="center">m2.dev.java.net</th>
 <th align="center">central</th>
 </tr>
-<tr class="a"><td align="left">14 (compile: 6, test: 6, runtime: 2)</td>
+<tr class="b"><td align="left">14 (compile: 10, test: 2, runtime: 2)</td>
 <td align="center">2</td>
 <td align="center">3</td>
 <td align="center">0</td>

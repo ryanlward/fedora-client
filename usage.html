@@ -43,8 +43,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-05-26
-                  &nbsp;| Version: 0.0.5-SNAPSHOT
+        Last Published: 2010-05-27
+                  &nbsp;| Version: 0.0.5
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -171,6 +171,15 @@ FedoraClient fedora = new FedoraClient(credentials);</pre>
 
     fedora.execute(ingest(&quot;test:pid&quot;).build());</pre>
 </div>
+<p>Create a new object with a RELS-EXT datastream</p>
+<div class="source"><pre>String pid = client.getNextPid(&quot;test&quot;); // generate a new PID with namespace &quot;test&quot;
+fedora.execute(ingest(pid).build());    // create a new object
+String cmodel = &quot;info:fedora/foo:bar&quot;;  // uri for a Content Model
+String relsExt = new RelsExt.Builder(pid)
+                   .addCModel(cmodel)
+                   .build().toString(); // build a RELS-EXT document
+fedora.execute(addDatastream(pid, &quot;RELS-EXT&quot;).content(relsExt).build());</pre>
+</div>
 <div class="section"><h3>Including fedora-client in your Maven2 project</h3>
 <p>Add the following to your pom.xml:</p>
 <div class="source"><pre>&lt;repositories&gt;
@@ -185,7 +194,7 @@ FedoraClient fedora = new FedoraClient(credentials);</pre>
     &lt;dependency&gt;
         &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
         &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
-        &lt;version&gt;0.0.4&lt;/version&gt;
+        &lt;version&gt;0.0.5&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</pre>
 </div>

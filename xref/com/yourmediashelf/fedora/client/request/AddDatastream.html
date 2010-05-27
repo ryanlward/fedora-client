@@ -27,7 +27,7 @@
 <a name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> *</em>
 <a name="18" href="#18">18</a>  <em class="jxr_javadoccomment"> */</em>
 <a name="19" href="#19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/AddDatastream.html">AddDatastream</a>
-<a name="20" href="#20">20</a>          <strong class="jxr_keyword">extends</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/FedoraMethod.html">FedoraMethod</a> {
+<a name="20" href="#20">20</a>          <strong class="jxr_keyword">extends</strong> FedoraMethod&lt;AddDatastream&gt; {
 <a name="21" href="#21">21</a>  
 <a name="22" href="#22">22</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String pid;
 <a name="23" href="#23">23</a>  
@@ -138,39 +138,60 @@
 <a name="128" href="#128">128</a>     }
 <a name="129" href="#129">129</a> 
 <a name="130" href="#130">130</a>     @Override
-<a name="131" href="#131">131</a>     <strong class="jxr_keyword">protected</strong> ClientResponse execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) {
-<a name="132" href="#132">132</a>         WebResource wr = fedora.resource();
-<a name="133" href="#133">133</a>         String path = String.format(<span class="jxr_string">"objects/%s/datastreams/%s"</span>, pid, dsId);
-<a name="134" href="#134">134</a> 
-<a name="135" href="#135">135</a>         wr = wr.path(path).queryParams(getQueryParams());
-<a name="136" href="#136">136</a> 
-<a name="137" href="#137">137</a>         ClientResponse response = <strong class="jxr_keyword">null</strong>;
-<a name="138" href="#138">138</a>         String mimeType = getFirstQueryParam(<span class="jxr_string">"mimeType"</span>);
-<a name="139" href="#139">139</a>         MediaType mediaType = <strong class="jxr_keyword">null</strong>;
-<a name="140" href="#140">140</a>         <strong class="jxr_keyword">if</strong> (content == <strong class="jxr_keyword">null</strong>) {
-<a name="141" href="#141">141</a>             response = wr.post(ClientResponse.<strong class="jxr_keyword">class</strong>);
-<a name="142" href="#142">142</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof String) {
-<a name="143" href="#143">143</a>             <strong class="jxr_keyword">if</strong> (mimeType == <strong class="jxr_keyword">null</strong>) {
-<a name="144" href="#144">144</a>                 mediaType = MediaType.TEXT_XML_TYPE;
-<a name="145" href="#145">145</a>             } <strong class="jxr_keyword">else</strong> {
-<a name="146" href="#146">146</a>                 mediaType = MediaType.valueOf(mimeType);
-<a name="147" href="#147">147</a>             }
-<a name="148" href="#148">148</a>             response = wr.type(mediaType).post(ClientResponse.<strong class="jxr_keyword">class</strong>, content);
-<a name="149" href="#149">149</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof File) {
-<a name="150" href="#150">150</a>             File f = (File) content;
-<a name="151" href="#151">151</a>             <strong class="jxr_keyword">if</strong> (mimeType == <strong class="jxr_keyword">null</strong>) {
-<a name="152" href="#152">152</a>                 mediaType = MediaType.valueOf(fedora.getMimeType(f));
-<a name="153" href="#153">153</a>             } <strong class="jxr_keyword">else</strong> {
-<a name="154" href="#154">154</a>                 mediaType = MediaType.valueOf(mimeType);
-<a name="155" href="#155">155</a>             }
-<a name="156" href="#156">156</a>             response = wr.type(mediaType).post(ClientResponse.<strong class="jxr_keyword">class</strong>, f);
-<a name="157" href="#157">157</a>         } <strong class="jxr_keyword">else</strong> {
-<a name="158" href="#158">158</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"unknown request content type"</span>);
-<a name="159" href="#159">159</a>         }
-<a name="160" href="#160">160</a>         <strong class="jxr_keyword">return</strong> response;
-<a name="161" href="#161">161</a>     }
-<a name="162" href="#162">162</a> 
-<a name="163" href="#163">163</a> }
+<a name="131" href="#131">131</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/FedoraRequest.html">FedoraRequest</a> build() {
+<a name="132" href="#132">132</a>         <em class="jxr_comment">// special handling for RELS-EXT and RELS-INT</em>
+<a name="133" href="#133">133</a>         <strong class="jxr_keyword">if</strong> (dsId.equals(<span class="jxr_string">"RELS-EXT"</span>) || dsId.equals(<span class="jxr_string">"RELS-INT"</span>)) {
+<a name="134" href="#134">134</a>             String mimeType = getFirstQueryParam(<span class="jxr_string">"mimeType"</span>);
+<a name="135" href="#135">135</a>             <strong class="jxr_keyword">if</strong> (mimeType == <strong class="jxr_keyword">null</strong>) {
+<a name="136" href="#136">136</a>                 addQueryParam(<span class="jxr_string">"mimeType"</span>, <span class="jxr_string">"application/rdf+xml"</span>);
+<a name="137" href="#137">137</a>             }
+<a name="138" href="#138">138</a> 
+<a name="139" href="#139">139</a>             String formatURI = getFirstQueryParam(<span class="jxr_string">"formatURI"</span>);
+<a name="140" href="#140">140</a>             <strong class="jxr_keyword">if</strong> (formatURI == <strong class="jxr_keyword">null</strong>) {
+<a name="141" href="#141">141</a>                 <strong class="jxr_keyword">if</strong> (dsId.equals(<span class="jxr_string">"RELS-EXT"</span>)) {
+<a name="142" href="#142">142</a>                     addQueryParam(<span class="jxr_string">"formatURI"</span>, <span class="jxr_string">"info:fedora/fedora-system:FedoraRELSExt-1.0"</span>);
+<a name="143" href="#143">143</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (dsId.equals(<span class="jxr_string">"RELS-INT"</span>)) {
+<a name="144" href="#144">144</a>                     addQueryParam(<span class="jxr_string">"formatURI"</span>, <span class="jxr_string">"info:fedora/fedora-system:FedoraRELSInt-1.0"</span>);
+<a name="145" href="#145">145</a>                 }
+<a name="146" href="#146">146</a>             }
+<a name="147" href="#147">147</a>         }
+<a name="148" href="#148">148</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">super</strong>.build();
+<a name="149" href="#149">149</a>     }
+<a name="150" href="#150">150</a> 
+<a name="151" href="#151">151</a>     @Override
+<a name="152" href="#152">152</a>     <strong class="jxr_keyword">protected</strong> ClientResponse execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) {
+<a name="153" href="#153">153</a>         WebResource wr = fedora.resource();
+<a name="154" href="#154">154</a>         String path = String.format(<span class="jxr_string">"objects/%s/datastreams/%s"</span>, pid, dsId);
+<a name="155" href="#155">155</a> 
+<a name="156" href="#156">156</a>         wr = wr.path(path).queryParams(getQueryParams());
+<a name="157" href="#157">157</a> 
+<a name="158" href="#158">158</a>         ClientResponse response = <strong class="jxr_keyword">null</strong>;
+<a name="159" href="#159">159</a>         String mimeType = getFirstQueryParam(<span class="jxr_string">"mimeType"</span>);
+<a name="160" href="#160">160</a>         MediaType mediaType = <strong class="jxr_keyword">null</strong>;
+<a name="161" href="#161">161</a>         <strong class="jxr_keyword">if</strong> (content == <strong class="jxr_keyword">null</strong>) {
+<a name="162" href="#162">162</a>             response = wr.post(ClientResponse.<strong class="jxr_keyword">class</strong>);
+<a name="163" href="#163">163</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof String) {
+<a name="164" href="#164">164</a>             <strong class="jxr_keyword">if</strong> (mimeType == <strong class="jxr_keyword">null</strong>) {
+<a name="165" href="#165">165</a>                 mediaType = MediaType.TEXT_XML_TYPE;
+<a name="166" href="#166">166</a>             } <strong class="jxr_keyword">else</strong> {
+<a name="167" href="#167">167</a>                 mediaType = MediaType.valueOf(mimeType);
+<a name="168" href="#168">168</a>             }
+<a name="169" href="#169">169</a>             response = wr.type(mediaType).post(ClientResponse.<strong class="jxr_keyword">class</strong>, content);
+<a name="170" href="#170">170</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof File) {
+<a name="171" href="#171">171</a>             File f = (File) content;
+<a name="172" href="#172">172</a>             <strong class="jxr_keyword">if</strong> (mimeType == <strong class="jxr_keyword">null</strong>) {
+<a name="173" href="#173">173</a>                 mediaType = MediaType.valueOf(fedora.getMimeType(f));
+<a name="174" href="#174">174</a>             } <strong class="jxr_keyword">else</strong> {
+<a name="175" href="#175">175</a>                 mediaType = MediaType.valueOf(mimeType);
+<a name="176" href="#176">176</a>             }
+<a name="177" href="#177">177</a>             response = wr.type(mediaType).post(ClientResponse.<strong class="jxr_keyword">class</strong>, f);
+<a name="178" href="#178">178</a>         } <strong class="jxr_keyword">else</strong> {
+<a name="179" href="#179">179</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"unknown request content type"</span>);
+<a name="180" href="#180">180</a>         }
+<a name="181" href="#181">181</a>         <strong class="jxr_keyword">return</strong> response;
+<a name="182" href="#182">182</a>     }
+<a name="183" href="#183">183</a> 
+<a name="184" href="#184">184</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
