@@ -1,3 +1,5 @@
 com.yourmediashelf.fedora.client
 com.yourmediashelf.fedora.client.request
+com.yourmediashelf.fedora.client.response
+com.yourmediashelf.fedora.client.response.listDatastreams
 com.yourmediashelf.fedora.util

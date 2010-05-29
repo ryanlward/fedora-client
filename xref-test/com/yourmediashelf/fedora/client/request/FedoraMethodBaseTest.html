@@ -11,8 +11,8 @@
 <a name="1" href="#1">1</a>   
 <a name="2" href="#2">2</a>   <strong class="jxr_keyword">package</strong> com.yourmediashelf.fedora.client.request;
 <a name="3" href="#3">3</a>   
-<a name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.request.FedoraRequest.ingest;
-<a name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.request.FedoraRequest.purgeObject;
+<a name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.FedoraClient.ingest;
+<a name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.FedoraClient.purgeObject;
 <a name="6" href="#6">6</a>   
 <a name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> java.net.MalformedURLException;
 <a name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> java.net.URL;
@@ -75,11 +75,11 @@
 <a name="65" href="#65">65</a>      }
 <a name="66" href="#66">66</a>  
 <a name="67" href="#67">67</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ingestTestObject() <strong class="jxr_keyword">throws</strong> FedoraClientException {
-<a name="68" href="#68">68</a>          fedora().execute(ingest(testPid).build());
+<a name="68" href="#68">68</a>          ingest(testPid).execute(fedora());
 <a name="69" href="#69">69</a>      }
 <a name="70" href="#70">70</a>  
 <a name="71" href="#71">71</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> purgeTestObject() <strong class="jxr_keyword">throws</strong> FedoraClientException {
-<a name="72" href="#72">72</a>          fedora().execute(purgeObject(testPid).build());
+<a name="72" href="#72">72</a>          purgeObject(testPid).execute(fedora());
 <a name="73" href="#73">73</a>      }
 <a name="74" href="#74">74</a>  
 <a name="75" href="#75">75</a>      <strong class="jxr_keyword">public</strong> XpathEngine getXpathEngine(Map&lt;String, String&gt; nsMap) {

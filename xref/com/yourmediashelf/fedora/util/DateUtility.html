@@ -162,7 +162,7 @@
 <a name="152" href="#152">152</a> <em class="jxr_javadoccomment">     * @param input</em>
 <a name="153" href="#153">153</a> <em class="jxr_javadoccomment">     *        an XML Schema 1.1 dateTime</em>
 <a name="154" href="#154">154</a> <em class="jxr_javadoccomment">     * @return a DateTime representing the input</em>
-<a name="155" href="#155">155</a> <em class="jxr_javadoccomment">     * @see <a href="http://www.w3.org/TR/xmlschema11-2/" target="alexandria_uri">http://www.w3.org/TR/xmlschema11-2/</a>#dateTime</em>
+<a name="155" href="#155">155</a> <em class="jxr_javadoccomment">     * @see "<a href="http://www.w3.org/TR/xmlschema11-2/" target="alexandria_uri">http://www.w3.org/TR/xmlschema11-2/</a>#dateTime"</em>
 <a name="156" href="#156">156</a> <em class="jxr_javadoccomment">     */</em>
 <a name="157" href="#157">157</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> DateTime parseXSDDateTime(String input) {
 <a name="158" href="#158">158</a>         Matcher m = XSD_DATETIME.matcher(input);
@@ -227,7 +227,7 @@
 <a name="217" href="#217">217</a> <em class="jxr_javadoccomment">     *</em>
 <a name="218" href="#218">218</a> <em class="jxr_javadoccomment">     * @param date</em>
 <a name="219" href="#219">219</a> <em class="jxr_javadoccomment">     * @return An xsd:dateTime (in UTC) representation of date.</em>
-<a name="220" href="#220">220</a> <em class="jxr_javadoccomment">     * @see {@link #getXSDFormatter(DateTime)}</em>
+<a name="220" href="#220">220</a> <em class="jxr_javadoccomment">     * @see #getXSDFormatter(DateTime)</em>
 <a name="221" href="#221">221</a> <em class="jxr_javadoccomment">     */</em>
 <a name="222" href="#222">222</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getXSDDateTime(Date date) {
 <a name="223" href="#223">223</a>         <strong class="jxr_keyword">return</strong> getXSDDateTime(<strong class="jxr_keyword">new</strong> DateTime(date));
@@ -241,7 +241,7 @@
 <a name="231" href="#231">231</a> <em class="jxr_javadoccomment">     *</em>
 <a name="232" href="#232">232</a> <em class="jxr_javadoccomment">     * @param dateTime</em>
 <a name="233" href="#233">233</a> <em class="jxr_javadoccomment">     * @return An xsd:dateTime (in UTC) representation of date.</em>
-<a name="234" href="#234">234</a> <em class="jxr_javadoccomment">     * @see <a href="http://www.w3.org/TR/xmlschema11-2/" target="alexandria_uri">http://www.w3.org/TR/xmlschema11-2/</a>#dateTime</em>
+<a name="234" href="#234">234</a> <em class="jxr_javadoccomment">     * @see "<a href="http://www.w3.org/TR/xmlschema11-2/" target="alexandria_uri">http://www.w3.org/TR/xmlschema11-2/</a>#dateTime"</em>
 <a name="235" href="#235">235</a> <em class="jxr_javadoccomment">     */</em>
 <a name="236" href="#236">236</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String getXSDDateTime(DateTime dateTime) {
 <a name="237" href="#237">237</a>         <strong class="jxr_keyword">return</strong> dateTime.withZone(DateTimeZone.UTC).toString(getXSDFormatter(dateTime));

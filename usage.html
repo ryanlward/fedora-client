@@ -43,8 +43,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-05-27
-                  &nbsp;| Version: 0.0.5
+        Last Published: 2010-05-29
+                  &nbsp;| Version: 0.0.6
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -118,6 +118,18 @@
             <ul>
               
     <li class="none">
+                    <a href="changelog.html">Change Log</a>
+          </li>
+              
+    <li class="none">
+                    <a href="dev-activity.html">Developer Activity</a>
+          </li>
+              
+    <li class="none">
+                    <a href="file-activity.html">File Activity</a>
+          </li>
+              
+    <li class="none">
                     <a href="apidocs/index.html">JavaDocs</a>
           </li>
               
@@ -158,27 +170,20 @@
     new FedoraCredentials(&quot;username&quot;, &quot;password&quot;, &quot;http://example.org/fedora&quot;);
 FedoraClient fedora = new FedoraClient(credentials);</pre>
 </div>
-<p>Build a request object</p>
-<div class="source"><pre>FedoraRequest ingest = FedoraRequest.ingest(&quot;test:pid&quot;).build();</pre>
-</div>
-<p>Execute the request</p>
-<div class="source"><pre>fedora.execute(ingest);</pre>
+<p>Build the request, execute it, and evaluate the response</p>
+<div class="source"><pre>IngestResponse response = new Ingest(&quot;test:pid&quot;).label(&quot;foo&quot;).execute(fedora);
+String pid = response.getPid();</pre>
 </div>
 <p>Using static imports, you can use a more abbreviated syntax</p>
-<div class="source"><pre>import static com.yourmediashelf.fedora.client.request.FedoraRequest.*;
+<div class="source"><pre>import static com.yourmediashelf.fedora.client.FedoraClient.*;
 
 ...
 
-    fedora.execute(ingest(&quot;test:pid&quot;).build());</pre>
+    ingest(&quot;test:pid&quot;).execute(fedora);</pre>
 </div>
-<p>Create a new object with a RELS-EXT datastream</p>
-<div class="source"><pre>String pid = client.getNextPid(&quot;test&quot;); // generate a new PID with namespace &quot;test&quot;
-fedora.execute(ingest(pid).build());    // create a new object
-String cmodel = &quot;info:fedora/foo:bar&quot;;  // uri for a Content Model
-String relsExt = new RelsExt.Builder(pid)
-                   .addCModel(cmodel)
-                   .build().toString(); // build a RELS-EXT document
-fedora.execute(addDatastream(pid, &quot;RELS-EXT&quot;).content(relsExt).build());</pre>
+<p>Use optimistic locking for modifyObject by passing the lastModifiedDate as a request parameter. If the request's lastModifiedDate is earlier than the object's, the request will fail with a HTTP 409 Conflict error.</p>
+<div class="source"><pre>Date lastModifiedDate = fedora.getLastModifiedDate(&quot;test:pid&quot;);
+modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate)</pre>
 </div>
 <div class="section"><h3>Including fedora-client in your Maven2 project</h3>
 <p>Add the following to your pom.xml:</p>
@@ -194,7 +199,7 @@ fedora.execute(addDatastream(pid, &quot;RELS-EXT&quot;).content(relsExt).build()
     &lt;dependency&gt;
         &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
         &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
-        &lt;version&gt;0.0.5&lt;/version&gt;
+        &lt;version&gt;0.0.6&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</pre>
 </div>
