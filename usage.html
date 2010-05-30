@@ -43,8 +43,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-05-29
-                  &nbsp;| Version: 0.0.7
+        Last Published: 2010-05-30
+                  &nbsp;| Version: 0.0.8-SNAPSHOT
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -183,7 +183,13 @@ String pid = response.getPid();</pre>
 </div>
 <p>Use optimistic locking for modifyObject by passing the lastModifiedDate as a request parameter. If the request's lastModifiedDate is earlier than the object's, the request will fail with a HTTP 409 Conflict error.</p>
 <div class="source"><pre>Date lastModifiedDate = fedora.getLastModifiedDate(&quot;test:pid&quot;);
-modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate)</pre>
+try {
+    modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate).execute(fedora)
+} catch(FedoraClientException e) {
+    if (e.getStatus() == 409) {
+        // do something
+    }
+}</pre>
 </div>
 <div class="section"><h3>Including fedora-client in your Maven2 project</h3>
 <p>Add the following to your pom.xml (substituting the actual current version of fedora-client):</p>
