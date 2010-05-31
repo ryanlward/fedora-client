@@ -43,8 +43,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-05-30
-                  &nbsp;| Version: 0.0.8-SNAPSHOT
+        Last Published: 2010-06-01
+                  &nbsp;| Version: 0.0.8
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -165,7 +165,7 @@
     <div id="bodyColumn">
       <div id="contentBox">
         <div class="section"><h2>Usage</h2>
-<p>Create an instance of FedoraClient</p>
+<p>Create an instance of FedoraClient:</p>
 <div class="source"><pre>FedoraCredentials credentials = 
     new FedoraCredentials(&quot;username&quot;, &quot;password&quot;, &quot;http://example.org/fedora&quot;);
 FedoraClient fedora = new FedoraClient(credentials);</pre>
@@ -174,7 +174,7 @@ FedoraClient fedora = new FedoraClient(credentials);</pre>
 <div class="source"><pre>IngestResponse response = new Ingest(&quot;test:pid&quot;).label(&quot;foo&quot;).execute(fedora);
 String pid = response.getPid();</pre>
 </div>
-<p>Using static imports, you can use a more abbreviated syntax</p>
+<p>Using static imports, you can use a more abbreviated syntax:</p>
 <div class="source"><pre>import static com.yourmediashelf.fedora.client.FedoraClient.*;
 
 ...
@@ -184,13 +184,14 @@ String pid = response.getPid();</pre>
 <p>Use optimistic locking for modifyObject by passing the lastModifiedDate as a request parameter. If the request's lastModifiedDate is earlier than the object's, the request will fail with a HTTP 409 Conflict error.</p>
 <div class="source"><pre>Date lastModifiedDate = fedora.getLastModifiedDate(&quot;test:pid&quot;);
 try {
-    modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate).execute(fedora)
+    modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate).execute(fedora);
 } catch(FedoraClientException e) {
     if (e.getStatus() == 409) {
         // do something
     }
 }</pre>
 </div>
+<p>Parsing a response. FedoraRequests return instances of a FedoraResponse. The response-specific implementations (e.g. AddDatastreamResponse, GetDatastreamResponse, etc.) provide convenience methods that parse the response body. However, at this writing, not every request has a corresponding response implemented (yet). In those cases, it is necessary to parse the &quot;raw&quot; response, as returned by FedoraReponse.getEntityInputStream or FedoraResponse.getEntity.</p>
 <div class="section"><h3>Including fedora-client in your Maven2 project</h3>
 <p>Add the following to your pom.xml (substituting the actual current version of fedora-client):</p>
 <div class="source"><pre>&lt;repositories&gt;
@@ -205,7 +206,7 @@ try {
     &lt;dependency&gt;
         &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
         &lt;artifactId&gt;fedora-client&lt;/artifactId&gt;
-        &lt;version&gt;0.0.7&lt;/version&gt;
+        &lt;version&gt;0.0.8&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</pre>
 </div>
