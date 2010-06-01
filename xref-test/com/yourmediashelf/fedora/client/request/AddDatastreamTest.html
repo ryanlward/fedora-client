@@ -42,33 +42,41 @@
 <a name="32" href="#32">32</a>          DatastreamProfile profile = response.getDatastreamProfile();
 <a name="33" href="#33">33</a>          assertNotNull(profile);
 <a name="34" href="#34">34</a>          assertEquals(<span class="jxr_string">"bar"</span>, profile.getDsLabel());
-<a name="35" href="#35">35</a>      }
-<a name="36" href="#36">36</a>  
-<a name="37" href="#37">37</a>      @Test
-<a name="38" href="#38">38</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testDefaultValues() <strong class="jxr_keyword">throws</strong> Exception {
-<a name="39" href="#39">39</a>          String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
-<a name="40" href="#40">40</a>          AddDatastreamResponse response = addDatastream(testPid, <span class="jxr_string">"baz"</span>)
-<a name="41" href="#41">41</a>                                             .content(content)
-<a name="42" href="#42">42</a>                                             .dsLabel(<strong class="jxr_keyword">null</strong>).execute(fedora());
-<a name="43" href="#43">43</a>          assertEquals(201, response.getStatus());
-<a name="44" href="#44">44</a>      }
-<a name="45" href="#45">45</a>  
-<a name="46" href="#46">46</a>      @Test
-<a name="47" href="#47">47</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testManagedContent() <strong class="jxr_keyword">throws</strong> Exception {
-<a name="48" href="#48">48</a>          File f = <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">"src/test/resources/21.edit.essay.zip"</span>);
-<a name="49" href="#49">49</a>          assertTrue(f.exists());
-<a name="50" href="#50">50</a>          FedoraResponse response =
-<a name="51" href="#51">51</a>              fedora().execute(addDatastream(testPid, <span class="jxr_string">"MANAGED_DS"</span>)
-<a name="52" href="#52">52</a>                          .controlGroup(<span class="jxr_string">"M"</span>).content(f));
-<a name="53" href="#53">53</a>          assertEquals(201, response.getStatus());
-<a name="54" href="#54">54</a>      }
-<a name="55" href="#55">55</a>  
-<a name="56" href="#56">56</a>      @Test(expected=FedoraClientException.<strong class="jxr_keyword">class</strong>)
-<a name="57" href="#57">57</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMissingContent() <strong class="jxr_keyword">throws</strong> Exception {
-<a name="58" href="#58">58</a>          fedora().execute(addDatastream(testPid, <span class="jxr_string">"MANAGED_DS"</span>)
-<a name="59" href="#59">59</a>                      .controlGroup(<span class="jxr_string">"M"</span>));
-<a name="60" href="#60">60</a>      }
-<a name="61" href="#61">61</a>  }
+<a name="35" href="#35">35</a>          assertEquals(0, profile.getDsAltID().size());
+<a name="36" href="#36">36</a>      }
+<a name="37" href="#37">37</a>  
+<a name="38" href="#38">38</a>      @Test
+<a name="39" href="#39">39</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testDefaultValues() <strong class="jxr_keyword">throws</strong> Exception {
+<a name="40" href="#40">40</a>          String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
+<a name="41" href="#41">41</a>          AddDatastreamResponse response = addDatastream(testPid, <span class="jxr_string">"baz"</span>)
+<a name="42" href="#42">42</a>                                             .content(content)
+<a name="43" href="#43">43</a>                                             .dsLabel(<strong class="jxr_keyword">null</strong>).execute(fedora());
+<a name="44" href="#44">44</a>          assertEquals(201, response.getStatus());
+<a name="45" href="#45">45</a>      }
+<a name="46" href="#46">46</a>  
+<a name="47" href="#47">47</a>      @Test
+<a name="48" href="#48">48</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testManagedContent() <strong class="jxr_keyword">throws</strong> Exception {
+<a name="49" href="#49">49</a>          File f = <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">"src/test/resources/21.edit.essay.zip"</span>);
+<a name="50" href="#50">50</a>          assertTrue(f.exists());
+<a name="51" href="#51">51</a>          FedoraResponse response =
+<a name="52" href="#52">52</a>              fedora().execute(addDatastream(testPid, <span class="jxr_string">"MANAGED_DS"</span>)
+<a name="53" href="#53">53</a>                          .controlGroup(<span class="jxr_string">"M"</span>).content(f));
+<a name="54" href="#54">54</a>          assertEquals(201, response.getStatus());
+<a name="55" href="#55">55</a>      }
+<a name="56" href="#56">56</a>  
+<a name="57" href="#57">57</a>      @Test(expected=FedoraClientException.<strong class="jxr_keyword">class</strong>)
+<a name="58" href="#58">58</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMissingManagedContent() <strong class="jxr_keyword">throws</strong> Exception {
+<a name="59" href="#59">59</a>          fedora().execute(addDatastream(testPid, <span class="jxr_string">"MANAGED_DS"</span>)
+<a name="60" href="#60">60</a>                      .controlGroup(<span class="jxr_string">"M"</span>));
+<a name="61" href="#61">61</a>      }
+<a name="62" href="#62">62</a>  
+<a name="63" href="#63">63</a>      @Test
+<a name="64" href="#64">64</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAddByLocation() <strong class="jxr_keyword">throws</strong> Exception {
+<a name="65" href="#65">65</a>          String dsLocation = String.format(<span class="jxr_string">"%s/objects/%s/datastreams/DC/content"</span>,
+<a name="66" href="#66">66</a>                                            getCredentials().getBaseUrl().toString(), testPid);
+<a name="67" href="#67">67</a>          addDatastream(testPid, <span class="jxr_string">"MYDC"</span>).dsLocation(dsLocation).controlGroup(<span class="jxr_string">"R"</span>).execute(fedora());
+<a name="68" href="#68">68</a>      }
+<a name="69" href="#69">69</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
