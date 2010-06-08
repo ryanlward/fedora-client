@@ -4,3 +4,4 @@ com.yourmediashelf.fedora.client.response
 com.yourmediashelf.fedora.util
 com.yourmediashelf.fedora.generated.access
 com.yourmediashelf.fedora.generated.management
+com.yourmediashelf.fedora.generated.foxml
