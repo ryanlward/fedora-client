@@ -59,7 +59,7 @@
 <a name="49" href="#49">49</a>          <strong class="jxr_keyword">if</strong> (pid == <strong class="jxr_keyword">null</strong> || pid.isEmpty()) {
 <a name="50" href="#50">50</a>              <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"pid cannot be null or empty"</span>);
 <a name="51" href="#51">51</a>          }
-<a name="52" href="#52">52</a>          <strong class="jxr_keyword">if</strong> (dsId == <strong class="jxr_keyword">null</strong> || pid.isEmpty()) {
+<a name="52" href="#52">52</a>          <strong class="jxr_keyword">if</strong> (dsId == <strong class="jxr_keyword">null</strong> || dsId.isEmpty()) {
 <a name="53" href="#53">53</a>              <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"dsId cannot be null or empty"</span>);
 <a name="54" href="#54">54</a>          }
 <a name="55" href="#55">55</a>          <strong class="jxr_keyword">this</strong>.pid = pid;
@@ -133,93 +133,91 @@
 <a name="123" href="#123">123</a> <em class="jxr_javadoccomment">     * @return this builder</em>
 <a name="124" href="#124">124</a> <em class="jxr_javadoccomment">     */</em>
 <a name="125" href="#125">125</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> lastModifiedDate(DateTime lastModifiedDate) {
-<a name="126" href="#126">126</a>         addQueryParam(<span class="jxr_string">"lastModifiedDate"</span>, getXSDDateTime(lastModifiedDate));
-<a name="127" href="#127">127</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="128" href="#128">128</a>     }
-<a name="129" href="#129">129</a> 
-<a name="130" href="#130">130</a>     <em class="jxr_javadoccomment">/**</em>
-<a name="131" href="#131">131</a> <em class="jxr_javadoccomment">     * Convenience method for {@link #lastModifiedDate(String)}.</em>
-<a name="132" href="#132">132</a> <em class="jxr_javadoccomment">     *</em>
-<a name="133" href="#133">133</a> <em class="jxr_javadoccomment">     * @param lastModifiedDate</em>
-<a name="134" href="#134">134</a> <em class="jxr_javadoccomment">     * @return this builder</em>
-<a name="135" href="#135">135</a> <em class="jxr_javadoccomment">     */</em>
-<a name="136" href="#136">136</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> lastModifiedDate(Date lastModifiedDate) {
-<a name="137" href="#137">137</a>         addQueryParam(<span class="jxr_string">"lastModifiedDate"</span>, getXSDDateTime(lastModifiedDate));
-<a name="138" href="#138">138</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="139" href="#139">139</a>     }
-<a name="140" href="#140">140</a> 
-<a name="141" href="#141">141</a>     <em class="jxr_javadoccomment">/**</em>
-<a name="142" href="#142">142</a> <em class="jxr_javadoccomment">     * &lt;p&gt;If provided, the server will use the supplied lastModifedDate to</em>
-<a name="143" href="#143">143</a> <em class="jxr_javadoccomment">     * prevent concurrent modifications, only performing the request if the</em>
-<a name="144" href="#144">144</a> <em class="jxr_javadoccomment">     * datastream has not been modified since the request-provided</em>
-<a name="145" href="#145">145</a> <em class="jxr_javadoccomment">     * lastModifiedDate. Otherwise, the request will fail with an HTTP 409</em>
-<a name="146" href="#146">146</a> <em class="jxr_javadoccomment">     * Conflict.&lt;/p&gt;</em>
-<a name="147" href="#147">147</a> <em class="jxr_javadoccomment">     *</em>
-<a name="148" href="#148">148</a> <em class="jxr_javadoccomment">     * &lt;p&gt;Typical usage would be to get the lastModifiedDate of a datastream</em>
-<a name="149" href="#149">149</a> <em class="jxr_javadoccomment">     * before modification, and then to pass that date as part of the subsequent</em>
-<a name="150" href="#150">150</a> <em class="jxr_javadoccomment">     * modify request, which would then only succeed if the datastream has not</em>
-<a name="151" href="#151">151</a> <em class="jxr_javadoccomment">     * been already modified since.&lt;/p&gt;</em>
-<a name="152" href="#152">152</a> <em class="jxr_javadoccomment">     *</em>
-<a name="153" href="#153">153</a> <em class="jxr_javadoccomment">     * &lt;p&gt;Supported against Fedora 3.4.0 and later (with earlier versions, this</em>
-<a name="154" href="#154">154</a> <em class="jxr_javadoccomment">     * parameter is ignored).&lt;/p&gt;</em>
-<a name="155" href="#155">155</a> <em class="jxr_javadoccomment">     *</em>
-<a name="156" href="#156">156</a> <em class="jxr_javadoccomment">     * @param lastModifiedDate an xsd:dateTime string, e.g. 2001-12-31T12:50:01.000Z</em>
-<a name="157" href="#157">157</a> <em class="jxr_javadoccomment">     * @return this builder</em>
-<a name="158" href="#158">158</a> <em class="jxr_javadoccomment">     */</em>
-<a name="159" href="#159">159</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> lastModifiedDate(String lastModifiedDate) {
-<a name="160" href="#160">160</a>         addQueryParam(<span class="jxr_string">"lastModifiedDate"</span>, lastModifiedDate);
-<a name="161" href="#161">161</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="162" href="#162">162</a>     }
-<a name="163" href="#163">163</a> 
-<a name="164" href="#164">164</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> logMessage(String logMessage) {
-<a name="165" href="#165">165</a>         addQueryParam(<span class="jxr_string">"logMessage"</span>, logMessage);
-<a name="166" href="#166">166</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="167" href="#167">167</a>     }
-<a name="168" href="#168">168</a> 
-<a name="169" href="#169">169</a>     <em class="jxr_javadoccomment">/**</em>
-<a name="170" href="#170">170</a> <em class="jxr_javadoccomment">     * Enable versioning of the datastream.</em>
-<a name="171" href="#171">171</a> <em class="jxr_javadoccomment">     *</em>
-<a name="172" href="#172">172</a> <em class="jxr_javadoccomment">     * @param versionable</em>
-<a name="173" href="#173">173</a> <em class="jxr_javadoccomment">     * @return this builder</em>
-<a name="174" href="#174">174</a> <em class="jxr_javadoccomment">     */</em>
-<a name="175" href="#175">175</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> versionable(<strong class="jxr_keyword">boolean</strong> versionable) {
-<a name="176" href="#176">176</a>         addQueryParam(<span class="jxr_string">"versionable"</span>, Boolean.toString(versionable));
-<a name="177" href="#177">177</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="178" href="#178">178</a>     }
-<a name="179" href="#179">179</a> 
-<a name="180" href="#180">180</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> content(File content) {
-<a name="181" href="#181">181</a>         <strong class="jxr_keyword">this</strong>.content = content;
-<a name="182" href="#182">182</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="183" href="#183">183</a>     }
-<a name="184" href="#184">184</a> 
-<a name="185" href="#185">185</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> content(String content) {
-<a name="186" href="#186">186</a>         <strong class="jxr_keyword">this</strong>.content = content;
-<a name="187" href="#187">187</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a name="188" href="#188">188</a>     }
-<a name="189" href="#189">189</a> 
-<a name="190" href="#190">190</a>     @Override
-<a name="191" href="#191">191</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/ModifyDatastreamResponse.html">ModifyDatastreamResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) <strong class="jxr_keyword">throws</strong> FedoraClientException {
-<a name="192" href="#192">192</a>         WebResource wr = fedora.resource();
-<a name="193" href="#193">193</a>         String path = String.format(<span class="jxr_string">"objects/%s/datastreams/%s"</span>, pid, dsId);
-<a name="194" href="#194">194</a>         wr = wr.path(path).queryParams(getQueryParams());
-<a name="195" href="#195">195</a> 
-<a name="196" href="#196">196</a>         ClientResponse response = <strong class="jxr_keyword">null</strong>;
-<a name="197" href="#197">197</a>         <strong class="jxr_keyword">if</strong> (content == <strong class="jxr_keyword">null</strong>) {
-<a name="198" href="#198">198</a>             response = wr.put(ClientResponse.<strong class="jxr_keyword">class</strong>);
-<a name="199" href="#199">199</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof String) {
-<a name="200" href="#200">200</a>             response = wr.type(MediaType.TEXT_XML_TYPE).put(ClientResponse.<strong class="jxr_keyword">class</strong>,
-<a name="201" href="#201">201</a>                                                              content);
-<a name="202" href="#202">202</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof File) {
-<a name="203" href="#203">203</a>             File f = (File) content;
-<a name="204" href="#204">204</a>             String mimeType = fedora.getMimeType(f);
-<a name="205" href="#205">205</a>             response = wr.type(mimeType).put(ClientResponse.<strong class="jxr_keyword">class</strong>, f);
-<a name="206" href="#206">206</a>         } <strong class="jxr_keyword">else</strong> {
-<a name="207" href="#207">207</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"unknown request content type"</span>);
-<a name="208" href="#208">208</a>         }
-<a name="209" href="#209">209</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/ModifyDatastreamResponse.html">ModifyDatastreamResponse</a>(response);
-<a name="210" href="#210">210</a>     }
-<a name="211" href="#211">211</a> 
-<a name="212" href="#212">212</a> }
+<a name="126" href="#126">126</a>         <strong class="jxr_keyword">return</strong> lastModifiedDate(getXSDDateTime(lastModifiedDate));
+<a name="127" href="#127">127</a>     }
+<a name="128" href="#128">128</a> 
+<a name="129" href="#129">129</a>     <em class="jxr_javadoccomment">/**</em>
+<a name="130" href="#130">130</a> <em class="jxr_javadoccomment">     * Convenience method for {@link #lastModifiedDate(String)}.</em>
+<a name="131" href="#131">131</a> <em class="jxr_javadoccomment">     *</em>
+<a name="132" href="#132">132</a> <em class="jxr_javadoccomment">     * @param lastModifiedDate</em>
+<a name="133" href="#133">133</a> <em class="jxr_javadoccomment">     * @return this builder</em>
+<a name="134" href="#134">134</a> <em class="jxr_javadoccomment">     */</em>
+<a name="135" href="#135">135</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> lastModifiedDate(Date lastModifiedDate) {
+<a name="136" href="#136">136</a>         <strong class="jxr_keyword">return</strong> lastModifiedDate(getXSDDateTime(lastModifiedDate));
+<a name="137" href="#137">137</a>     }
+<a name="138" href="#138">138</a> 
+<a name="139" href="#139">139</a>     <em class="jxr_javadoccomment">/**</em>
+<a name="140" href="#140">140</a> <em class="jxr_javadoccomment">     * &lt;p&gt;If provided, the server will use the supplied lastModifedDate to</em>
+<a name="141" href="#141">141</a> <em class="jxr_javadoccomment">     * prevent concurrent modifications, only performing the request if the</em>
+<a name="142" href="#142">142</a> <em class="jxr_javadoccomment">     * datastream has not been modified since the request-provided</em>
+<a name="143" href="#143">143</a> <em class="jxr_javadoccomment">     * lastModifiedDate. Otherwise, the request will fail with an HTTP 409</em>
+<a name="144" href="#144">144</a> <em class="jxr_javadoccomment">     * Conflict.&lt;/p&gt;</em>
+<a name="145" href="#145">145</a> <em class="jxr_javadoccomment">     *</em>
+<a name="146" href="#146">146</a> <em class="jxr_javadoccomment">     * &lt;p&gt;Typical usage would be to get the lastModifiedDate of a datastream</em>
+<a name="147" href="#147">147</a> <em class="jxr_javadoccomment">     * before modification, and then to pass that date as part of the subsequent</em>
+<a name="148" href="#148">148</a> <em class="jxr_javadoccomment">     * modify request, which would then only succeed if the datastream has not</em>
+<a name="149" href="#149">149</a> <em class="jxr_javadoccomment">     * been already modified since.&lt;/p&gt;</em>
+<a name="150" href="#150">150</a> <em class="jxr_javadoccomment">     *</em>
+<a name="151" href="#151">151</a> <em class="jxr_javadoccomment">     * &lt;p&gt;Supported against Fedora 3.4.0 and later (with earlier versions, this</em>
+<a name="152" href="#152">152</a> <em class="jxr_javadoccomment">     * parameter is ignored).&lt;/p&gt;</em>
+<a name="153" href="#153">153</a> <em class="jxr_javadoccomment">     *</em>
+<a name="154" href="#154">154</a> <em class="jxr_javadoccomment">     * @param lastModifiedDate an xsd:dateTime string, e.g. 2001-12-31T12:50:01.000Z</em>
+<a name="155" href="#155">155</a> <em class="jxr_javadoccomment">     * @return this builder</em>
+<a name="156" href="#156">156</a> <em class="jxr_javadoccomment">     */</em>
+<a name="157" href="#157">157</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> lastModifiedDate(String lastModifiedDate) {
+<a name="158" href="#158">158</a>         addQueryParam(<span class="jxr_string">"lastModifiedDate"</span>, lastModifiedDate);
+<a name="159" href="#159">159</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a name="160" href="#160">160</a>     }
+<a name="161" href="#161">161</a> 
+<a name="162" href="#162">162</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> logMessage(String logMessage) {
+<a name="163" href="#163">163</a>         addQueryParam(<span class="jxr_string">"logMessage"</span>, logMessage);
+<a name="164" href="#164">164</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a name="165" href="#165">165</a>     }
+<a name="166" href="#166">166</a> 
+<a name="167" href="#167">167</a>     <em class="jxr_javadoccomment">/**</em>
+<a name="168" href="#168">168</a> <em class="jxr_javadoccomment">     * Enable versioning of the datastream.</em>
+<a name="169" href="#169">169</a> <em class="jxr_javadoccomment">     *</em>
+<a name="170" href="#170">170</a> <em class="jxr_javadoccomment">     * @param versionable</em>
+<a name="171" href="#171">171</a> <em class="jxr_javadoccomment">     * @return this builder</em>
+<a name="172" href="#172">172</a> <em class="jxr_javadoccomment">     */</em>
+<a name="173" href="#173">173</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> versionable(<strong class="jxr_keyword">boolean</strong> versionable) {
+<a name="174" href="#174">174</a>         addQueryParam(<span class="jxr_string">"versionable"</span>, Boolean.toString(versionable));
+<a name="175" href="#175">175</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a name="176" href="#176">176</a>     }
+<a name="177" href="#177">177</a> 
+<a name="178" href="#178">178</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> content(File content) {
+<a name="179" href="#179">179</a>         <strong class="jxr_keyword">this</strong>.content = content;
+<a name="180" href="#180">180</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a name="181" href="#181">181</a>     }
+<a name="182" href="#182">182</a> 
+<a name="183" href="#183">183</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> content(String content) {
+<a name="184" href="#184">184</a>         <strong class="jxr_keyword">this</strong>.content = content;
+<a name="185" href="#185">185</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a name="186" href="#186">186</a>     }
+<a name="187" href="#187">187</a> 
+<a name="188" href="#188">188</a>     @Override
+<a name="189" href="#189">189</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/ModifyDatastreamResponse.html">ModifyDatastreamResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) <strong class="jxr_keyword">throws</strong> FedoraClientException {
+<a name="190" href="#190">190</a>         WebResource wr = fedora.resource();
+<a name="191" href="#191">191</a>         String path = String.format(<span class="jxr_string">"objects/%s/datastreams/%s"</span>, pid, dsId);
+<a name="192" href="#192">192</a>         wr = wr.path(path).queryParams(getQueryParams());
+<a name="193" href="#193">193</a> 
+<a name="194" href="#194">194</a>         ClientResponse response = <strong class="jxr_keyword">null</strong>;
+<a name="195" href="#195">195</a>         <strong class="jxr_keyword">if</strong> (content == <strong class="jxr_keyword">null</strong>) {
+<a name="196" href="#196">196</a>             response = wr.put(ClientResponse.<strong class="jxr_keyword">class</strong>);
+<a name="197" href="#197">197</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof String) {
+<a name="198" href="#198">198</a>             response = wr.type(MediaType.TEXT_XML_TYPE).put(ClientResponse.<strong class="jxr_keyword">class</strong>,
+<a name="199" href="#199">199</a>                                                              content);
+<a name="200" href="#200">200</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (content instanceof File) {
+<a name="201" href="#201">201</a>             File f = (File) content;
+<a name="202" href="#202">202</a>             String mimeType = fedora.getMimeType(f);
+<a name="203" href="#203">203</a>             response = wr.type(mimeType).put(ClientResponse.<strong class="jxr_keyword">class</strong>, f);
+<a name="204" href="#204">204</a>         } <strong class="jxr_keyword">else</strong> {
+<a name="205" href="#205">205</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"unknown request content type"</span>);
+<a name="206" href="#206">206</a>         }
+<a name="207" href="#207">207</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/ModifyDatastreamResponse.html">ModifyDatastreamResponse</a>(response);
+<a name="208" href="#208">208</a>     }
+<a name="209" href="#209">209</a> 
+<a name="210" href="#210">210</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

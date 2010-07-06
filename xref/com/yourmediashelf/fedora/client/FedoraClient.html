@@ -299,52 +299,59 @@
 <a name="289" href="#289">289</a>     }
 <a name="290" href="#290">290</a> 
 <a name="291" href="#291">291</a>     <em class="jxr_javadoccomment">/**</em>
-<a name="292" href="#292">292</a> <em class="jxr_javadoccomment">     * @param pid</em>
-<a name="293" href="#293">293</a> <em class="jxr_javadoccomment">     *        persistent identifier of the object to be created or null for a</em>
-<a name="294" href="#294">294</a> <em class="jxr_javadoccomment">     *        server-assigned pid</em>
-<a name="295" href="#295">295</a> <em class="jxr_javadoccomment">     * @return builder for the Ingest method</em>
-<a name="296" href="#296">296</a> <em class="jxr_javadoccomment">     * @see Ingest</em>
-<a name="297" href="#297">297</a> <em class="jxr_javadoccomment">     */</em>
-<a name="298" href="#298">298</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Ingest.html">Ingest</a> ingest(String pid) {
-<a name="299" href="#299">299</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Ingest.html">Ingest</a>(pid);
-<a name="300" href="#300">300</a>     }
-<a name="301" href="#301">301</a> 
-<a name="302" href="#302">302</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListDatastreams.html">ListDatastreams</a> listDatastreams(String pid) {
-<a name="303" href="#303">303</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListDatastreams.html">ListDatastreams</a>(pid);
-<a name="304" href="#304">304</a>     }
-<a name="305" href="#305">305</a> 
-<a name="306" href="#306">306</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a> listMethods(String pid) {
-<a name="307" href="#307">307</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a>(pid);
-<a name="308" href="#308">308</a>     }
-<a name="309" href="#309">309</a> 
-<a name="310" href="#310">310</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a> listMethods(String pid, String sdefPid) {
-<a name="311" href="#311">311</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a>(pid, sdefPid);
-<a name="312" href="#312">312</a>     }
-<a name="313" href="#313">313</a> 
-<a name="314" href="#314">314</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> modifyDatastream(String pid, String dsId) {
-<a name="315" href="#315">315</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a>(pid, dsId);
-<a name="316" href="#316">316</a>     }
-<a name="317" href="#317">317</a> 
-<a name="318" href="#318">318</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyObject.html">ModifyObject</a> modifyObject(String pid) {
-<a name="319" href="#319">319</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyObject.html">ModifyObject</a>(pid);
-<a name="320" href="#320">320</a>     }
-<a name="321" href="#321">321</a> 
-<a name="322" href="#322">322</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeDatastream.html">PurgeDatastream</a> purgeDatastream(String pid, String dsId) {
-<a name="323" href="#323">323</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeDatastream.html">PurgeDatastream</a>(pid, dsId);
-<a name="324" href="#324">324</a>     }
-<a name="325" href="#325">325</a> 
-<a name="326" href="#326">326</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a> purgeObject(String pid) {
-<a name="327" href="#327">327</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a>(pid);
-<a name="328" href="#328">328</a>     }
-<a name="329" href="#329">329</a> 
-<a name="330" href="#330">330</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeRelationship.html">PurgeRelationship</a> purgeRelationship(String pid) {
-<a name="331" href="#331">331</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeRelationship.html">PurgeRelationship</a>(pid);
-<a name="332" href="#332">332</a>     }
-<a name="333" href="#333">333</a> 
-<a name="334" href="#334">334</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Upload.html">Upload</a> upload(File file) {
-<a name="335" href="#335">335</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Upload.html">Upload</a>(file);
-<a name="336" href="#336">336</a>     }
-<a name="337" href="#337">337</a> }
+<a name="292" href="#292">292</a> <em class="jxr_javadoccomment">     * Ingest request that uses a server-assigned pid</em>
+<a name="293" href="#293">293</a> <em class="jxr_javadoccomment">     *</em>
+<a name="294" href="#294">294</a> <em class="jxr_javadoccomment">     * @return builder for the Ingest method</em>
+<a name="295" href="#295">295</a> <em class="jxr_javadoccomment">     */</em>
+<a name="296" href="#296">296</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Ingest.html">Ingest</a> ingest() {
+<a name="297" href="#297">297</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Ingest.html">Ingest</a>();
+<a name="298" href="#298">298</a>     }
+<a name="299" href="#299">299</a> 
+<a name="300" href="#300">300</a>     <em class="jxr_javadoccomment">/**</em>
+<a name="301" href="#301">301</a> <em class="jxr_javadoccomment">     * @param pid persistent identifier of the object to be created</em>
+<a name="302" href="#302">302</a> <em class="jxr_javadoccomment">     * @return builder for the Ingest method</em>
+<a name="303" href="#303">303</a> <em class="jxr_javadoccomment">     * @see Ingest</em>
+<a name="304" href="#304">304</a> <em class="jxr_javadoccomment">     */</em>
+<a name="305" href="#305">305</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Ingest.html">Ingest</a> ingest(String pid) {
+<a name="306" href="#306">306</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Ingest.html">Ingest</a>(pid);
+<a name="307" href="#307">307</a>     }
+<a name="308" href="#308">308</a> 
+<a name="309" href="#309">309</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListDatastreams.html">ListDatastreams</a> listDatastreams(String pid) {
+<a name="310" href="#310">310</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListDatastreams.html">ListDatastreams</a>(pid);
+<a name="311" href="#311">311</a>     }
+<a name="312" href="#312">312</a> 
+<a name="313" href="#313">313</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a> listMethods(String pid) {
+<a name="314" href="#314">314</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a>(pid);
+<a name="315" href="#315">315</a>     }
+<a name="316" href="#316">316</a> 
+<a name="317" href="#317">317</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a> listMethods(String pid, String sdefPid) {
+<a name="318" href="#318">318</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ListMethods.html">ListMethods</a>(pid, sdefPid);
+<a name="319" href="#319">319</a>     }
+<a name="320" href="#320">320</a> 
+<a name="321" href="#321">321</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a> modifyDatastream(String pid, String dsId) {
+<a name="322" href="#322">322</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyDatastream.html">ModifyDatastream</a>(pid, dsId);
+<a name="323" href="#323">323</a>     }
+<a name="324" href="#324">324</a> 
+<a name="325" href="#325">325</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyObject.html">ModifyObject</a> modifyObject(String pid) {
+<a name="326" href="#326">326</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/ModifyObject.html">ModifyObject</a>(pid);
+<a name="327" href="#327">327</a>     }
+<a name="328" href="#328">328</a> 
+<a name="329" href="#329">329</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeDatastream.html">PurgeDatastream</a> purgeDatastream(String pid, String dsId) {
+<a name="330" href="#330">330</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeDatastream.html">PurgeDatastream</a>(pid, dsId);
+<a name="331" href="#331">331</a>     }
+<a name="332" href="#332">332</a> 
+<a name="333" href="#333">333</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a> purgeObject(String pid) {
+<a name="334" href="#334">334</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a>(pid);
+<a name="335" href="#335">335</a>     }
+<a name="336" href="#336">336</a> 
+<a name="337" href="#337">337</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeRelationship.html">PurgeRelationship</a> purgeRelationship(String pid) {
+<a name="338" href="#338">338</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/PurgeRelationship.html">PurgeRelationship</a>(pid);
+<a name="339" href="#339">339</a>     }
+<a name="340" href="#340">340</a> 
+<a name="341" href="#341">341</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Upload.html">Upload</a> upload(File file) {
+<a name="342" href="#342">342</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../com/yourmediashelf/fedora/client/request/Upload.html">Upload</a>(file);
+<a name="343" href="#343">343</a>     }
+<a name="344" href="#344">344</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
