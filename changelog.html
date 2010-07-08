@@ -42,8 +42,8 @@
   
     
             <div class="xleft">
-        Last Published: 2010-07-06
-                  &nbsp;| Version: 0.1.1
+        Last Published: 2010-07-08
+                  &nbsp;| Version: 0.1.2
                       </div>
             <div class="xright">            <a href="http://www.yourmediashelf.com/" class="externalLink">MediaShelf</a>
             |
@@ -173,360 +173,264 @@
       <div id="contentBox">
         <div class="section"><h2>Change Log Report</h2>
 <p>Total number of changed sets: 1</p>
-<div class="section"><h3>Changes between 2010-06-06 and 2010-07-07</h3>
-<p>Total commits: 36<br />
-Total number of files changed: 104</p>
+<div class="section"><h3>Changes between 2010-06-08 and 2010-07-09</h3>
+<p>Total commits: 35<br />
+Total number of files changed: 38</p>
 <table class="bodyTable"><tr class="a"><th>Timestamp</th>
 <th>Author</th>
 <th>Details</th>
 </tr>
+<tr class="b"><td>2010-07-08 02:36:22</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v e0e4db2f44c30430659b4ce030cf04b932f1ee48<br />
+<br />
+[maven-release-plugin] prepare release fedora-<a href="http://jira.codehaus.org/browse/client-0" class="externalLink">client-0</a>.1.2</td>
+</tr>
+<tr class="a"><td>2010-07-08 02:35:14</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/deployNotes.txt" class="externalLink">src/site/apt/<b>deployNotes.txt</b></a> v f50e7b46100cfe6b4d3119455e12e85ff4e3efa8<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/usage.apt" class="externalLink">src/site/apt/<b>usage.apt</b></a> v f50e7b46100cfe6b4d3119455e12e85ff4e3efa8<br />
+<br />
+updated docs</td>
+</tr>
+<tr class="b"><td>2010-07-08 02:33:02</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/AtomApimMessage.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>AtomApimMessage.java</b></a> v a7d588d866272a34bf52ecb5116100e648f35431<br />
+<br />
+license header</td>
+</tr>
+<tr class="a"><td>2010-07-08 02:31:58</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/AtomApimMessage.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>AtomApimMessage.java</b></a> v 2a07992973b3829a296e1869dea601d57be9209f<br />
+<br />
+simplified version of org.fcrepo.server.messaging.AtomAPIMMessage with a single constructor for parsing Fedora APIM messages</td>
+</tr>
+<tr class="b"><td>2010-07-08 02:30:26</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v 7ae33b971adfc91715c0baebec83fd7d05cc946d<br />
+<br />
+bump jersey to 1.3</td>
+</tr>
+<tr class="a"><td>2010-07-07 14:27:01</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/messaging/MessagingClientTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClientTest.java</b></a> v 9aa471fbee3d90386ae7f4773812cf47a2b14d07<br />
+<br />
+disable jmx for messaging tests</td>
+</tr>
+<tr class="b"><td>2010-07-07 14:26:38</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v d41b7f4c1684c31d31ba484ba16ae2553c8978e5<br />
+<br />
+set explicit version for jaxb2 plugin. set activemq system property so that activemq-data directory generated during test is located in target/</td>
+</tr>
+<tr class="a"><td>2010-07-07 12:20:37</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/deployNotes.txt" class="externalLink">src/site/apt/<b>deployNotes.txt</b></a> v b1646b179cf4f02d89e3c3995f6f06ca01dc80c6<br />
+<br />
+added note about minimum Maven requirements for deploy</td>
+</tr>
+<tr class="b"><td>2010-07-07 12:15:12</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Upload.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>Upload.java</b></a> v 595e51e7492cb9705e6feecffae1f5374cb197c9<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/UploadTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>UploadTest.java</b></a> v 595e51e7492cb9705e6feecffae1f5374cb197c9<br />
+<br />
+support for new REST API upload method. see https://jira.duraspace.org/browse/<a href="http://jira.codehaus.org/browse/FCREPO-687" class="externalLink">FCREPO-687</a></td>
+</tr>
+<tr class="a"><td>2010-07-06 19:45:50</td>
+<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v bd9b016d6049425e3f7afa0683b2f04f38a70cd0<br />
+<br />
+[maven-release-plugin] prepare for next development iteration</td>
+</tr>
 <tr class="b"><td>2010-07-06 19:45:41</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v c723d5d311ac85fffa6859c8eb4c3376cb3e1f00<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v c723d5d311ac85fffa6859c8eb4c3376cb3e1f00<br />
 <br />
-[maven-release-plugin] prepare release fedora-<a class="externalLink" href="http://jira.codehaus.org/browse/client-0">client-0</a>.1.1</td>
+[maven-release-plugin] prepare release fedora-<a href="http://jira.codehaus.org/browse/client-0" class="externalLink">client-0</a>.1.1</td>
 </tr>
 <tr class="a"><td>2010-07-06 18:34:58</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeDatastreamTest.java</b></a> v da8b4924567b6b9dc8a55c035e1b21df5723be42<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeDatastreamTest.java</b></a> v da8b4924567b6b9dc8a55c035e1b21df5723be42<br />
 <br />
 added debug info</td>
 </tr>
 <tr class="b"><td>2010-07-06 18:09:31</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeDatastreamTest.java</b></a> v 6633b2555e166aa8fe149d3068b4c6764e34b51d<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeDatastreamTest.java</b></a> v 6633b2555e166aa8fe149d3068b4c6764e34b51d<br />
 <br />
 added log message</td>
 </tr>
 <tr class="a"><td>2010-07-06 16:15:13</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 5a41c79d4aa7c8abc97cfd0f2b0b12d0ffea89ef<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v 5a41c79d4aa7c8abc97cfd0f2b0b12d0ffea89ef<br />
 <br />
 workaround for release-plugin and gpg</td>
 </tr>
 <tr class="b"><td>2010-07-06 12:28:18</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/deployNotes.txt">src/site/apt/<b>deployNotes.txt</b></a> v e38a1c0f3156bd98b35a40ebe13bd66524317c8d<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/deployNotes.txt" class="externalLink">src/site/apt/<b>deployNotes.txt</b></a> v e38a1c0f3156bd98b35a40ebe13bd66524317c8d<br />
 <br />
 added instructions for license formatting</td>
 </tr>
 <tr class="a"><td>2010-07-06 12:11:13</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/.gitignore"><b>.gitignore</b></a> v d6c0eb881e247b5cffe77de09d13137f61810999<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/.gitignore" class="externalLink"><b>.gitignore</b></a> v d6c0eb881e247b5cffe77de09d13137f61810999<br />
 <br />
 ignore activemq-data directory generated in testing (should configure this to be in the target directory)</td>
 </tr>
 <tr class="b"><td>2010-07-06 12:10:39</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/JMSManager.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>JMSManager.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingClient.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClient.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingListener.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingListener.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/package-info.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>package-info.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/messaging/MessagingClientTest.java">src/test/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClientTest.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/JMSManager.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>JMSManager.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingClient.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClient.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingListener.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingListener.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/package-info.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>package-info.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/messaging/MessagingClientTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClientTest.java</b></a> v 6db6f88e21b2ce63dcb448e4ca57a8c4bf99595e<br />
 <br />
 license headers</td>
 </tr>
 <tr class="a"><td>2010-07-06 12:06:33</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v e8c1070a06a5c1d97896fb6100b5cdf082c850c2<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v e8c1070a06a5c1d97896fb6100b5cdf082c850c2<br />
 <br />
 moved gpg-plugin to a release profile</td>
 </tr>
 <tr class="b"><td>2010-07-06 02:05:17</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/deployNotes.txt">src/site/apt/<b>deployNotes.txt</b></a> v 40df6115a788ab01716412f54ee8228d53e5d0f9<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/index.apt">src/site/apt/<b>index.apt</b></a> v 40df6115a788ab01716412f54ee8228d53e5d0f9<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/usage.apt">src/site/apt/<b>usage.apt</b></a> v 40df6115a788ab01716412f54ee8228d53e5d0f9<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/deployNotes.txt" class="externalLink">src/site/apt/<b>deployNotes.txt</b></a> v 40df6115a788ab01716412f54ee8228d53e5d0f9<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/index.apt" class="externalLink">src/site/apt/<b>index.apt</b></a> v 40df6115a788ab01716412f54ee8228d53e5d0f9<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/usage.apt" class="externalLink">src/site/apt/<b>usage.apt</b></a> v 40df6115a788ab01716412f54ee8228d53e5d0f9<br />
 <br />
 minor doc updates</td>
 </tr>
 <tr class="a"><td>2010-07-06 02:04:52</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/JMSManager.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>JMSManager.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingClient.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClient.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingException.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingException.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingListener.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingListener.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/package-info.java">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>package-info.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/messaging/MessagingClientTest.java">src/test/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClientTest.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/JMSManager.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>JMSManager.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingClient.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClient.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingException.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingException.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/MessagingListener.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingListener.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/messaging/package-info.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/messaging/<b>package-info.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/messaging/MessagingClientTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/messaging/<b>MessagingClientTest.java</b></a> v 7c7ab8a41f2b7562f975082326ba021074f3d9d5<br />
 <br />
 local copy of fcrepo-client-messaging w/out other fcrepo dependencies</td>
 </tr>
 <tr class="b"><td>2010-07-05 23:14:18</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistory.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistory.java</b></a> v 83ef9356a2c9e156b6c9c46ed2c0c5d0ede1fb3a<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistory.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistory.java</b></a> v 83ef9356a2c9e156b6c9c46ed2c0c5d0ede1fb3a<br />
 <br />
 getDatastreamHistory now /history in Fedora 3.4-RC1</td>
 </tr>
 <tr class="a"><td>2010-07-05 14:34:47</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v ced0ef8a275bb512ac0ba67da9a81d581814409d<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v ced0ef8a275bb512ac0ba67da9a81d581814409d<br />
 <br />
 updated the duraspace maven repo urls</td>
 </tr>
 <tr class="b"><td>2010-06-08 22:08:53</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/AddDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>AddDatastream.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Ingest.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Ingest.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/IngestTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>IngestTest.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/AddDatastream.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>AddDatastream.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Ingest.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>Ingest.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/IngestTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>IngestTest.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v 66a987ccd52bbf292ba5020c822a31d93bb9e9ca<br />
 <br />
 added explicit no-arg constructor for Ingest. More javadocs</td>
 </tr>
 <tr class="a"><td>2010-06-08 21:31:53</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v 5f8f61cb4ed0f9ff2cfb40cc569dcc2484288972<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v 5f8f61cb4ed0f9ff2cfb40cc569dcc2484288972<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v 5f8f61cb4ed0f9ff2cfb40cc569dcc2484288972<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v 5f8f61cb4ed0f9ff2cfb40cc569dcc2484288972<br />
 <br />
 wasn't correctly testing for bad constructor calls</td>
 </tr>
 <tr class="b"><td>2010-06-08 18:48:32</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistory.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistory.java</b></a> v 368cbed0df36abbf4888feb699ef6279b444230a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetDatastreamHistoryResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetDatastreamHistoryResponse.java</b></a> v 368cbed0df36abbf4888feb699ef6279b444230a<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistory.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistory.java</b></a> v 368cbed0df36abbf4888feb699ef6279b444230a<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetDatastreamHistoryResponse.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetDatastreamHistoryResponse.java</b></a> v 368cbed0df36abbf4888feb699ef6279b444230a<br />
 <br />
 expanded support for getDatastreamHistory</td>
 </tr>
 <tr class="a"><td>2010-06-08 18:47:57</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ExportTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ExportTest.java</b></a> v e3822bf253797650ca7f2bb457547feb3ae32c16<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ExportTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>ExportTest.java</b></a> v e3822bf253797650ca7f2bb457547feb3ae32c16<br />
 <br />
 added test for Export request</td>
 </tr>
 <tr class="b"><td>2010-06-08 17:44:03</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/foxml/foxml1-1.xsd">src/main/resources/xsd/foxml/<b>foxml1-1.xsd</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/management/datastreamHistory.xsd">src/main/resources/xsd/management/<b>datastreamHistory.xsd</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistoryTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistoryTest.java</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetDisseminationTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetDisseminationTest.java</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetObjectXMLTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetObjectXMLTest.java</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/foxml/foxml1-1.xsd" class="externalLink">src/main/resources/xsd/foxml/<b>foxml1-1.xsd</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/management/datastreamHistory.xsd" class="externalLink">src/main/resources/xsd/management/<b>datastreamHistory.xsd</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistoryTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistoryTest.java</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetDisseminationTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetDisseminationTest.java</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetObjectXMLTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetObjectXMLTest.java</b></a> v 2eeb56ba453ef7b4977de2c1cabc683d59bfaf58<br />
 <br />
 datastreamHistory support</td>
 </tr>
 <tr class="a"><td>2010-06-08 13:40:56</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 479a9dae22518d00677413d4f08a136865615d77<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v 479a9dae22518d00677413d4f08a136865615d77<br />
 <br />
 [maven-release-plugin] prepare for next development iteration</td>
 </tr>
 <tr class="b"><td>2010-06-08 13:40:48</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v b4bedd90128bfbb8c7c4b5be6761c91128e0ed66<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v b4bedd90128bfbb8c7c4b5be6761c91128e0ed66<br />
 <br />
-[maven-release-plugin] prepare release fedora-<a class="externalLink" href="http://jira.codehaus.org/browse/client-0">client-0</a>.1.0</td>
+[maven-release-plugin] prepare release fedora-<a href="http://jira.codehaus.org/browse/client-0" class="externalLink">client-0</a>.1.0</td>
 </tr>
 <tr class="a"><td>2010-06-08 12:40:21</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Upload.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Upload.java</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/index.apt">src/site/apt/<b>index.apt</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/usage.apt">src/site/apt/<b>usage.apt</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml" class="externalLink"><b>pom.xml</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Upload.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>Upload.java</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/index.apt" class="externalLink">src/site/apt/<b>index.apt</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/usage.apt" class="externalLink">src/site/apt/<b>usage.apt</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v fb44a81953d6e238c2c84007742b54971bd81e03<br />
 <br />
 upload handles 302 redirects</td>
 </tr>
 <tr class="b"><td>2010-06-08 11:51:53</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/AddRelationship.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>AddRelationship.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/DescribeRepository.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>DescribeRepository.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetNextPID.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetNextPID.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Ingest.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Ingest.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/PurgeObject.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>PurgeObject.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/AddRelationship.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>AddRelationship.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/DescribeRepository.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>DescribeRepository.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetNextPID.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetNextPID.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Ingest.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>Ingest.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/PurgeObject.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>PurgeObject.java</b></a> v fbe4e72b3b62354cc028d0f988730f61fa3b1527<br />
 <br />
 javadoc updates</td>
 </tr>
 <tr class="a"><td>2010-06-08 11:37:44</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Upload.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Upload.java</b></a> v a680c0c06a63c0bfe1e580257ada43d4a665204a<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Upload.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>Upload.java</b></a> v a680c0c06a63c0bfe1e580257ada43d4a665204a<br />
 <br />
 updated javadoc</td>
 </tr>
 <tr class="b"><td>2010-06-08 11:32:02</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v a1c3143160adb3fc84c62be31af8659b1780d941<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v a1c3143160adb3fc84c62be31af8659b1780d941<br />
 <br />
 added debug setting and method for retrieving server version</td>
 </tr>
 <tr class="a"><td>2010-06-08 10:28:59</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/DescribeRepository.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>DescribeRepository.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/DescribeRepositoryResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>DescribeRepositoryResponse.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/access/fedoraRepository.xsd">src/main/resources/xsd/access/<b>fedoraRepository.xsd</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/DescribeRepositoryTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>DescribeRepositoryTest.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/DescribeRepository.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>DescribeRepository.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/DescribeRepositoryResponse.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/response/<b>DescribeRepositoryResponse.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/access/fedoraRepository.xsd" class="externalLink">src/main/resources/xsd/access/<b>fedoraRepository.xsd</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/DescribeRepositoryTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>DescribeRepositoryTest.java</b></a> v 22eb023d4865eaff0a448a1e88570157bd3b487f<br />
 <br />
 implemented support for API-A-Lite DescribeRepository</td>
 </tr>
 <tr class="b"><td>2010-06-08 08:15:12</td>
 <td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/UploadResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>UploadResponse.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
+<td><a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/UploadResponse.java" class="externalLink">src/main/java/com/yourmediashelf/fedora/client/response/<b>UploadResponse.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
+<a href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java" class="externalLink">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v fdbeafa3641fd6328e6d7356c60b0cf9be9055af<br />
 <br />
 updated javadocs, added more test cases for add/modify datastream</td>
-</tr>
-<tr class="a"><td>2010-06-07 12:45:32</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/UploadResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>UploadResponse.java</b></a> v c6b91fae71cd061e6c3c810823ca6ab973c72599<br />
-<br />
-trimming upload url of response body</td>
-</tr>
-<tr class="b"><td>2010-06-07 11:35:19</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v 1bb2e4c3eba4ebf7523eb2386ea7f90404423119<br />
-<br />
-added test for <a class="externalLink" href="http://jira.codehaus.org/browse/fcrepo-696">fcrepo-696</a>, marked ignore for now</td>
-</tr>
-<tr class="a"><td>2010-06-07 11:34:34</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v a22c74288317a191a5c905db1989d59036e23793<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v a22c74288317a191a5c905db1989d59036e23793<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Upload.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Upload.java</b></a> v a22c74288317a191a5c905db1989d59036e23793<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/UploadResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>UploadResponse.java</b></a> v a22c74288317a191a5c905db1989d59036e23793<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/UploadTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>UploadTest.java</b></a> v a22c74288317a191a5c905db1989d59036e23793<br />
-<br />
-added support for the API-M-LITE upload method</td>
-</tr>
-<tr class="b"><td>2010-06-07 10:26:56</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetObjectHistory.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetObjectHistory.java</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ListMethods.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ListMethods.java</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetObjectHistoryResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetObjectHistoryResponse.java</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/ListMethodsResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>ListMethodsResponse.java</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/access/fedoraObjectHistory.xsd">src/main/resources/xsd/access/<b>fedoraObjectHistory.xsd</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/access/listMethods-binding.xjb">src/main/resources/xsd/access/<b>listMethods-binding.xjb</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/resources/xsd/access/listMethods.xsd">src/main/resources/xsd/access/<b>listMethods.xsd</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetObjectHistoryTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetObjectHistoryTest.java</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ListMethodsTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ListMethodsTest.java</b></a> v 71e5db7183ab564f4b3c3e4e1855e168587fbb37<br />
-<br />
-added FedoraResponse impls for listMethods and getObjectHistory</td>
-</tr>
-<tr class="a"><td>2010-06-07 06:34:46</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 81858489fc654482486cb6057b5bcea205fac8d4<br />
-<br />
-[maven-release-plugin] prepare for next development iteration</td>
-</tr>
-<tr class="b"><td>2010-06-07 06:34:38</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v bedd79bb0f65f34e944d11543c86d9825c643a02<br />
-<br />
-[maven-release-plugin] prepare release fedora-<a class="externalLink" href="http://jira.codehaus.org/browse/client-0">client-0</a>.0.9</td>
-</tr>
-<tr class="a"><td>2010-06-07 06:26:16</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/developers.apt">src/site/apt/<b>developers.apt</b></a> v a6655af86c7d22da66b10ff77c989b07cb6ddccf<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/index.apt">src/site/apt/<b>index.apt</b></a> v a6655af86c7d22da66b10ff77c989b07cb6ddccf<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/apt/usage.apt">src/site/apt/<b>usage.apt</b></a> v a6655af86c7d22da66b10ff77c989b07cb6ddccf<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/site/site.xml">src/site/<b>site.xml</b></a> v a6655af86c7d22da66b10ff77c989b07cb6ddccf<br />
-<br />
-updated docs</td>
-</tr>
-<tr class="b"><td>2010-06-07 06:00:40</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/LICENSE_HEADER"><b>LICENSE_HEADER</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClient.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClient.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraClientException.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraClientException.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/FedoraCredentials.java">src/main/java/com/yourmediashelf/fedora/client/<b>FedoraCredentials.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/RelsExt.java">src/main/java/com/yourmediashelf/fedora/client/<b>RelsExt.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/AddDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>AddDatastream.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/AddRelationship.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>AddRelationship.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Export.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Export.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/FedoraRequest.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>FedoraRequest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/FindObjects.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>FindObjects.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastream.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastreamDissemination.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamDissemination.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDatastreamHistory.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamHistory.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetDissemination.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetDissemination.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetNextPID.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetNextPID.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetObjectHistory.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetObjectHistory.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetObjectProfile.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetObjectProfile.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetObjectXML.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetObjectXML.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/GetRelationships.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>GetRelationships.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/Ingest.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>Ingest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ListDatastreams.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ListDatastreams.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ListMethods.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ListMethods.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastream.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/ModifyObject.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>ModifyObject.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/PurgeDatastream.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>PurgeDatastream.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/PurgeObject.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>PurgeObject.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/request/PurgeRelationship.java">src/main/java/com/yourmediashelf/fedora/client/request/<b>PurgeRelationship.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/AddDatastreamResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>AddDatastreamResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/DatastreamProfileResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>DatastreamProfileResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/FedoraResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>FedoraResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/FedoraResponseImpl.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>FedoraResponseImpl.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetDatastreamResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetDatastreamResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetNextPIDResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetNextPIDResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetObjectProfileResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetObjectProfileResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/IngestResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>IngestResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/ListDatastreamsResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>ListDatastreamsResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/ModifyDatastreamResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>ModifyDatastreamResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/PurgeDatastreamResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>PurgeDatastreamResponse.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/util/ChecksumUtility.java">src/main/java/com/yourmediashelf/fedora/util/<b>ChecksumUtility.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/util/DateUtility.java">src/main/java/com/yourmediashelf/fedora/util/<b>DateUtility.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/util/NamespaceContextImpl.java">src/main/java/com/yourmediashelf/fedora/util/<b>NamespaceContextImpl.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/util/XmlSerializer.java">src/main/java/com/yourmediashelf/fedora/util/<b>XmlSerializer.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/FedoraClientTest.java">src/test/java/com/yourmediashelf/fedora/client/<b>FedoraClientTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/RelsExtTest.java">src/test/java/com/yourmediashelf/fedora/client/<b>RelsExtTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddRelationshipTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddRelationshipTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/BaseFedoraRequestTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>BaseFedoraRequestTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/FindObjectsTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>FindObjectsTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetDatastreamTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetNextPIDTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetNextPIDTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/GetRelationshipsTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>GetRelationshipsTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/IngestTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>IngestTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ListDatastreamsTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ListDatastreamsTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyDatastreamTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/ModifyObjectTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>ModifyObjectTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeDatastreamTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeObjectTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeObjectTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/PurgeRelationshipTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>PurgeRelationshipTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/util/DateUtilityTest.java">src/test/java/com/yourmediashelf/fedora/util/<b>DateUtilityTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/util/XmlSerializerTest.java">src/test/java/com/yourmediashelf/fedora/util/<b>XmlSerializerTest.java</b></a> v 3da0171acccea26fc39be78149c8b69afb75c907<br />
-<br />
-using maven-license-plugin</td>
-</tr>
-<tr class="a"><td>2010-06-07 05:24:41</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/util/XmlSerializerTest.java">src/test/java/com/yourmediashelf/fedora/util/<b>XmlSerializerTest.java</b></a> v ee31da8f0f90cfd4ee0ce6cb40eebf7be9d2c421<br />
-<br />
-added missing charset</td>
-</tr>
-<tr class="b"><td>2010-06-07 05:24:21</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/DatastreamProfileResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>DatastreamProfileResponse.java</b></a> v 64be91f36c8c7e30d5fbdeaf21425bfd8b008625<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetDatastreamResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetDatastreamResponse.java</b></a> v 64be91f36c8c7e30d5fbdeaf21425bfd8b008625<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v 64be91f36c8c7e30d5fbdeaf21425bfd8b008625<br />
-<br />
-moved isChecksumValid to DatastreamProfileResponse and added <a class="externalLink" href="http://jira.codehaus.org/browse/SHA-1">SHA-1</a> to checksum tests</td>
-</tr>
-<tr class="a"><td>2010-06-07 04:39:30</td>
-<td>Edwin Shin &lt;edwin.shin@yourmediashelf.com&gt;</td>
-<td><a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/pom.xml"><b>pom.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/client/response/GetDatastreamResponse.java">src/main/java/com/yourmediashelf/fedora/client/response/<b>GetDatastreamResponse.java</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/util/ChecksumUtility.java">src/main/java/com/yourmediashelf/fedora/util/<b>ChecksumUtility.java</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/main/java/com/yourmediashelf/fedora/util/XmlSerializer.java">src/main/java/com/yourmediashelf/fedora/util/<b>XmlSerializer.java</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/client/request/AddDatastreamTest.java">src/test/java/com/yourmediashelf/fedora/client/request/<b>AddDatastreamTest.java</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/java/com/yourmediashelf/fedora/util/XmlSerializerTest.java">src/test/java/com/yourmediashelf/fedora/util/<b>XmlSerializerTest.java</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.1-canonical.xml">src/test/resources/c14n/<b>3.1-canonical.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.1-input.xml">src/test/resources/c14n/<b>3.1-input.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.2-canonical.xml">src/test/resources/c14n/<b>3.2-canonical.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.2-input.xml">src/test/resources/c14n/<b>3.2-input.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.3-canonical.xml">src/test/resources/c14n/<b>3.3-canonical.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.3-input.xml">src/test/resources/c14n/<b>3.3-input.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.4-canonical.xml">src/test/resources/c14n/<b>3.4-canonical.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.4-input.xml">src/test/resources/c14n/<b>3.4-input.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.6-canonical.xml">src/test/resources/c14n/<b>3.6-canonical.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<a class="externalLink" href="http://github.com/mediashelf/fedora-client/blob/master/src/test/resources/c14n/3.6-input.xml">src/test/resources/c14n/<b>3.6-input.xml</b></a> v 1d9dff9202d1917b103f0d17dd85a49b711e587a<br />
-<br />
-added xml serialization and checksumming utilities</td>
 </tr>
 </table>
 </div>
