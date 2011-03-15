@@ -423,7 +423,7 @@
 <a class="jxr_linenumber" name="413" href="#413">413</a>     }
 <a class="jxr_linenumber" name="414" href="#414">414</a> 
 <a class="jxr_linenumber" name="415" href="#415">415</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="416" href="#416">416</a> <em class="jxr_javadoccomment">     * @see JMSManager#listenDurable(Topic, MessageListener, String)</em>
+<a class="jxr_linenumber" name="416" href="#416">416</a> <em class="jxr_javadoccomment">     * @see JMSManager#listenDurable(Topic, String, MessageListener, String)</em>
 <a class="jxr_linenumber" name="417" href="#417">417</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="418" href="#418">418</a>     <strong class="jxr_keyword">public</strong> String listenDurable(String topicName,
 <a class="jxr_linenumber" name="419" href="#419">419</a>                                 MessageListener callback,
@@ -440,7 +440,7 @@
 <a class="jxr_linenumber" name="430" href="#430">430</a> <em class="jxr_javadoccomment">     * method is the same as calling</em>
 <a class="jxr_linenumber" name="431" href="#431">431</a> <em class="jxr_javadoccomment">     * &lt;code&gt;listenDurable(topic, "", callback, null)&lt;/code&gt;</em>
 <a class="jxr_linenumber" name="432" href="#432">432</a> <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="433" href="#433">433</a> <em class="jxr_javadoccomment">     * @see JMSManager#listenDurable(Topic, MessageListener, String)</em>
+<a class="jxr_linenumber" name="433" href="#433">433</a> <em class="jxr_javadoccomment">     * @see JMSManager#listenDurable(Topic, String, MessageListener, String)</em>
 <a class="jxr_linenumber" name="434" href="#434">434</a> <em class="jxr_javadoccomment">     */</em>
 <a class="jxr_linenumber" name="435" href="#435">435</a>     <strong class="jxr_keyword">public</strong> String listenDurable(Topic topic, MessageListener callback)
 <a class="jxr_linenumber" name="436" href="#436">436</a>             <strong class="jxr_keyword">throws</strong> <a href="../../../../../com/yourmediashelf/fedora/client/messaging/MessagingException.html">MessagingException</a> {
