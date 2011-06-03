@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'MediaShelf fedora-client 0.1.5 API'
+'MediaShelf fedora-client 0.1.6 API'
 -linkoffline
 'http://download.oracle.com/javase/6/docs/api' '/Users/eddie/Documents/workspace/fedora-client/target/checkout/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'MediaShelf fedora-client 0.1.5 API'
+'MediaShelf fedora-client 0.1.6 API'
