@@ -54,6 +54,9 @@
             <strong>Usage</strong>
           </li>
                   <li class="none">
+                          <a href="history.html" title="History">History</a>
+            </li>
+                  <li class="none">
                           <a href="developers.html" title="Developers">Developers</a>
             </li>
           </ul>
@@ -84,31 +87,27 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2>Usage<a name="Usage"></a></h2><p>Create an instance of FedoraClient:</p><div class="source"><pre>FedoraCredentials credentials = 
+        <div class="section"><h2>Usage<a name="Usage"></a></h2><p>Usage is simple: </p><ol style="list-style-type: decimal"><li>Create an instance of FedoraClient<div class="source"><pre>FedoraCredentials credentials = 
     new FedoraCredentials(&quot;http://example.org/fedora&quot;, &quot;username&quot;, &quot;password&quot;);
-FedoraClient fedora = new FedoraClient(credentials);</pre></div><p>Build the request, execute it, and evaluate the response</p><div class="source"><pre>IngestResponse response = new Ingest(&quot;test:pid&quot;).label(&quot;foo&quot;).execute(fedora);
-String pid = response.getPid();</pre></div><p>Using static imports, you can use a more abbreviated syntax:</p><div class="source"><pre>import static com.yourmediashelf.fedora.client.FedoraClient.*;
-
-...
-
-    ingest(&quot;test:pid&quot;).execute(fedora);</pre></div><p>Use optimistic locking for modifyObject by passing the lastModifiedDate as a request parameter. If the request's lastModifiedDate is earlier than the object's, the request will fail with a HTTP 409 Conflict error.</p><div class="source"><pre>Date lastModifiedDate = fedora.getLastModifiedDate(&quot;test:pid&quot;);
+FedoraClient fedora = new FedoraClient(credentials);</pre></div></li><li>Optionally, set this instance of FedoraClient as the default for all requests<div class="source"><pre>FedoraRequest.setDefaultClient(fedora);</pre></div></li><li>Build a <tt>FedoraRequest</tt> for the Fedora API method and execute the request<div class="source"><pre>IngestResponse response = new Ingest(&quot;test:pid&quot;).label(&quot;foo&quot;).execute();
+String pid = response.getPid();</pre></div><p>Using static imports, you can use a more abbreviated syntax:</p><p>+-- import static com.yourmediashelf.fedora.client.FedoraClient.*; ...</p><p>ingest(&quot;test:pid&quot;).execute(); +--</p><p>Use optimistic locking for modifyObject by passing the lastModifiedDate as a request parameter. If the request's lastModifiedDate is earlier than the object's, the request will fail with a HTTP 409 Conflict error.</p><div class="source"><pre>Date lastModifiedDate = fedora.getLastModifiedDate(&quot;test:pid&quot;);
 try {
-    modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate).execute(fedora);
+    modifyObject(&quot;test:pid&quot;).label(&quot;bar&quot;).lastModifiedDate(lastModifiedDate).execute();
 } catch(FedoraClientException e) {
     if (e.getStatus() == 409) {
         // do something
     }
-}</pre></div><div class="section"><h3>Parsing a response<a name="Parsing_a_response"></a></h3><p>FedoraRequests return instances of a FedoraResponse. The response-specific implementations (e.g. AddDatastreamResponse, GetDatastreamResponse, etc.) provide convenience methods that parse the response body. However, at this writing, not every request has a corresponding response implemented (yet). In those cases, it is necessary to parse the &quot;raw&quot; response, as returned by FedoraReponse.getEntityInputStream or FedoraResponse.getEntity.</p></div><div class="section"><h3>Including fedora-client in your Maven project<a name="Including_fedora-client_in_your_Maven_project"></a></h3><p>As of 0.1.7, fedora-client is now available via Maven Central. Prior versions are available in the Duraspace Thirdparty Maven Repository (https://m2.duraspace.org/content/repositories/thirdparty).</p><p>As of 0.1.8, fedora-client is now a Maven multi-module project, producing fedora-client-core and fedora-client-messaging artifacts. Unless you specifically require support for Fedora Messaging, fedora-client-core is all you need. Similarly, if you only need support for Fedora Messaging and not Fedora's REST API, fedora-client-messaging is all you need.</p><p>Add the following to your pom.xml (substituting the actual, current version of fedora-client):</p><div class="source"><pre>
+}</pre></div></li></ol><div class="section"><h3>Parsing a response<a name="Parsing_a_response"></a></h3><p>FedoraRequests return instances of a FedoraResponse. The response-specific implementations (e.g. AddDatastreamResponse, GetDatastreamResponse, etc.) provide convenience methods that parse the response body. However, at this writing, not every request has a corresponding response implemented (yet). In those cases, it is necessary to parse the &quot;raw&quot; response, as returned by FedoraReponse.getEntityInputStream or FedoraResponse.getEntity.</p></div><div class="section"><h3>Including fedora-client in your Maven project<a name="Including_fedora-client_in_your_Maven_project"></a></h3><p>As of 0.1.7, fedora-client is now available via Maven Central. Prior versions are available in the Duraspace Thirdparty Maven Repository (https://m2.duraspace.org/content/repositories/thirdparty).</p><p>As of 0.1.8, fedora-client is now a Maven multi-module project, producing fedora-client-core and fedora-client-messaging artifacts. Unless you specifically require support for Fedora Messaging, fedora-client-core is all you need. Similarly, if you only need support for Fedora Messaging and not Fedora's REST API, fedora-client-messaging is all you need.</p><p>Add the following to your pom.xml (substituting the actual, current version of fedora-client):</p><div class="source"><pre>
 &lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
         &lt;artifactId&gt;fedora-client-core&lt;/artifactId&gt;
-        &lt;version&gt;0.1.8&lt;/version&gt;
+        &lt;version&gt;0.2&lt;/version&gt;
     &lt;/dependency&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;com.yourmediashelf.fedora.client&lt;/groupId&gt;
         &lt;artifactId&gt;fedora-client-messaging&lt;/artifactId&gt;
-        &lt;version&gt;0.1.8&lt;/version&gt;
+        &lt;version&gt;0.2&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</pre></div></div><div class="section"><h3>Including fedora-client in your non-Maven project<a name="Including_fedora-client_in_your_non-Maven_project"></a></h3><p>As of version 0.1.5, fedora-client also distributes <i>-with-dependencies</i> jars that bundle all dependencies (except for log4j) for use with non-Maven-based projects.</p></div></div>
       </div>
