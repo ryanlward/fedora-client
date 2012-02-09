@@ -62,18 +62,18 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>          String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
 <a class="jxr_linenumber" name="53" href="#53">53</a>          FedoraResponse response;
 <a class="jxr_linenumber" name="54" href="#54">54</a>          response =
-<a class="jxr_linenumber" name="55" href="#55">55</a>                  addDatastream(testPid, dsId).content(content).execute(fedora());
+<a class="jxr_linenumber" name="55" href="#55">55</a>                  addDatastream(testPid, dsId).content(content).execute();
 <a class="jxr_linenumber" name="56" href="#56">56</a>          assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="57" href="#57">57</a>  
 <a class="jxr_linenumber" name="58" href="#58">58</a>          <em class="jxr_comment">// verify datastream content before modify</em>
-<a class="jxr_linenumber" name="59" href="#59">59</a>          response = getDatastreamDissemination(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="59" href="#59">59</a>          response = getDatastreamDissemination(testPid, dsId).execute();
 <a class="jxr_linenumber" name="60" href="#60">60</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="61" href="#61">61</a>          assertXMLEqual(content, response.getEntity(String.<strong class="jxr_keyword">class</strong>));
 <a class="jxr_linenumber" name="62" href="#62">62</a>  
 <a class="jxr_linenumber" name="63" href="#63">63</a>          <em class="jxr_comment">// verify datastream properties before modify</em>
 <a class="jxr_linenumber" name="64" href="#64">64</a>          DatastreamProfileResponse dspResponse;
 <a class="jxr_linenumber" name="65" href="#65">65</a>          dspResponse =
-<a class="jxr_linenumber" name="66" href="#66">66</a>                  getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute(fedora());
+<a class="jxr_linenumber" name="66" href="#66">66</a>                  getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute();
 <a class="jxr_linenumber" name="67" href="#67">67</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="68" href="#68">68</a>          DatastreamProfile profile = dspResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="69" href="#69">69</a>          assertEquals(testPid, profile.getPid());
@@ -99,17 +99,17 @@
 <a class="jxr_linenumber" name="89" href="#89">89</a>          String newDsLabel = <span class="jxr_string">"asdf"</span>;
 <a class="jxr_linenumber" name="90" href="#90">90</a>          response =
 <a class="jxr_linenumber" name="91" href="#91">91</a>                  modifyDatastream(testPid, dsId).content(content)
-<a class="jxr_linenumber" name="92" href="#92">92</a>                          .dsLabel(newDsLabel).execute(fedora());
+<a class="jxr_linenumber" name="92" href="#92">92</a>                          .dsLabel(newDsLabel).execute();
 <a class="jxr_linenumber" name="93" href="#93">93</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="94" href="#94">94</a>  
 <a class="jxr_linenumber" name="95" href="#95">95</a>          <em class="jxr_comment">// verify datastream content after modify</em>
-<a class="jxr_linenumber" name="96" href="#96">96</a>          response = getDatastreamDissemination(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="96" href="#96">96</a>          response = getDatastreamDissemination(testPid, dsId).execute();
 <a class="jxr_linenumber" name="97" href="#97">97</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="98" href="#98">98</a>          assertXMLEqual(content, response.getEntity(String.<strong class="jxr_keyword">class</strong>));
 <a class="jxr_linenumber" name="99" href="#99">99</a>  
 <a class="jxr_linenumber" name="100" href="#100">100</a>         <em class="jxr_comment">// verify datastream properties after modify</em>
 <a class="jxr_linenumber" name="101" href="#101">101</a>         dspResponse =
-<a class="jxr_linenumber" name="102" href="#102">102</a>                 getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute(fedora());
+<a class="jxr_linenumber" name="102" href="#102">102</a>                 getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute();
 <a class="jxr_linenumber" name="103" href="#103">103</a>         assertEquals(200, dspResponse.getStatus());
 <a class="jxr_linenumber" name="104" href="#104">104</a>         profile = dspResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="105" href="#105">105</a> 
@@ -135,11 +135,11 @@
 <a class="jxr_linenumber" name="125" href="#125">125</a>     @Test
 <a class="jxr_linenumber" name="126" href="#126">126</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testOptimisticLocking() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="127" href="#127">127</a>         DateTime lastModifiedDate =
-<a class="jxr_linenumber" name="128" href="#128">128</a>                 <strong class="jxr_keyword">new</strong> DateTime(fedora().getLastModifiedDate(testPid, <span class="jxr_string">"DC"</span>));
+<a class="jxr_linenumber" name="128" href="#128">128</a>                 <strong class="jxr_keyword">new</strong> DateTime(fedora.getLastModifiedDate(testPid, <span class="jxr_string">"DC"</span>));
 <a class="jxr_linenumber" name="129" href="#129">129</a>         <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="130" href="#130">130</a>             modifyDatastream(testPid, <span class="jxr_string">"DC"</span>).dsLabel(<span class="jxr_string">"testOptimisticLocking"</span>)
 <a class="jxr_linenumber" name="131" href="#131">131</a>                     .lastModifiedDate(lastModifiedDate.minusHours(1))
-<a class="jxr_linenumber" name="132" href="#132">132</a>                     .execute(fedora());
+<a class="jxr_linenumber" name="132" href="#132">132</a>                     .execute();
 <a class="jxr_linenumber" name="133" href="#133">133</a>             fail(<span class="jxr_string">"modifyDatastream succeeded, but should have failed"</span>);
 <a class="jxr_linenumber" name="134" href="#134">134</a>         } <strong class="jxr_keyword">catch</strong> (FedoraClientException expected) {
 <a class="jxr_linenumber" name="135" href="#135">135</a>             assertEquals(409, expected.getStatus());
@@ -150,27 +150,27 @@
 <a class="jxr_linenumber" name="140" href="#140">140</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testNullAndEmptyPidAndDsId() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="141" href="#141">141</a>         String dsId = <span class="jxr_string">"testNullAndEmptyPidAndDsId"</span>;
 <a class="jxr_linenumber" name="142" href="#142">142</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="143" href="#143">143</a>             modifyDatastream(<strong class="jxr_keyword">null</strong>, dsId).logMessage(<span class="jxr_string">"test null pid"</span>).execute(fedora());
+<a class="jxr_linenumber" name="143" href="#143">143</a>             modifyDatastream(<strong class="jxr_keyword">null</strong>, dsId).logMessage(<span class="jxr_string">"test null pid"</span>).execute();
 <a class="jxr_linenumber" name="144" href="#144">144</a>             fail(<span class="jxr_string">"Null pid should throw an IllegalArgumentException"</span>);
 <a class="jxr_linenumber" name="145" href="#145">145</a>         } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException expected) {}
 <a class="jxr_linenumber" name="146" href="#146">146</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="147" href="#147">147</a>             modifyDatastream(<span class="jxr_string">""</span>, dsId).logMessage(<span class="jxr_string">"test empty pid"</span>).execute(fedora());
+<a class="jxr_linenumber" name="147" href="#147">147</a>             modifyDatastream(<span class="jxr_string">""</span>, dsId).logMessage(<span class="jxr_string">"test empty pid"</span>).execute();
 <a class="jxr_linenumber" name="148" href="#148">148</a>             fail(<span class="jxr_string">"Empty pid should throw an IllegalArgumentException"</span>);
 <a class="jxr_linenumber" name="149" href="#149">149</a>         } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException expected) {}
 <a class="jxr_linenumber" name="150" href="#150">150</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="151" href="#151">151</a>             modifyDatastream(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>).logMessage(<span class="jxr_string">"test null pid &amp; dsid"</span>).execute(fedora());
+<a class="jxr_linenumber" name="151" href="#151">151</a>             modifyDatastream(<strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">null</strong>).logMessage(<span class="jxr_string">"test null pid &amp; dsid"</span>).execute();
 <a class="jxr_linenumber" name="152" href="#152">152</a>             fail(<span class="jxr_string">"Null pid &amp; dsId should throw an IllegalArgumentException"</span>);
 <a class="jxr_linenumber" name="153" href="#153">153</a>         } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException expected) {}
 <a class="jxr_linenumber" name="154" href="#154">154</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="155" href="#155">155</a>             modifyDatastream(<span class="jxr_string">""</span>, <span class="jxr_string">""</span>).logMessage(<span class="jxr_string">"test empty pid &amp; dsid"</span>).execute(fedora());
+<a class="jxr_linenumber" name="155" href="#155">155</a>             modifyDatastream(<span class="jxr_string">""</span>, <span class="jxr_string">""</span>).logMessage(<span class="jxr_string">"test empty pid &amp; dsid"</span>).execute();
 <a class="jxr_linenumber" name="156" href="#156">156</a>             fail(<span class="jxr_string">"Empty pid &amp; dsId should throw an IllegalArgumentException"</span>);
 <a class="jxr_linenumber" name="157" href="#157">157</a>         } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException expected) {}
 <a class="jxr_linenumber" name="158" href="#158">158</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="159" href="#159">159</a>             modifyDatastream(testPid, <strong class="jxr_keyword">null</strong>).logMessage(<span class="jxr_string">"test null dsid"</span>).execute(fedora());
+<a class="jxr_linenumber" name="159" href="#159">159</a>             modifyDatastream(testPid, <strong class="jxr_keyword">null</strong>).logMessage(<span class="jxr_string">"test null dsid"</span>).execute();
 <a class="jxr_linenumber" name="160" href="#160">160</a>             fail(<span class="jxr_string">"Null dsId should throw an IllegalArgumentException"</span>);
 <a class="jxr_linenumber" name="161" href="#161">161</a>         } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException expected) {}
 <a class="jxr_linenumber" name="162" href="#162">162</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="163" href="#163">163</a>             modifyDatastream(testPid, <span class="jxr_string">""</span>).logMessage(<span class="jxr_string">"test empty dsid"</span>).execute(fedora());
+<a class="jxr_linenumber" name="163" href="#163">163</a>             modifyDatastream(testPid, <span class="jxr_string">""</span>).logMessage(<span class="jxr_string">"test empty dsid"</span>).execute();
 <a class="jxr_linenumber" name="164" href="#164">164</a>             fail(<span class="jxr_string">"Empty dsId should throw an IllegalArgumentException"</span>);
 <a class="jxr_linenumber" name="165" href="#165">165</a>         } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException expected) {}
 <a class="jxr_linenumber" name="166" href="#166">166</a>     }
@@ -186,13 +186,13 @@
 <a class="jxr_linenumber" name="176" href="#176">176</a>         String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
 <a class="jxr_linenumber" name="177" href="#177">177</a>         FedoraResponse response;
 <a class="jxr_linenumber" name="178" href="#178">178</a>         response =
-<a class="jxr_linenumber" name="179" href="#179">179</a>                 addDatastream(testPid, dsId).content(content).execute(fedora());
+<a class="jxr_linenumber" name="179" href="#179">179</a>                 addDatastream(testPid, dsId).content(content).execute();
 <a class="jxr_linenumber" name="180" href="#180">180</a>         assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="181" href="#181">181</a> 
 <a class="jxr_linenumber" name="182" href="#182">182</a>         <em class="jxr_comment">// verify datastream properties before modify</em>
 <a class="jxr_linenumber" name="183" href="#183">183</a>         GetDatastreamResponse gdResponse;
 <a class="jxr_linenumber" name="184" href="#184">184</a>         gdResponse =
-<a class="jxr_linenumber" name="185" href="#185">185</a>                 getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute(fedora());
+<a class="jxr_linenumber" name="185" href="#185">185</a>                 getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute();
 <a class="jxr_linenumber" name="186" href="#186">186</a>         assertEquals(200, gdResponse.getStatus());
 <a class="jxr_linenumber" name="187" href="#187">187</a>         DatastreamProfile profile = gdResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="188" href="#188">188</a>         assertEquals(testPid, profile.getPid());
@@ -217,11 +217,11 @@
 <a class="jxr_linenumber" name="207" href="#207">207</a>         String newDsState = <span class="jxr_string">"I"</span>;
 <a class="jxr_linenumber" name="208" href="#208">208</a>         response =
 <a class="jxr_linenumber" name="209" href="#209">209</a>                 modifyDatastream(testPid, dsId).dsState(newDsState)
-<a class="jxr_linenumber" name="210" href="#210">210</a>                         .execute(fedora());
+<a class="jxr_linenumber" name="210" href="#210">210</a>                         .execute();
 <a class="jxr_linenumber" name="211" href="#211">211</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="212" href="#212">212</a> 
 <a class="jxr_linenumber" name="213" href="#213">213</a>         <em class="jxr_comment">// verify datastream properties after modify</em>
-<a class="jxr_linenumber" name="214" href="#214">214</a>         gdResponse = getDatastream(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="214" href="#214">214</a>         gdResponse = getDatastream(testPid, dsId).execute();
 <a class="jxr_linenumber" name="215" href="#215">215</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="216" href="#216">216</a>         profile = gdResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="217" href="#217">217</a> 
@@ -247,11 +247,11 @@
 <a class="jxr_linenumber" name="237" href="#237">237</a>         String newDsLabel = <span class="jxr_string">"testModifyState"</span>;
 <a class="jxr_linenumber" name="238" href="#238">238</a>         response =
 <a class="jxr_linenumber" name="239" href="#239">239</a>                 modifyDatastream(testPid, dsId).dsLabel(newDsLabel)
-<a class="jxr_linenumber" name="240" href="#240">240</a>                         .execute(fedora());
+<a class="jxr_linenumber" name="240" href="#240">240</a>                         .execute();
 <a class="jxr_linenumber" name="241" href="#241">241</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="242" href="#242">242</a> 
 <a class="jxr_linenumber" name="243" href="#243">243</a>         <em class="jxr_comment">// verify datastream properties after modify</em>
-<a class="jxr_linenumber" name="244" href="#244">244</a>         gdResponse = getDatastream(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="244" href="#244">244</a>         gdResponse = getDatastream(testPid, dsId).execute();
 <a class="jxr_linenumber" name="245" href="#245">245</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="246" href="#246">246</a>         profile = gdResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="247" href="#247">247</a> 
@@ -286,13 +286,13 @@
 <a class="jxr_linenumber" name="276" href="#276">276</a>         String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
 <a class="jxr_linenumber" name="277" href="#277">277</a>         FedoraResponse response;
 <a class="jxr_linenumber" name="278" href="#278">278</a>         response =
-<a class="jxr_linenumber" name="279" href="#279">279</a>                 addDatastream(testPid, dsId).content(content).execute(fedora());
+<a class="jxr_linenumber" name="279" href="#279">279</a>                 addDatastream(testPid, dsId).content(content).execute();
 <a class="jxr_linenumber" name="280" href="#280">280</a>         assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="281" href="#281">281</a> 
 <a class="jxr_linenumber" name="282" href="#282">282</a>         <em class="jxr_comment">// verify datastream properties before modify</em>
 <a class="jxr_linenumber" name="283" href="#283">283</a>         DatastreamProfileResponse dspResponse;
 <a class="jxr_linenumber" name="284" href="#284">284</a>         dspResponse =
-<a class="jxr_linenumber" name="285" href="#285">285</a>                 getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute(fedora());
+<a class="jxr_linenumber" name="285" href="#285">285</a>                 getDatastream(testPid, dsId).format(<span class="jxr_string">"xml"</span>).execute();
 <a class="jxr_linenumber" name="286" href="#286">286</a>         assertEquals(200, dspResponse.getStatus());
 <a class="jxr_linenumber" name="287" href="#287">287</a>         DatastreamProfile profile = dspResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="288" href="#288">288</a>         assertEquals(testPid, profile.getPid());
@@ -321,11 +321,11 @@
 <a class="jxr_linenumber" name="311" href="#311">311</a>         List&lt;String&gt; versionable = modifyDS.getQueryParam(<span class="jxr_string">"versionable"</span>);
 <a class="jxr_linenumber" name="312" href="#312">312</a>         assertEquals(1, versionable.size());
 <a class="jxr_linenumber" name="313" href="#313">313</a>         assertEquals(Boolean.toString(newVersionable), versionable.get(0));
-<a class="jxr_linenumber" name="314" href="#314">314</a>         response = modifyDS.execute(fedora());
+<a class="jxr_linenumber" name="314" href="#314">314</a>         response = modifyDS.execute();
 <a class="jxr_linenumber" name="315" href="#315">315</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="316" href="#316">316</a> 
 <a class="jxr_linenumber" name="317" href="#317">317</a>         <em class="jxr_comment">// verify datastream properties after modify</em>
-<a class="jxr_linenumber" name="318" href="#318">318</a>         dspResponse = getDatastream(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="318" href="#318">318</a>         dspResponse = getDatastream(testPid, dsId).execute();
 <a class="jxr_linenumber" name="319" href="#319">319</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="320" href="#320">320</a>         profile = dspResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="321" href="#321">321</a> 
@@ -352,11 +352,11 @@
 <a class="jxr_linenumber" name="342" href="#342">342</a>         response =
 <a class="jxr_linenumber" name="343" href="#343">343</a>                 modifyDatastream(testPid, dsId)
 <a class="jxr_linenumber" name="344" href="#344">344</a>                         .logMessage(<span class="jxr_string">"don't actually modify anything"</span>)
-<a class="jxr_linenumber" name="345" href="#345">345</a>                         .execute(fedora());
+<a class="jxr_linenumber" name="345" href="#345">345</a>                         .execute();
 <a class="jxr_linenumber" name="346" href="#346">346</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="347" href="#347">347</a> 
 <a class="jxr_linenumber" name="348" href="#348">348</a>         <em class="jxr_comment">// verify datastream properties after modify</em>
-<a class="jxr_linenumber" name="349" href="#349">349</a>         dspResponse = getDatastream(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="349" href="#349">349</a>         dspResponse = getDatastream(testPid, dsId).execute();
 <a class="jxr_linenumber" name="350" href="#350">350</a>         assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="351" href="#351">351</a>         profile = dspResponse.getDatastreamProfile();
 <a class="jxr_linenumber" name="352" href="#352">352</a> 
@@ -397,12 +397,12 @@
 <a class="jxr_linenumber" name="387" href="#387">387</a> 				.content(
 <a class="jxr_linenumber" name="388" href="#388">388</a> 						<span class="jxr_string">"&lt;rdf:RDF xmlns:rdf=\&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#\&quot;&gt;"</span>
 <a class="jxr_linenumber" name="389" href="#389">389</a> 								+ <span class="jxr_string">"&lt;rdf:Description rdf:about=\&quot;info:fedora/"</span>
-<a class="jxr_linenumber" name="390" href="#390">390</a> 								+ testPid + <span class="jxr_string">"\&quot; /&gt;&lt;/rdf:RDF&gt;"</span>).execute(fedora());
+<a class="jxr_linenumber" name="390" href="#390">390</a> 								+ testPid + <span class="jxr_string">"\&quot; /&gt;&lt;/rdf:RDF&gt;"</span>).execute();
 <a class="jxr_linenumber" name="391" href="#391">391</a> 
 <a class="jxr_linenumber" name="392" href="#392">392</a> 		assertEquals(201, adr.getStatus());
 <a class="jxr_linenumber" name="393" href="#393">393</a> 
 <a class="jxr_linenumber" name="394" href="#394">394</a> 		ModifyDatastreamResponse mdr = modifyDatastream(testPid, dsId).dsLabel(
-<a class="jxr_linenumber" name="395" href="#395">395</a> 				<span class="jxr_string">"a test label"</span>).logMessage(<span class="jxr_string">"testModifyManagedRelsExt"</span>).execute(fedora());
+<a class="jxr_linenumber" name="395" href="#395">395</a> 				<span class="jxr_string">"a test label"</span>).logMessage(<span class="jxr_string">"testModifyManagedRelsExt"</span>).execute();
 <a class="jxr_linenumber" name="396" href="#396">396</a> 		assertEquals(200, mdr.getStatus());
 <a class="jxr_linenumber" name="397" href="#397">397</a> 
 <a class="jxr_linenumber" name="398" href="#398">398</a> 		<em class="jxr_comment">// The fix for FCREPO-1045 skips validation if the dsLocation is</em>
@@ -410,8 +410,8 @@
 <a class="jxr_linenumber" name="400" href="#400">400</a> 		<em class="jxr_comment">// unversioned RELS-EXT still triggers validation.</em>
 <a class="jxr_linenumber" name="401" href="#401">401</a> 		mdr = modifyDatastream(testPid, dsId).versionable(false)
 <a class="jxr_linenumber" name="402" href="#402">402</a> 				.logMessage(<span class="jxr_string">"testModifyManagedRelsExt setting versionable false"</span>)
-<a class="jxr_linenumber" name="403" href="#403">403</a> 				.execute(fedora());
-<a class="jxr_linenumber" name="404" href="#404">404</a> 		GetDatastreamResponse gdr = getDatastream(testPid, dsId).execute(fedora());
+<a class="jxr_linenumber" name="403" href="#403">403</a> 				.execute();
+<a class="jxr_linenumber" name="404" href="#404">404</a> 		GetDatastreamResponse gdr = getDatastream(testPid, dsId).execute();
 <a class="jxr_linenumber" name="405" href="#405">405</a>         DatastreamProfile dsp = gdr.getDatastreamProfile();
 <a class="jxr_linenumber" name="406" href="#406">406</a>         assertFalse(Boolean.parseBoolean(dsp.getDsVersionable()));
 <a class="jxr_linenumber" name="407" href="#407">407</a> 		
@@ -421,7 +421,7 @@
 <a class="jxr_linenumber" name="411" href="#411">411</a> 						+ <span class="jxr_string">"&lt;rdf:Description rdf:about=\&quot;info:fedora/"</span>
 <a class="jxr_linenumber" name="412" href="#412">412</a> 						+ <span class="jxr_string">"AnInvalidPID\&quot; /&gt;&lt;/rdf:RDF&gt;"</span>)
 <a class="jxr_linenumber" name="413" href="#413">413</a> 				.logMessage(<span class="jxr_string">"testModifyManagedRelsExt request that should fail"</span>)
-<a class="jxr_linenumber" name="414" href="#414">414</a> 				.execute(fedora());
+<a class="jxr_linenumber" name="414" href="#414">414</a> 				.execute();
 <a class="jxr_linenumber" name="415" href="#415">415</a> 			fail(<span class="jxr_string">"Should have thrown an exception because of an invalid RELS-EXT"</span>);
 <a class="jxr_linenumber" name="416" href="#416">416</a> 		} <strong class="jxr_keyword">catch</strong> (FedoraClientException e) {
 <a class="jxr_linenumber" name="417" href="#417">417</a> 		}

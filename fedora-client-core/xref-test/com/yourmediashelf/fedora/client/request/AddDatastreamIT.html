@@ -57,13 +57,13 @@
 <a class="jxr_linenumber" name="47" href="#47">47</a>  
 <a class="jxr_linenumber" name="48" href="#48">48</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/AddDatastreamIT.html">AddDatastreamIT</a>
 <a class="jxr_linenumber" name="49" href="#49">49</a>          <strong class="jxr_keyword">extends</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/BaseFedoraRequestIT.html">BaseFedoraRequestIT</a> {
-<a class="jxr_linenumber" name="50" href="#50">50</a>  
+<a class="jxr_linenumber" name="50" href="#50">50</a>      
 <a class="jxr_linenumber" name="51" href="#51">51</a>      @Test
 <a class="jxr_linenumber" name="52" href="#52">52</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testNewAddDatastream() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="53" href="#53">53</a>          String dsid = <span class="jxr_string">"testNewAddDatastream"</span>;
 <a class="jxr_linenumber" name="54" href="#54">54</a>          AddDatastreamResponse response =
 <a class="jxr_linenumber" name="55" href="#55">55</a>                  <strong class="jxr_keyword">new</strong> AddDatastream(testPid, dsid).dsLabel(<span class="jxr_string">"bar"</span>)
-<a class="jxr_linenumber" name="56" href="#56">56</a>                          .content(<span class="jxr_string">"&lt;foo&gt;?&lt;/foo&gt;"</span>).execute(fedora());
+<a class="jxr_linenumber" name="56" href="#56">56</a>                          .content(<span class="jxr_string">"&lt;foo&gt;?&lt;/foo&gt;"</span>).execute();
 <a class="jxr_linenumber" name="57" href="#57">57</a>          assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="58" href="#58">58</a>          String expectedLocation =
 <a class="jxr_linenumber" name="59" href="#59">59</a>                  String.format(<span class="jxr_string">"%s/objects/%s/datastreams/%s"</span>, getCredentials()
@@ -82,14 +82,14 @@
 <a class="jxr_linenumber" name="72" href="#72">72</a>          assertTrue(f.exists());
 <a class="jxr_linenumber" name="73" href="#73">73</a>          FedoraResponse response =
 <a class="jxr_linenumber" name="74" href="#74">74</a>                  addDatastream(testPid, dsid).controlGroup(<span class="jxr_string">"M"</span>).content(f)
-<a class="jxr_linenumber" name="75" href="#75">75</a>                          .execute(fedora());
+<a class="jxr_linenumber" name="75" href="#75">75</a>                          .execute();
 <a class="jxr_linenumber" name="76" href="#76">76</a>          assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="77" href="#77">77</a>      }
 <a class="jxr_linenumber" name="78" href="#78">78</a>  
 <a class="jxr_linenumber" name="79" href="#79">79</a>      @Test(expected = FedoraClientException.<strong class="jxr_keyword">class</strong>)
 <a class="jxr_linenumber" name="80" href="#80">80</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMissingManagedContent() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="81" href="#81">81</a>          String dsid = <span class="jxr_string">"testMissingManagedContent"</span>;
-<a class="jxr_linenumber" name="82" href="#82">82</a>          addDatastream(testPid, dsid).controlGroup(<span class="jxr_string">"M"</span>).execute(fedora());
+<a class="jxr_linenumber" name="82" href="#82">82</a>          addDatastream(testPid, dsid).controlGroup(<span class="jxr_string">"M"</span>).execute();
 <a class="jxr_linenumber" name="83" href="#83">83</a>      }
 <a class="jxr_linenumber" name="84" href="#84">84</a>  
 <a class="jxr_linenumber" name="85" href="#85">85</a>      @Test
@@ -101,7 +101,7 @@
 <a class="jxr_linenumber" name="91" href="#91">91</a>                                testPid);
 <a class="jxr_linenumber" name="92" href="#92">92</a>          AddDatastreamResponse response =
 <a class="jxr_linenumber" name="93" href="#93">93</a>                  addDatastream(testPid, dsid).dsLocation(dsLocation)
-<a class="jxr_linenumber" name="94" href="#94">94</a>                          .controlGroup(<span class="jxr_string">"R"</span>).execute(fedora());
+<a class="jxr_linenumber" name="94" href="#94">94</a>                          .controlGroup(<span class="jxr_string">"R"</span>).execute();
 <a class="jxr_linenumber" name="95" href="#95">95</a>          assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="96" href="#96">96</a>      }
 <a class="jxr_linenumber" name="97" href="#97">97</a>  
@@ -111,7 +111,7 @@
 <a class="jxr_linenumber" name="101" href="#101">101</a>         String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
 <a class="jxr_linenumber" name="102" href="#102">102</a>         AddDatastreamResponse response =
 <a class="jxr_linenumber" name="103" href="#103">103</a>                 addDatastream(testPid, dsid).content(content)
-<a class="jxr_linenumber" name="104" href="#104">104</a>                         .logMessage(<span class="jxr_string">"testDefaultValues"</span>).execute(fedora());
+<a class="jxr_linenumber" name="104" href="#104">104</a>                         .logMessage(<span class="jxr_string">"testDefaultValues"</span>).execute();
 <a class="jxr_linenumber" name="105" href="#105">105</a>         assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="106" href="#106">106</a>     }
 <a class="jxr_linenumber" name="107" href="#107">107</a> 
@@ -122,7 +122,7 @@
 <a class="jxr_linenumber" name="112" href="#112">112</a>         List&lt;String&gt; altIds = Arrays.asList(<span class="jxr_string">"foo"</span>, <span class="jxr_string">"bar"</span>, <span class="jxr_string">"baz"</span>, <span class="jxr_string">"quuz"</span>);
 <a class="jxr_linenumber" name="113" href="#113">113</a>         AddDatastreamResponse response =
 <a class="jxr_linenumber" name="114" href="#114">114</a>                 addDatastream(testPid, dsid).altIDs(altIds).content(content)
-<a class="jxr_linenumber" name="115" href="#115">115</a>                         .execute(fedora());
+<a class="jxr_linenumber" name="115" href="#115">115</a>                         .execute();
 <a class="jxr_linenumber" name="116" href="#116">116</a>         assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="117" href="#117">117</a>         assertTrue(response.getDatastreamProfile().getDsAltID()
 <a class="jxr_linenumber" name="118" href="#118">118</a>                 .containsAll(altIds));
@@ -134,7 +134,7 @@
 <a class="jxr_linenumber" name="124" href="#124">124</a>         String content = <span class="jxr_string">"&lt;foo&gt;bar&lt;/foo&gt;"</span>;
 <a class="jxr_linenumber" name="125" href="#125">125</a>         AddDatastreamResponse response =
 <a class="jxr_linenumber" name="126" href="#126">126</a>                 addDatastream(testPid, dsid).content(content)
-<a class="jxr_linenumber" name="127" href="#127">127</a>                         .dsLabel(<span class="jxr_string">"testDsLabel"</span>).execute(fedora());
+<a class="jxr_linenumber" name="127" href="#127">127</a>                         .dsLabel(<span class="jxr_string">"testDsLabel"</span>).execute();
 <a class="jxr_linenumber" name="128" href="#128">128</a>         assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="129" href="#129">129</a>     }
 <a class="jxr_linenumber" name="130" href="#130">130</a> 
@@ -148,7 +148,7 @@
 <a class="jxr_linenumber" name="138" href="#138">138</a>                     addDatastream(testPid, state).content(content)
 <a class="jxr_linenumber" name="139" href="#139">139</a>                             .dsState(state)
 <a class="jxr_linenumber" name="140" href="#140">140</a>                             .logMessage(<span class="jxr_string">"testDsState with state: "</span> + state)
-<a class="jxr_linenumber" name="141" href="#141">141</a>                             .execute(fedora());
+<a class="jxr_linenumber" name="141" href="#141">141</a>                             .execute();
 <a class="jxr_linenumber" name="142" href="#142">142</a>             assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="143" href="#143">143</a>         }
 <a class="jxr_linenumber" name="144" href="#144">144</a>     }
@@ -176,7 +176,7 @@
 <a class="jxr_linenumber" name="166" href="#166">166</a>             response =
 <a class="jxr_linenumber" name="167" href="#167">167</a>                     addDatastream(testPid, dsid).content(content)
 <a class="jxr_linenumber" name="168" href="#168">168</a>                             .checksumType(type).checksum(value).logMessage(type
-<a class="jxr_linenumber" name="169" href="#169">169</a>                                     + <span class="jxr_string">": "</span> + value).execute(fedora());
+<a class="jxr_linenumber" name="169" href="#169">169</a>                                     + <span class="jxr_string">": "</span> + value).execute();
 <a class="jxr_linenumber" name="170" href="#170">170</a>             assertEquals(201, response.getStatus());
 <a class="jxr_linenumber" name="171" href="#171">171</a>         }
 <a class="jxr_linenumber" name="172" href="#172">172</a>     }
@@ -195,9 +195,9 @@
 <a class="jxr_linenumber" name="185" href="#185">185</a>             dsid = dsid + type;
 <a class="jxr_linenumber" name="186" href="#186">186</a>             checksum = ChecksumUtility.checksum(type, <strong class="jxr_keyword">new</strong> FileInputStream(f));
 <a class="jxr_linenumber" name="187" href="#187">187</a>             response = addDatastream(testPid, dsid).controlGroup(<span class="jxr_string">"M"</span>).content(f)
-<a class="jxr_linenumber" name="188" href="#188">188</a>                     .checksumType(type).checksum(checksum).execute(fedora());
+<a class="jxr_linenumber" name="188" href="#188">188</a>                     .checksumType(type).checksum(checksum).execute();
 <a class="jxr_linenumber" name="189" href="#189">189</a>             assertEquals(201, response.getStatus());
-<a class="jxr_linenumber" name="190" href="#190">190</a>             GetDatastreamResponse r = getDatastream(testPid, dsid).validateChecksum(<strong class="jxr_keyword">true</strong>).execute(fedora());
+<a class="jxr_linenumber" name="190" href="#190">190</a>             GetDatastreamResponse r = getDatastream(testPid, dsid).validateChecksum(<strong class="jxr_keyword">true</strong>).execute();
 <a class="jxr_linenumber" name="191" href="#191">191</a>             assertTrue(r.isChecksumValid());
 <a class="jxr_linenumber" name="192" href="#192">192</a>         }
 <a class="jxr_linenumber" name="193" href="#193">193</a>     }
@@ -209,7 +209,7 @@
 <a class="jxr_linenumber" name="199" href="#199">199</a>         File f = <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">"src/test/resources/21.edit.essay.zip"</span>);
 <a class="jxr_linenumber" name="200" href="#200">200</a>         assertTrue(f.exists());
 <a class="jxr_linenumber" name="201" href="#201">201</a> 
-<a class="jxr_linenumber" name="202" href="#202">202</a>         String dsLocation = upload(f).execute(fedora()).getUploadLocation();
+<a class="jxr_linenumber" name="202" href="#202">202</a>         String dsLocation = upload(f).execute().getUploadLocation();
 <a class="jxr_linenumber" name="203" href="#203">203</a>         assertTrue(<span class="jxr_string">"unexpected value for dsLocation: \&quot;"</span> + dsLocation + <span class="jxr_string">"\&quot;"</span>,
 <a class="jxr_linenumber" name="204" href="#204">204</a>                    dsLocation.startsWith(<span class="jxr_string">"uploaded://"</span>));
 <a class="jxr_linenumber" name="205" href="#205">205</a> 
@@ -220,9 +220,9 @@
 <a class="jxr_linenumber" name="210" href="#210">210</a>             dsid = dsid + type;
 <a class="jxr_linenumber" name="211" href="#211">211</a>             checksum = ChecksumUtility.checksum(type, <strong class="jxr_keyword">new</strong> FileInputStream(f));
 <a class="jxr_linenumber" name="212" href="#212">212</a>             response = addDatastream(testPid, dsid).controlGroup(<span class="jxr_string">"M"</span>).dsLocation(dsLocation)
-<a class="jxr_linenumber" name="213" href="#213">213</a>                     .checksumType(type).checksum(checksum).execute(fedora());
+<a class="jxr_linenumber" name="213" href="#213">213</a>                     .checksumType(type).checksum(checksum).execute();
 <a class="jxr_linenumber" name="214" href="#214">214</a>             assertEquals(201, response.getStatus());
-<a class="jxr_linenumber" name="215" href="#215">215</a>             GetDatastreamResponse r = getDatastream(testPid, dsid).validateChecksum(<strong class="jxr_keyword">true</strong>).execute(fedora());
+<a class="jxr_linenumber" name="215" href="#215">215</a>             GetDatastreamResponse r = getDatastream(testPid, dsid).validateChecksum(<strong class="jxr_keyword">true</strong>).execute();
 <a class="jxr_linenumber" name="216" href="#216">216</a>             assertTrue(r.isChecksumValid());
 <a class="jxr_linenumber" name="217" href="#217">217</a>         }
 <a class="jxr_linenumber" name="218" href="#218">218</a>     }
@@ -240,9 +240,9 @@
 <a class="jxr_linenumber" name="230" href="#230">230</a>                                           baseUrl.getPort());
 <a class="jxr_linenumber" name="231" href="#231">231</a> 
 <a class="jxr_linenumber" name="232" href="#232">232</a>         response = addDatastream(testPid, dsid).controlGroup(<span class="jxr_string">"M"</span>).dsLocation(dsLocation)
-<a class="jxr_linenumber" name="233" href="#233">233</a>                 .checksumType(<span class="jxr_string">"MD5"</span>).checksum(<span class="jxr_string">"b8ebd781db53b856efa8e873fa4d2f6e"</span>).execute(fedora());
+<a class="jxr_linenumber" name="233" href="#233">233</a>                 .checksumType(<span class="jxr_string">"MD5"</span>).checksum(<span class="jxr_string">"b8ebd781db53b856efa8e873fa4d2f6e"</span>).execute();
 <a class="jxr_linenumber" name="234" href="#234">234</a>         assertEquals(201, response.getStatus());
-<a class="jxr_linenumber" name="235" href="#235">235</a>         GetDatastreamResponse r = getDatastream(testPid, dsid).validateChecksum(<strong class="jxr_keyword">true</strong>).execute(fedora());
+<a class="jxr_linenumber" name="235" href="#235">235</a>         GetDatastreamResponse r = getDatastream(testPid, dsid).validateChecksum(<strong class="jxr_keyword">true</strong>).execute();
 <a class="jxr_linenumber" name="236" href="#236">236</a>         assertTrue(r.isChecksumValid());
 <a class="jxr_linenumber" name="237" href="#237">237</a>     }
 <a class="jxr_linenumber" name="238" href="#238">238</a> }

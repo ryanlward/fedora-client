@@ -56,7 +56,7 @@
 <a class="jxr_linenumber" name="46" href="#46">46</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetDatastreamAsHtml() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="47" href="#47">47</a>          FedoraResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="48" href="#48">48</a>  
-<a class="jxr_linenumber" name="49" href="#49">49</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"html"</span>).execute(fedora());
+<a class="jxr_linenumber" name="49" href="#49">49</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"html"</span>).execute();
 <a class="jxr_linenumber" name="50" href="#50">50</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="51" href="#51">51</a>          String result = response.getEntity(String.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="52" href="#52">52</a>  
@@ -69,7 +69,7 @@
 <a class="jxr_linenumber" name="59" href="#59">59</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetDatastreamAsXml() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="60" href="#60">60</a>          GetDatastreamResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="61" href="#61">61</a>  
-<a class="jxr_linenumber" name="62" href="#62">62</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"xml"</span>).execute(fedora());
+<a class="jxr_linenumber" name="62" href="#62">62</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"xml"</span>).execute();
 <a class="jxr_linenumber" name="63" href="#63">63</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="64" href="#64">64</a>  
 <a class="jxr_linenumber" name="65" href="#65">65</a>          DatastreamProfile profile = response.getDatastreamProfile();
@@ -81,7 +81,7 @@
 <a class="jxr_linenumber" name="71" href="#71">71</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetDatastreamAsOfDateTimeAsXML() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="72" href="#72">72</a>          GetDatastreamResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="73" href="#73">73</a>  
-<a class="jxr_linenumber" name="74" href="#74">74</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"xml"</span>).asOfDateTime(<span class="jxr_string">"9999-01-01T00:01:04.567Z"</span>).execute(fedora());
+<a class="jxr_linenumber" name="74" href="#74">74</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"xml"</span>).asOfDateTime(<span class="jxr_string">"9999-01-01T00:01:04.567Z"</span>).execute();
 <a class="jxr_linenumber" name="75" href="#75">75</a>          DatastreamProfile profile = response.getDatastreamProfile();
 <a class="jxr_linenumber" name="76" href="#76">76</a>          assertEquals(testPid, profile.getPid());
 <a class="jxr_linenumber" name="77" href="#77">77</a>          assertEquals(<span class="jxr_string">"DC"</span>, profile.getDsID());
@@ -96,7 +96,7 @@
 <a class="jxr_linenumber" name="86" href="#86">86</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetDatastreamState() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="87" href="#87">87</a>          GetDatastreamResponse response = <strong class="jxr_keyword">null</strong>;
 <a class="jxr_linenumber" name="88" href="#88">88</a>  
-<a class="jxr_linenumber" name="89" href="#89">89</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"xml"</span>).execute(fedora());
+<a class="jxr_linenumber" name="89" href="#89">89</a>          response = getDatastream(testPid, <span class="jxr_string">"DC"</span>).format(<span class="jxr_string">"xml"</span>).execute();
 <a class="jxr_linenumber" name="90" href="#90">90</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="91" href="#91">91</a>  
 <a class="jxr_linenumber" name="92" href="#92">92</a>          String dsState = response.getDatastreamProfile().getDsState();

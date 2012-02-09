@@ -42,7 +42,7 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>      @Test
 <a class="jxr_linenumber" name="33" href="#33">33</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testExport() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="34" href="#34">34</a>          String format = <span class="jxr_string">"info:fedora/fedora-system:FOXML-1.1"</span>;
-<a class="jxr_linenumber" name="35" href="#35">35</a>          FedoraResponse response = export(testPid).format(format).execute(fedora());
+<a class="jxr_linenumber" name="35" href="#35">35</a>          FedoraResponse response = export(testPid).format(format).execute();
 <a class="jxr_linenumber" name="36" href="#36">36</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="37" href="#37">37</a>          DigitalObject foxml = response.getEntity(DigitalObject.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="38" href="#38">38</a>          assertEquals(testPid, foxml.getPID());
