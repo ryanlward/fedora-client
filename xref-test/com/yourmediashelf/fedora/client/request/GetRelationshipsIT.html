@@ -27,44 +27,44 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> * along with fedora-client.  If not, see &lt;<a href="http://www.gnu.org/licenses/&gt;." target="alexandria_uri">http://www.gnu.org/licenses/&gt;.</a></em>
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">package</strong> com.yourmediashelf.fedora.client.request;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.FedoraClient.addRelationship;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.FedoraClient.getRelationships;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.assertEquals;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.assertTrue;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.Model;
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.ModelFactory;
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.Statement;
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.StmtIterator;
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.util.FileUtils;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">package</strong> com.yourmediashelf.fedora.client.request;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.FedoraClient.addRelationship;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> com.yourmediashelf.fedora.client.FedoraClient.getRelationships;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.assertEquals;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.assertTrue;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.Model;
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.ModelFactory;
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.Statement;
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.rdf.model.StmtIterator;
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <strong class="jxr_keyword">import</strong> com.hp.hpl.jena.util.FileUtils;
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.FedoraClientException;
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.response.FedoraResponse;
 <a class="jxr_linenumber" name="36" href="#36">36</a>  
-<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationshipsIT.html">GetRelationshipsIT</a>
-<a class="jxr_linenumber" name="38" href="#38">38</a>          <strong class="jxr_keyword">extends</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/BaseFedoraRequestIT.html">BaseFedoraRequestIT</a> {
-<a class="jxr_linenumber" name="39" href="#39">39</a>  
-<a class="jxr_linenumber" name="40" href="#40">40</a>      @Test
-<a class="jxr_linenumber" name="41" href="#41">41</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetAllRelationships() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="42" href="#42">42</a>          FedoraResponse response = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="43" href="#43">43</a>          response = getRelationships(testPid).execute();
-<a class="jxr_linenumber" name="44" href="#44">44</a>          <em class="jxr_comment">//TODO: better test</em>
-<a class="jxr_linenumber" name="45" href="#45">45</a>          assertEquals(200, response.getStatus());
-<a class="jxr_linenumber" name="46" href="#46">46</a>      }
-<a class="jxr_linenumber" name="47" href="#47">47</a>  
-<a class="jxr_linenumber" name="48" href="#48">48</a>      @Test
-<a class="jxr_linenumber" name="49" href="#49">49</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetRelationships() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="50" href="#50">50</a>          FedoraResponse response = <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="51" href="#51">51</a>          String subject = String.format(<span class="jxr_string">"info:fedora/%s"</span>, testPid);
-<a class="jxr_linenumber" name="52" href="#52">52</a>          String predicate = <span class="jxr_string">"urn:foo/testGetRelationships"</span>;
-<a class="jxr_linenumber" name="53" href="#53">53</a>          String object = <span class="jxr_string">"Able was I ere I saw Elba"</span>;
-<a class="jxr_linenumber" name="54" href="#54">54</a>  
-<a class="jxr_linenumber" name="55" href="#55">55</a>          <em class="jxr_comment">// first add a relationship</em>
-<a class="jxr_linenumber" name="56" href="#56">56</a>          response =
-<a class="jxr_linenumber" name="57" href="#57">57</a>                  addRelationship(testPid).predicate(predicate).object(object, <strong class="jxr_keyword">true</strong>).execute();
+<a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationshipsIT.html">GetRelationshipsIT</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/BaseFedoraRequestIT.html">BaseFedoraRequestIT</a> {
+<a class="jxr_linenumber" name="38" href="#38">38</a>  
+<a class="jxr_linenumber" name="39" href="#39">39</a>      @Test
+<a class="jxr_linenumber" name="40" href="#40">40</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetAllRelationships() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="41" href="#41">41</a>          FedoraResponse response = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="42" href="#42">42</a>          response = getRelationships(testPid).execute();
+<a class="jxr_linenumber" name="43" href="#43">43</a>          <em class="jxr_comment">//TODO: better test</em>
+<a class="jxr_linenumber" name="44" href="#44">44</a>          assertEquals(200, response.getStatus());
+<a class="jxr_linenumber" name="45" href="#45">45</a>      }
+<a class="jxr_linenumber" name="46" href="#46">46</a>  
+<a class="jxr_linenumber" name="47" href="#47">47</a>      @Test
+<a class="jxr_linenumber" name="48" href="#48">48</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetRelationships() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="49" href="#49">49</a>          FedoraResponse response = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="50" href="#50">50</a>          String subject = String.format(<span class="jxr_string">"info:fedora/%s"</span>, testPid);
+<a class="jxr_linenumber" name="51" href="#51">51</a>          String predicate = <span class="jxr_string">"urn:foo/testGetRelationships"</span>;
+<a class="jxr_linenumber" name="52" href="#52">52</a>          String object = <span class="jxr_string">"Able was I ere I saw Elba"</span>;
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>          <em class="jxr_comment">// first add a relationship</em>
+<a class="jxr_linenumber" name="55" href="#55">55</a>          response =
+<a class="jxr_linenumber" name="56" href="#56">56</a>                  addRelationship(testPid).predicate(predicate).object(object,
+<a class="jxr_linenumber" name="57" href="#57">57</a>                          <strong class="jxr_keyword">true</strong>).execute();
 <a class="jxr_linenumber" name="58" href="#58">58</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="59" href="#59">59</a>  
 <a class="jxr_linenumber" name="60" href="#60">60</a>          <em class="jxr_comment">// now get it</em>
@@ -92,8 +92,8 @@
 <a class="jxr_linenumber" name="82" href="#82">82</a>          String datatype = <span class="jxr_string">"http://www.w3.org/2001/XMLSchema#dateTime"</span>;
 <a class="jxr_linenumber" name="83" href="#83">83</a>  
 <a class="jxr_linenumber" name="84" href="#84">84</a>          response =
-<a class="jxr_linenumber" name="85" href="#85">85</a>                  addRelationship(testPid).predicate(predicate)
-<a class="jxr_linenumber" name="86" href="#86">86</a>                          .object(object, datatype).execute();
+<a class="jxr_linenumber" name="85" href="#85">85</a>                  addRelationship(testPid).predicate(predicate).object(object,
+<a class="jxr_linenumber" name="86" href="#86">86</a>                          datatype).execute();
 <a class="jxr_linenumber" name="87" href="#87">87</a>          assertEquals(200, response.getStatus());
 <a class="jxr_linenumber" name="88" href="#88">88</a>  
 <a class="jxr_linenumber" name="89" href="#89">89</a>          <em class="jxr_comment">// now get it</em>
@@ -112,7 +112,7 @@
 <a class="jxr_linenumber" name="102" href="#102">102</a>             assertEquals(datatype, s.getLiteral().getDatatypeURI());
 <a class="jxr_linenumber" name="103" href="#103">103</a>         }
 <a class="jxr_linenumber" name="104" href="#104">104</a>     }
-<a class="jxr_linenumber" name="105" href="#105">105</a>     
+<a class="jxr_linenumber" name="105" href="#105">105</a> 
 <a class="jxr_linenumber" name="106" href="#106">106</a>     @Test
 <a class="jxr_linenumber" name="107" href="#107">107</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetRelsIntRelationship() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="108" href="#108">108</a>         String subject = String.format(<span class="jxr_string">"info:fedora/%s/RELS-INT"</span>, testPid);
@@ -138,7 +138,12 @@
 <a class="jxr_linenumber" name="128" href="#128">128</a>         }
 <a class="jxr_linenumber" name="129" href="#129">129</a>         assertTrue(found);
 <a class="jxr_linenumber" name="130" href="#130">130</a>     }
-<a class="jxr_linenumber" name="131" href="#131">131</a> }
+<a class="jxr_linenumber" name="131" href="#131">131</a> 
+<a class="jxr_linenumber" name="132" href="#132">132</a>     @Override
+<a class="jxr_linenumber" name="133" href="#133">133</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testNoDefaultClientRequest() <strong class="jxr_keyword">throws</strong> FedoraClientException {
+<a class="jxr_linenumber" name="134" href="#134">134</a>         testNoDefaultClientRequest(getRelationships(testPid), 200);
+<a class="jxr_linenumber" name="135" href="#135">135</a>     }
+<a class="jxr_linenumber" name="136" href="#136">136</a> }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

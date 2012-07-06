@@ -42,29 +42,32 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * @author Edwin Shin</em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a> <strong class="jxr_keyword">extends</strong> FedoraRequest&lt;PurgeObject&gt; {
-<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String pid;
-<a class="jxr_linenumber" name="36" href="#36">36</a>  
-<a class="jxr_linenumber" name="37" href="#37">37</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="38" href="#38">38</a>  <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="39" href="#39">39</a>  <em class="jxr_javadoccomment">     * @param pid the identifier of the object to delete.</em>
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="41" href="#41">41</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a>(String pid) {
-<a class="jxr_linenumber" name="42" href="#42">42</a>          <strong class="jxr_keyword">this</strong>.pid = pid;
-<a class="jxr_linenumber" name="43" href="#43">43</a>      }
-<a class="jxr_linenumber" name="44" href="#44">44</a>  
-<a class="jxr_linenumber" name="45" href="#45">45</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a> logMessage(String logMessage) {
-<a class="jxr_linenumber" name="46" href="#46">46</a>          addQueryParam(<span class="jxr_string">"logMessage"</span>, logMessage);
-<a class="jxr_linenumber" name="47" href="#47">47</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a class="jxr_linenumber" name="48" href="#48">48</a>      }
-<a class="jxr_linenumber" name="49" href="#49">49</a>  
-<a class="jxr_linenumber" name="50" href="#50">50</a>      @Override
-<a class="jxr_linenumber" name="51" href="#51">51</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponse.html">FedoraResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) <strong class="jxr_keyword">throws</strong> FedoraClientException {
-<a class="jxr_linenumber" name="52" href="#52">52</a>          String path = String.format(<span class="jxr_string">"objects/%s"</span>, pid);
-<a class="jxr_linenumber" name="53" href="#53">53</a>  
-<a class="jxr_linenumber" name="54" href="#54">54</a>          WebResource wr = fedora.resource().path(path).queryParams(getQueryParams());
-<a class="jxr_linenumber" name="55" href="#55">55</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponseImpl.html">FedoraResponseImpl</a>(wr.delete(ClientResponse.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="56" href="#56">56</a>      }
-<a class="jxr_linenumber" name="57" href="#57">57</a>  }
+<a class="jxr_linenumber" name="35" href="#35">35</a>  
+<a class="jxr_linenumber" name="36" href="#36">36</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String pid;
+<a class="jxr_linenumber" name="37" href="#37">37</a>  
+<a class="jxr_linenumber" name="38" href="#38">38</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="39" href="#39">39</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="40" href="#40">40</a>  <em class="jxr_javadoccomment">     * @param pid the identifier of the object to delete.</em>
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="42" href="#42">42</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a>(String pid) {
+<a class="jxr_linenumber" name="43" href="#43">43</a>          <strong class="jxr_keyword">this</strong>.pid = pid;
+<a class="jxr_linenumber" name="44" href="#44">44</a>      }
+<a class="jxr_linenumber" name="45" href="#45">45</a>  
+<a class="jxr_linenumber" name="46" href="#46">46</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/PurgeObject.html">PurgeObject</a> logMessage(String logMessage) {
+<a class="jxr_linenumber" name="47" href="#47">47</a>          addQueryParam(<span class="jxr_string">"logMessage"</span>, logMessage);
+<a class="jxr_linenumber" name="48" href="#48">48</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a class="jxr_linenumber" name="49" href="#49">49</a>      }
+<a class="jxr_linenumber" name="50" href="#50">50</a>  
+<a class="jxr_linenumber" name="51" href="#51">51</a>      @Override
+<a class="jxr_linenumber" name="52" href="#52">52</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponse.html">FedoraResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora)
+<a class="jxr_linenumber" name="53" href="#53">53</a>              <strong class="jxr_keyword">throws</strong> <a href="../../../../../com/yourmediashelf/fedora/client/FedoraClientException.html">FedoraClientException</a> {
+<a class="jxr_linenumber" name="54" href="#54">54</a>          String path = String.format(<span class="jxr_string">"objects/%s"</span>, pid);
+<a class="jxr_linenumber" name="55" href="#55">55</a>  
+<a class="jxr_linenumber" name="56" href="#56">56</a>          WebResource wr =
+<a class="jxr_linenumber" name="57" href="#57">57</a>                  resource(fedora).path(path).queryParams(getQueryParams());
+<a class="jxr_linenumber" name="58" href="#58">58</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponseImpl.html">FedoraResponseImpl</a>(wr.delete(ClientResponse.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="59" href="#59">59</a>      }
+<a class="jxr_linenumber" name="60" href="#60">60</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
