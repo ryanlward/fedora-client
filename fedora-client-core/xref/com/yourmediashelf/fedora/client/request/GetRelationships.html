@@ -42,48 +42,52 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * @author Edwin Shin</em>
 <a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/RelationshipsRequest.html">RelationshipsRequest</a> {
-<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a>(String subject) {
-<a class="jxr_linenumber" name="36" href="#36">36</a>          <strong class="jxr_keyword">super</strong>(subject);
-<a class="jxr_linenumber" name="37" href="#37">37</a>      }
-<a class="jxr_linenumber" name="38" href="#38">38</a>  
-<a class="jxr_linenumber" name="39" href="#39">39</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="40" href="#40">40</a>  <em class="jxr_javadoccomment">     * The subject of the relationship. If &lt;code&gt;null&lt;/code&gt;, defaults to the </em>
-<a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment">     * URI form of the constructor-provided pid, e.g. &lt;code&gt;info:fedora/demo:1&lt;/code&gt;.</em>
-<a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment">     * </em>
-<a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment">     * @param subject the subject of the relationship</em>
-<a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment">     * @return this builder</em>
-<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment">     * @deprecated use constructor</em>
-<a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="47" href="#47">47</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> subject(String subject) {
-<a class="jxr_linenumber" name="48" href="#48">48</a>          addQueryParam(<span class="jxr_string">"subject"</span>, subject);
-<a class="jxr_linenumber" name="49" href="#49">49</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a class="jxr_linenumber" name="50" href="#50">50</a>      }
-<a class="jxr_linenumber" name="51" href="#51">51</a>  
-<a class="jxr_linenumber" name="52" href="#52">52</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> predicate(String predicate) {
-<a class="jxr_linenumber" name="53" href="#53">53</a>          addQueryParam(<span class="jxr_string">"predicate"</span>, predicate);
-<a class="jxr_linenumber" name="54" href="#54">54</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a class="jxr_linenumber" name="55" href="#55">55</a>      }
-<a class="jxr_linenumber" name="56" href="#56">56</a>  
-<a class="jxr_linenumber" name="57" href="#57">57</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="58" href="#58">58</a>  <em class="jxr_javadoccomment">     * The format of the response. Default is rdf/xml.</em>
-<a class="jxr_linenumber" name="59" href="#59">59</a>  <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="60" href="#60">60</a>  <em class="jxr_javadoccomment">     * @param format one of "rdf/xml", "n-triples", "turtle", or "sparql".</em>
-<a class="jxr_linenumber" name="61" href="#61">61</a>  <em class="jxr_javadoccomment">     * @return this builder</em>
-<a class="jxr_linenumber" name="62" href="#62">62</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="63" href="#63">63</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> format(String format) {
-<a class="jxr_linenumber" name="64" href="#64">64</a>          addQueryParam(<span class="jxr_string">"format"</span>, format);
-<a class="jxr_linenumber" name="65" href="#65">65</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
-<a class="jxr_linenumber" name="66" href="#66">66</a>      }
-<a class="jxr_linenumber" name="67" href="#67">67</a>  
-<a class="jxr_linenumber" name="68" href="#68">68</a>      @Override
-<a class="jxr_linenumber" name="69" href="#69">69</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponse.html">FedoraResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) <strong class="jxr_keyword">throws</strong> FedoraClientException {
-<a class="jxr_linenumber" name="70" href="#70">70</a>          WebResource wr = fedora.resource();
-<a class="jxr_linenumber" name="71" href="#71">71</a>          String path = String.format(<span class="jxr_string">"objects/%s/relationships"</span>, pid);
-<a class="jxr_linenumber" name="72" href="#72">72</a>  
-<a class="jxr_linenumber" name="73" href="#73">73</a>          ClientResponse cr = wr.path(path).queryParams(getQueryParams()).get(ClientResponse.<strong class="jxr_keyword">class</strong>);
-<a class="jxr_linenumber" name="74" href="#74">74</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponseImpl.html">FedoraResponseImpl</a>(cr);
-<a class="jxr_linenumber" name="75" href="#75">75</a>      }
-<a class="jxr_linenumber" name="76" href="#76">76</a>  }
+<a class="jxr_linenumber" name="35" href="#35">35</a>  
+<a class="jxr_linenumber" name="36" href="#36">36</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a>(String subject) {
+<a class="jxr_linenumber" name="37" href="#37">37</a>          <strong class="jxr_keyword">super</strong>(subject);
+<a class="jxr_linenumber" name="38" href="#38">38</a>      }
+<a class="jxr_linenumber" name="39" href="#39">39</a>  
+<a class="jxr_linenumber" name="40" href="#40">40</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment">     * The subject of the relationship. If &lt;code&gt;null&lt;/code&gt;, defaults to the </em>
+<a class="jxr_linenumber" name="42" href="#42">42</a>  <em class="jxr_javadoccomment">     * URI form of the constructor-provided pid, e.g. &lt;code&gt;info:fedora/demo:1&lt;/code&gt;.</em>
+<a class="jxr_linenumber" name="43" href="#43">43</a>  <em class="jxr_javadoccomment">     * </em>
+<a class="jxr_linenumber" name="44" href="#44">44</a>  <em class="jxr_javadoccomment">     * @param subject the subject of the relationship</em>
+<a class="jxr_linenumber" name="45" href="#45">45</a>  <em class="jxr_javadoccomment">     * @return this builder</em>
+<a class="jxr_linenumber" name="46" href="#46">46</a>  <em class="jxr_javadoccomment">     * @deprecated use constructor</em>
+<a class="jxr_linenumber" name="47" href="#47">47</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="48" href="#48">48</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> subject(String subject) {
+<a class="jxr_linenumber" name="49" href="#49">49</a>          addQueryParam(<span class="jxr_string">"subject"</span>, subject);
+<a class="jxr_linenumber" name="50" href="#50">50</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a class="jxr_linenumber" name="51" href="#51">51</a>      }
+<a class="jxr_linenumber" name="52" href="#52">52</a>  
+<a class="jxr_linenumber" name="53" href="#53">53</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> predicate(String predicate) {
+<a class="jxr_linenumber" name="54" href="#54">54</a>          addQueryParam(<span class="jxr_string">"predicate"</span>, predicate);
+<a class="jxr_linenumber" name="55" href="#55">55</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a class="jxr_linenumber" name="56" href="#56">56</a>      }
+<a class="jxr_linenumber" name="57" href="#57">57</a>  
+<a class="jxr_linenumber" name="58" href="#58">58</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="59" href="#59">59</a>  <em class="jxr_javadoccomment">     * The format of the response. Default is rdf/xml.</em>
+<a class="jxr_linenumber" name="60" href="#60">60</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="61" href="#61">61</a>  <em class="jxr_javadoccomment">     * @param format one of "rdf/xml", "n-triples", "turtle", or "sparql".</em>
+<a class="jxr_linenumber" name="62" href="#62">62</a>  <em class="jxr_javadoccomment">     * @return this builder</em>
+<a class="jxr_linenumber" name="63" href="#63">63</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="64" href="#64">64</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetRelationships.html">GetRelationships</a> format(String format) {
+<a class="jxr_linenumber" name="65" href="#65">65</a>          addQueryParam(<span class="jxr_string">"format"</span>, format);
+<a class="jxr_linenumber" name="66" href="#66">66</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
+<a class="jxr_linenumber" name="67" href="#67">67</a>      }
+<a class="jxr_linenumber" name="68" href="#68">68</a>  
+<a class="jxr_linenumber" name="69" href="#69">69</a>      @Override
+<a class="jxr_linenumber" name="70" href="#70">70</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponse.html">FedoraResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora)
+<a class="jxr_linenumber" name="71" href="#71">71</a>              <strong class="jxr_keyword">throws</strong> <a href="../../../../../com/yourmediashelf/fedora/client/FedoraClientException.html">FedoraClientException</a> {
+<a class="jxr_linenumber" name="72" href="#72">72</a>          WebResource wr = resource(fedora);
+<a class="jxr_linenumber" name="73" href="#73">73</a>          String path = String.format(<span class="jxr_string">"objects/%s/relationships"</span>, pid);
+<a class="jxr_linenumber" name="74" href="#74">74</a>  
+<a class="jxr_linenumber" name="75" href="#75">75</a>          ClientResponse cr =
+<a class="jxr_linenumber" name="76" href="#76">76</a>                  wr.path(path).queryParams(getQueryParams()).get(
+<a class="jxr_linenumber" name="77" href="#77">77</a>                          ClientResponse.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="78" href="#78">78</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponseImpl.html">FedoraResponseImpl</a>(cr);
+<a class="jxr_linenumber" name="79" href="#79">79</a>      }
+<a class="jxr_linenumber" name="80" href="#80">80</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

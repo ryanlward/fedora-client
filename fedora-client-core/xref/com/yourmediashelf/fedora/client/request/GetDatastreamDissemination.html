@@ -27,25 +27,25 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_javadoccomment"> * along with fedora-client.  If not, see &lt;<a href="http://www.gnu.org/licenses/&gt;." target="alexandria_uri">http://www.gnu.org/licenses/&gt;.</a></em>
 <a class="jxr_linenumber" name="18" href="#18">18</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="19" href="#19">19</a>  
-<a class="jxr_linenumber" name="20" href="#20">20</a>  
-<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">package</strong> com.yourmediashelf.fedora.client.request;
-<a class="jxr_linenumber" name="22" href="#22">22</a>  
-<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> com.sun.jersey.api.client.ClientResponse;
-<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> com.sun.jersey.api.client.WebResource;
-<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.FedoraClient;
-<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.FedoraClientException;
-<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.response.FedoraResponse;
-<a class="jxr_linenumber" name="28" href="#28">28</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.response.FedoraResponseImpl;
-<a class="jxr_linenumber" name="29" href="#29">29</a>  
-<a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> * Builder for the GetDatastreamDissemination method.</em>
-<a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> * @author Edwin Shin</em>
-<a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="35" href="#35">35</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetDatastreamDissemination.html">GetDatastreamDissemination</a>
-<a class="jxr_linenumber" name="36" href="#36">36</a>          <strong class="jxr_keyword">extends</strong> FedoraRequest&lt;GetDatastreamDissemination&gt; {
-<a class="jxr_linenumber" name="37" href="#37">37</a>  
-<a class="jxr_linenumber" name="38" href="#38">38</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String pid;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  <strong class="jxr_keyword">package</strong> com.yourmediashelf.fedora.client.request;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> com.sun.jersey.api.client.ClientResponse;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> com.sun.jersey.api.client.WebResource;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.FedoraClient;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.FedoraClientException;
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.response.FedoraResponse;
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <strong class="jxr_keyword">import</strong> com.yourmediashelf.fedora.client.response.FedoraResponseImpl;
+<a class="jxr_linenumber" name="28" href="#28">28</a>  
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_javadoccomment"> * Builder for the GetDatastreamDissemination method.</em>
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_javadoccomment"> * @author Edwin Shin</em>
+<a class="jxr_linenumber" name="33" href="#33">33</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/yourmediashelf/fedora/client/request/GetDatastreamDissemination.html">GetDatastreamDissemination</a> <strong class="jxr_keyword">extends</strong>
+<a class="jxr_linenumber" name="35" href="#35">35</a>          FedoraRequest&lt;GetDatastreamDissemination&gt; {
+<a class="jxr_linenumber" name="36" href="#36">36</a>  
+<a class="jxr_linenumber" name="37" href="#37">37</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String pid;
+<a class="jxr_linenumber" name="38" href="#38">38</a>  
 <a class="jxr_linenumber" name="39" href="#39">39</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String dsId;
 <a class="jxr_linenumber" name="40" href="#40">40</a>  
 <a class="jxr_linenumber" name="41" href="#41">41</a>      <em class="jxr_javadoccomment">/**</em>
@@ -68,14 +68,17 @@
 <a class="jxr_linenumber" name="58" href="#58">58</a>      }
 <a class="jxr_linenumber" name="59" href="#59">59</a>  
 <a class="jxr_linenumber" name="60" href="#60">60</a>      @Override
-<a class="jxr_linenumber" name="61" href="#61">61</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponse.html">FedoraResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora) <strong class="jxr_keyword">throws</strong> FedoraClientException {
-<a class="jxr_linenumber" name="62" href="#62">62</a>          WebResource wr = fedora.resource();
-<a class="jxr_linenumber" name="63" href="#63">63</a>          String path = String.format(<span class="jxr_string">"objects/%s/datastreams/%s/content"</span>, pid, dsId);
-<a class="jxr_linenumber" name="64" href="#64">64</a>  
-<a class="jxr_linenumber" name="65" href="#65">65</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponseImpl.html">FedoraResponseImpl</a>(wr.path(path).queryParams(getQueryParams()).get(ClientResponse.<strong class="jxr_keyword">class</strong>));
-<a class="jxr_linenumber" name="66" href="#66">66</a>      }
-<a class="jxr_linenumber" name="67" href="#67">67</a>  
-<a class="jxr_linenumber" name="68" href="#68">68</a>  }
+<a class="jxr_linenumber" name="61" href="#61">61</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponse.html">FedoraResponse</a> execute(<a href="../../../../../com/yourmediashelf/fedora/client/FedoraClient.html">FedoraClient</a> fedora)
+<a class="jxr_linenumber" name="62" href="#62">62</a>              <strong class="jxr_keyword">throws</strong> <a href="../../../../../com/yourmediashelf/fedora/client/FedoraClientException.html">FedoraClientException</a> {
+<a class="jxr_linenumber" name="63" href="#63">63</a>          WebResource wr = resource(fedora);
+<a class="jxr_linenumber" name="64" href="#64">64</a>          String path =
+<a class="jxr_linenumber" name="65" href="#65">65</a>                  String.format(<span class="jxr_string">"objects/%s/datastreams/%s/content"</span>, pid, dsId);
+<a class="jxr_linenumber" name="66" href="#66">66</a>  
+<a class="jxr_linenumber" name="67" href="#67">67</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../com/yourmediashelf/fedora/client/response/FedoraResponseImpl.html">FedoraResponseImpl</a>(wr.path(path).queryParams(
+<a class="jxr_linenumber" name="68" href="#68">68</a>                  getQueryParams()).get(ClientResponse.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="69" href="#69">69</a>      }
+<a class="jxr_linenumber" name="70" href="#70">70</a>  
+<a class="jxr_linenumber" name="71" href="#71">71</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
