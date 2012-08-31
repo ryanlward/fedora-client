@@ -17,6 +17,8 @@
 -doctitle
 'fedora-client-messaging 0.6 Test API'
 -link
+'../apidocs'
+-link
 'http://java.sun.com/javase/6/docs/api'
 -linkoffline
 'http://mediashelf.github.com/fedora-client-core/apidocs' '/Users/eddie/Documents/workspace/fedora-client/target/checkout/fedora-client-core/target/site/testapidocs'
